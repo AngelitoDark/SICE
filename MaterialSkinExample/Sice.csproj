@@ -82,6 +82,12 @@
     <Compile Include="C_Deposito.Designer.cs">
       <DependentUpon>C_Deposito.cs</DependentUpon>
     </Compile>
+    <Compile Include="Deposito_D.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Deposito_D.Designer.cs">
+      <DependentUpon>Deposito_D.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fondo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="C_Deposito.resx">
       <DependentUpon>C_Deposito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Deposito_D.resx">
+      <DependentUpon>Deposito_D.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fondo.resx">
       <DependentUpon>Fondo.cs</DependentUpon>

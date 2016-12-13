@@ -232,6 +232,15 @@ namespace MaterialSkinExample
             }
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Deposito_D deposito_d = new Deposito_D();
+
+            deposito_d.Show();
+            this.Hide();
+
+        }
+
         public void Log(string logMessage, TextWriter w)
         {
             string EstadoFecha = (DateTime.Now.ToLongDateString() + DateTime.Now.ToLongTimeString());
