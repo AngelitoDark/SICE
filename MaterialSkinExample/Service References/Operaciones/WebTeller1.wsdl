@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://okibrasil.com/ws_service" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://okibrasil.com/ws_service" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://okibrasil.com/ws_service/Imports">
+      <xsd:import schemaLocation="http://localhost/ws_webteller/WebTeller.svc?xsd=xsd0" namespace="http://okibrasil.com/ws_service" />
+      <xsd:import schemaLocation="http://localhost/ws_webteller/WebTeller.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/ws_webteller/WebTeller.svc?xsd=xsd2" namespace="http://okibrasil.com/ws_webteller/types" />
+      <xsd:import schemaLocation="http://localhost/ws_webteller/WebTeller.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WS_Webteller.OperationTypes" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWebTeller_InitTerminal_InputMessage">
+    <wsdl:part name="parameters" element="tns:InitTerminal" />
+  </wsdl:message>
+  <wsdl:message name="IWebTeller_InitTerminal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InitTerminalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebTeller_CloseTerminal_InputMessage">
+    <wsdl:part name="parameters" element="tns:CloseTerminal" />
+  </wsdl:message>
+  <wsdl:message name="IWebTeller_CloseTerminal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CloseTerminalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebTeller_StartDeposit_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartDeposit" />
+  </wsdl:message>
+  <wsdl:message name="IWebTeller_StartDeposit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartDepositResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebTeller_ContinueDeposit_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContinueDeposit" />
+  </wsdl:message>
+  <wsdl:message name="IWebTeller_ContinueDeposit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContinueDepositResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebTeller_EndDeposit_InputMessage">
+    <wsdl:part name="parameters" element="tns:EndDeposit" />
+  </wsdl:message>
+  <wsdl:message name="IWebTeller_EndDeposit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EndDepositResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebTeller_CancelDeposit_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelDeposit" />
+  </wsdl:message>
+  <wsdl:message name="IWebTeller_CancelDeposit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelDepositResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebTeller_Withdraw_InputMessage">
+    <wsdl:part name="parameters" element="tns:Withdraw" />
+  </wsdl:message>
+  <wsdl:message name="IWebTeller_Withdraw_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WithdrawResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebTeller_TransactionDayOpen_InputMessage">
+    <wsdl:part name="parameters" element="tns:TransactionDayOpen" />
+  </wsdl:message>
+  <wsdl:message name="IWebTeller_TransactionDayOpen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TransactionDayOpenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebTeller_TransactionDayClose_InputMessage">
+    <wsdl:part name="parameters" element="tns:TransactionDayClose" />
+  </wsdl:message>
+  <wsdl:message name="IWebTeller_TransactionDayClose_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TransactionDayCloseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebTeller_TransactionDayReopen_InputMessage">
+    <wsdl:part name="parameters" element="tns:TransactionDayReopen" />
+  </wsdl:message>
+  <wsdl:message name="IWebTeller_TransactionDayReopen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TransactionDayReopenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebTeller_TransactionDayCurrent_InputMessage">
+    <wsdl:part name="parameters" element="tns:TransactionDayCurrent" />
+  </wsdl:message>
+  <wsdl:message name="IWebTeller_TransactionDayCurrent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TransactionDayCurrentResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWebTeller">
+    <wsdl:operation name="InitTerminal">
+      <wsdl:input wsaw:Action="http://okibrasil.com/ws_service/IWebTeller/InitTerminal" message="tns:IWebTeller_InitTerminal_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/ws_service/IWebTeller/InitTerminalResponse" message="tns:IWebTeller_InitTerminal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseTerminal">
+      <wsdl:input wsaw:Action="http://okibrasil.com/ws_service/IWebTeller/CloseTerminal" message="tns:IWebTeller_CloseTerminal_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/ws_service/IWebTeller/CloseTerminalResponse" message="tns:IWebTeller_CloseTerminal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartDeposit">
+      <wsdl:input wsaw:Action="http://okibrasil.com/ws_service/IWebTeller/StartDeposit" message="tns:IWebTeller_StartDeposit_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/ws_service/IWebTeller/StartDepositResponse" message="tns:IWebTeller_StartDeposit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContinueDeposit">
+      <wsdl:input wsaw:Action="http://okibrasil.com/ws_service/IWebTeller/ContinueDeposit" message="tns:IWebTeller_ContinueDeposit_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/ws_service/IWebTeller/ContinueDepositResponse" message="tns:IWebTeller_ContinueDeposit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EndDeposit">
+      <wsdl:input wsaw:Action="http://okibrasil.com/ws_service/IWebTeller/EndDeposit" message="tns:IWebTeller_EndDeposit_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/ws_service/IWebTeller/EndDepositResponse" message="tns:IWebTeller_EndDeposit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelDeposit">
+      <wsdl:input wsaw:Action="http://okibrasil.com/ws_service/IWebTeller/CancelDeposit" message="tns:IWebTeller_CancelDeposit_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/ws_service/IWebTeller/CancelDepositResponse" message="tns:IWebTeller_CancelDeposit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Withdraw">
+      <wsdl:input wsaw:Action="http://okibrasil.com/ws_service/IWebTeller/Withdraw" message="tns:IWebTeller_Withdraw_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/ws_service/IWebTeller/WithdrawResponse" message="tns:IWebTeller_Withdraw_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TransactionDayOpen">
+      <wsdl:input wsaw:Action="http://okibrasil.com/ws_service/IWebTeller/TransactionDayOpen" message="tns:IWebTeller_TransactionDayOpen_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/ws_service/IWebTeller/TransactionDayOpenResponse" message="tns:IWebTeller_TransactionDayOpen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TransactionDayClose">
+      <wsdl:input wsaw:Action="http://okibrasil.com/ws_service/IWebTeller/TransactionDayClose" message="tns:IWebTeller_TransactionDayClose_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/ws_service/IWebTeller/TransactionDayCloseResponse" message="tns:IWebTeller_TransactionDayClose_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TransactionDayReopen">
+      <wsdl:input wsaw:Action="http://okibrasil.com/ws_service/IWebTeller/TransactionDayReopen" message="tns:IWebTeller_TransactionDayReopen_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/ws_service/IWebTeller/TransactionDayReopenResponse" message="tns:IWebTeller_TransactionDayReopen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TransactionDayCurrent">
+      <wsdl:input wsaw:Action="http://okibrasil.com/ws_service/IWebTeller/TransactionDayCurrent" message="tns:IWebTeller_TransactionDayCurrent_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/ws_service/IWebTeller/TransactionDayCurrentResponse" message="tns:IWebTeller_TransactionDayCurrent_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cb44cc4f-f7af-42c4-a1a1-f4fa49e1eb6a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/ws_webteller/WebTeller.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WebTeller.wsdl" MetadataType="Wsdl" ID="2d91ea9c-f6bd-4a8d-8f58-b76959d05a61" SourceId="1" SourceUrl="http://localhost/ws_webteller/WebTeller.svc?wsdl" />
+    <MetadataFile FileName="WebTeller.xsd" MetadataType="Schema" ID="9d548fae-0398-4b03-8b12-3a996205f02b" SourceId="1" SourceUrl="http://localhost/ws_webteller/WebTeller.svc?xsd=xsd0" />
+    <MetadataFile FileName="WebTeller1.wsdl" MetadataType="Wsdl" ID="4c749523-dcad-438a-a1a4-e72512918541" SourceId="1" SourceUrl="http://localhost/ws_webteller/WebTeller.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="WebTeller1.xsd" MetadataType="Schema" ID="b0145200-1776-4ff3-8143-dcf645004b84" SourceId="1" SourceUrl="http://localhost/ws_webteller/WebTeller.svc?xsd=xsd3" />
+    <MetadataFile FileName="WebTeller2.xsd" MetadataType="Schema" ID="cbaeb656-70e6-44a7-92ae-1914cc7cc157" SourceId="1" SourceUrl="http://localhost/ws_webteller/WebTeller.svc?xsd=xsd1" />
+    <MetadataFile FileName="WebTeller3.xsd" MetadataType="Schema" ID="d8137b6e-0a6e-4b3b-b9d6-33fb92f949fd" SourceId="1" SourceUrl="http://localhost/ws_webteller/WebTeller.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
