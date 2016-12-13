@@ -122,8 +122,13 @@
       <DependentUpon>Deposito.cs</DependentUpon>
     </Compile>
     <Compile Include="Querys.cs" />
-    <Compile Include="Retornos.cs" />
+    <Compile Include="Response.cs" />
     <Compile Include="SendJSon.cs" />
+    <Compile Include="Service References\FullService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\Operaciones\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -168,6 +173,52 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Service References\FullService\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FullService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FullService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FullService\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FullService\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FullService\MaterialSkinExample.FullService.ConfiguracaoCassette.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FullService\MaterialSkinExample.FullService.DadosConsultaMotivo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FullService\MaterialSkinExample.FullService.DadosConteudoTCR.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FullService\MaterialSkinExample.FullService.ObterPrivilegios.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FullService\MaterialSkinExample.FullService.ObterPrivilegiosDeUsuario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FullService\MaterialSkinExample.FullService.ObterUsuarios.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FullService\MaterialSkinExample.FullService.RespostaConsultarStatusOperacao.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FullService\MaterialSkinExample.FullService.RespostaOperacao.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FullService\MaterialSkinExample.FullService.RetornoOperacao.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FullService\MaterialSkinExample.FullService.RetornoPadrao.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FullService\wtService.wsdl" />
     <None Include="Service References\Operaciones\WebTeller.wsdl" />
     <None Include="Service References\Operaciones\WebTeller.xsd">
       <SubType>Designer</SubType>
@@ -210,6 +261,12 @@
   <ItemGroup>
     <Content Include="imgres.ico" />
     <Content Include="Resources\title_bar.png" />
+    <None Include="Service References\FullService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\FullService\configuration.svcinfo" />
+    <None Include="Service References\FullService\configuration91.svcinfo" />
     <None Include="Service References\Operaciones\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -223,6 +280,7 @@
     <None Include="Resources\logo_OKI.png" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\FullService\" />
     <WCFMetadataStorage Include="Service References\Operaciones\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

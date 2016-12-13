@@ -231,9 +231,24 @@ namespace MaterialSkinExample
                 pictureBox8.Visible = true;
             }
         }
+       // Variables estaticas del servicio web 
+        static string user = "TCR";
+        static String Pasword = "12345";
+        static string terminal = "123";
+        static FullService.Autenticacao authData = new FullService.Autenticacao();
+        static FullService.OperationsClient operaciones = new FullService.OperationsClient();
+        static FullService.ConfiguracaoCassette casett = new FullService.ConfiguracaoCassette();
+        static FullService.DadosCassete dados = new FullService.DadosCassete();
+
 
         private void button3_Click(object sender, EventArgs e)
         {
+            authData.Usuario = user;
+            authData.Terminal = terminal;
+            authData.Senha = Pasword;
+            string mensaje = operaciones.AbastecimentoIniciar(authData).Mensagem;
+           // MessageBox.Show(mensaje);
+
             Deposito_D deposito_d = new Deposito_D();
 
             deposito_d.Show();

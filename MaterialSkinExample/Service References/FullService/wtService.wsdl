@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://okibrasil.com/wtservice" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="wtService" targetNamespace="http://okibrasil.com/wtservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://okibrasil.com/wtservice/Imports">
+      <xsd:import schemaLocation="http://localhost/wtservice/?xsd=xsd0" namespace="http://okibrasil.com/wtservice" />
+      <xsd:import schemaLocation="http://localhost/wtservice/?xsd=xsd3" namespace="http://okibrasil.com/wtservice/faults" />
+      <xsd:import schemaLocation="http://localhost/wtservice/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/wtservice/?xsd=xsd2" namespace="http://okibrasil.com/wtservice/types" />
+      <xsd:import schemaLocation="http://localhost/wtservice/?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOperations_CadastrarOperacao_InputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarOperacao" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_CadastrarOperacao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarOperacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_CadastrarOperacao_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://okibrasil.com/wtservice/faults" name="detail" element="q1:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_CancelarOperacao_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelarOperacao" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_CancelarOperacao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelarOperacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_CancelarOperacao_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://okibrasil.com/wtservice/faults" name="detail" element="q2:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_ConsultarStatusOperacao_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarStatusOperacao" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_ConsultarStatusOperacao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarStatusOperacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_ConsultarStatusOperacao_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://okibrasil.com/wtservice/faults" name="detail" element="q3:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_ConfigurarFundoDeTroco_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConfigurarFundoDeTroco" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_ConfigurarFundoDeTroco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConfigurarFundoDeTrocoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_ConfigurarFundoDeTroco_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://okibrasil.com/wtservice/faults" name="detail" element="q4:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_TerminalAbrir_InputMessage">
+    <wsdl:part name="parameters" element="tns:TerminalAbrir" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_TerminalAbrir_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TerminalAbrirResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_TerminalAbrir_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://okibrasil.com/wtservice/faults" name="detail" element="q5:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_TerminalFechar_InputMessage">
+    <wsdl:part name="parameters" element="tns:TerminalFechar" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_TerminalFechar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TerminalFecharResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_TerminalFechar_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://okibrasil.com/wtservice/faults" name="detail" element="q6:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_DepositoIniciar_InputMessage">
+    <wsdl:part name="parameters" element="tns:DepositoIniciar" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_DepositoIniciar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DepositoIniciarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_DepositoIniciar_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://okibrasil.com/wtservice/faults" name="detail" element="q7:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_DepositoContinuar_InputMessage">
+    <wsdl:part name="parameters" element="tns:DepositoContinuar" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_DepositoContinuar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DepositoContinuarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_DepositoContinuar_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://okibrasil.com/wtservice/faults" name="detail" element="q8:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_DepositoFinalizar_InputMessage">
+    <wsdl:part name="parameters" element="tns:DepositoFinalizar" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_DepositoFinalizar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DepositoFinalizarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_DepositoFinalizar_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://okibrasil.com/wtservice/faults" name="detail" element="q9:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_DepositoCancelar_InputMessage">
+    <wsdl:part name="parameters" element="tns:DepositoCancelar" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_DepositoCancelar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DepositoCancelarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_DepositoCancelar_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://okibrasil.com/wtservice/faults" name="detail" element="q10:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_Sacar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sacar" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_Sacar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SacarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_Sacar_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://okibrasil.com/wtservice/faults" name="detail" element="q11:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_ContarNotas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContarNotas" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_ContarNotas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContarNotasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_ContarNotas_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://okibrasil.com/wtservice/faults" name="detail" element="q12:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_AbastecimentoIniciar_InputMessage">
+    <wsdl:part name="parameters" element="tns:AbastecimentoIniciar" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_AbastecimentoIniciar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AbastecimentoIniciarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_AbastecimentoIniciar_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://okibrasil.com/wtservice/faults" name="detail" element="q13:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_AbastecimentoEncerrar_InputMessage">
+    <wsdl:part name="parameters" element="tns:AbastecimentoEncerrar" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_AbastecimentoEncerrar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AbastecimentoEncerrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_AbastecimentoEncerrar_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://okibrasil.com/wtservice/faults" name="detail" element="q14:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_ResetTCR_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetTCR" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_ResetTCR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetTCRResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_ResetTCR_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://okibrasil.com/wtservice/faults" name="detail" element="q15:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_ConfiguracaoAtualVerificar_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConfiguracaoAtualVerificar" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_ConfiguracaoAtualVerificar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConfiguracaoAtualVerificarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_ConfiguracaoAtualVerificar_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://okibrasil.com/wtservice/faults" name="detail" element="q16:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_ConfiguracaoAtualAceitar_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConfiguracaoAtualAceitar" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_ConfiguracaoAtualAceitar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConfiguracaoAtualAceitarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperations_ConfiguracaoAtualAceitar_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://okibrasil.com/wtservice/faults" name="detail" element="q17:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IReasons_CadastrarMotivoOperacao_InputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarMotivoOperacao" />
+  </wsdl:message>
+  <wsdl:message name="IReasons_CadastrarMotivoOperacao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarMotivoOperacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReasons_CadastrarMotivoOperacao_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://okibrasil.com/wtservice/faults" name="detail" element="q18:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IReasons_RemoverMotivoOperacao_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoverMotivoOperacao" />
+  </wsdl:message>
+  <wsdl:message name="IReasons_RemoverMotivoOperacao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoverMotivoOperacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReasons_RemoverMotivoOperacao_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://okibrasil.com/wtservice/faults" name="detail" element="q19:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IReasons_AtualizarMotivoOperacao_InputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarMotivoOperacao" />
+  </wsdl:message>
+  <wsdl:message name="IReasons_AtualizarMotivoOperacao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarMotivoOperacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReasons_AtualizarMotivoOperacao_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://okibrasil.com/wtservice/faults" name="detail" element="q20:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IReasons_ConsultarMotivosOperacao_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarMotivosOperacao" />
+  </wsdl:message>
+  <wsdl:message name="IReasons_ConsultarMotivosOperacao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarMotivosOperacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReasons_ConsultarMotivosOperacao_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://okibrasil.com/wtservice/faults" name="detail" element="q21:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IUsers_CadastrarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IUsers_CadastrarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsers_CadastrarUsuario_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://okibrasil.com/wtservice/faults" name="detail" element="q22:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IUsers_AtualizarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IUsers_AtualizarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsers_AtualizarUsuario_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://okibrasil.com/wtservice/faults" name="detail" element="q23:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IUsers_ExcluirUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExcluirUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IUsers_ExcluirUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExcluirUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsers_ExcluirUsuario_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://okibrasil.com/wtservice/faults" name="detail" element="q24:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IUsers_ConfigurarPrivilegios_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConfigurarPrivilegios" />
+  </wsdl:message>
+  <wsdl:message name="IUsers_ConfigurarPrivilegios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConfigurarPrivilegiosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsers_ConfigurarPrivilegios_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://okibrasil.com/wtservice/faults" name="detail" element="q25:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IUsers_AlterarLimiteSaque_InputMessage">
+    <wsdl:part name="parameters" element="tns:AlterarLimiteSaque" />
+  </wsdl:message>
+  <wsdl:message name="IUsers_AlterarLimiteSaque_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AlterarLimiteSaqueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsers_AlterarLimiteSaque_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://okibrasil.com/wtservice/faults" name="detail" element="q26:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IUsers_ObterPrivilegios_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterPrivilegios" />
+  </wsdl:message>
+  <wsdl:message name="IUsers_ObterPrivilegios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterPrivilegiosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsers_ObterPrivilegios_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://okibrasil.com/wtservice/faults" name="detail" element="q27:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IUsers_ObterPrivilegiosDeUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterPrivilegiosDeUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IUsers_ObterPrivilegiosDeUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterPrivilegiosDeUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsers_ObterPrivilegiosDeUsuario_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://okibrasil.com/wtservice/faults" name="detail" element="q28:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IUsers_ObterUsuarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="IUsers_ObterUsuarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsers_ObterUsuarios_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://okibrasil.com/wtservice/faults" name="detail" element="q29:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IContent_ConsultarConteudoTCR_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarConteudoTCR" />
+  </wsdl:message>
+  <wsdl:message name="IContent_ConsultarConteudoTCR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarConteudoTCRResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContent_ConsultarConteudoTCR_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://okibrasil.com/wtservice/faults" name="detail" element="q30:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="ICalendar_AbrirDia_InputMessage">
+    <wsdl:part name="parameters" element="tns:AbrirDia" />
+  </wsdl:message>
+  <wsdl:message name="ICalendar_AbrirDia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AbrirDiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICalendar_AbrirDia_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://okibrasil.com/wtservice/faults" name="detail" element="q31:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="ICalendar_FecharDia_InputMessage">
+    <wsdl:part name="parameters" element="tns:FecharDia" />
+  </wsdl:message>
+  <wsdl:message name="ICalendar_FecharDia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FecharDiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICalendar_FecharDia_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://okibrasil.com/wtservice/faults" name="detail" element="q32:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="ICalendar_ReabrirDia_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReabrirDia" />
+  </wsdl:message>
+  <wsdl:message name="ICalendar_ReabrirDia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReabrirDiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICalendar_ReabrirDia_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://okibrasil.com/wtservice/faults" name="detail" element="q33:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="ICalendar_DiaAberto_InputMessage">
+    <wsdl:part name="parameters" element="tns:DiaAberto" />
+  </wsdl:message>
+  <wsdl:message name="ICalendar_DiaAberto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DiaAbertoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICalendar_DiaAberto_WtServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://okibrasil.com/wtservice/faults" name="detail" element="q34:WtServiceFault" />
+  </wsdl:message>
+  <wsdl:portType name="IOperations">
+    <wsdl:operation name="CadastrarOperacao">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IOperations/CadastrarOperacao" message="tns:IOperations_CadastrarOperacao_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IOperations/CadastrarOperacaoResponse" message="tns:IOperations_CadastrarOperacao_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IOperations/CadastrarOperacaoWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IOperations_CadastrarOperacao_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelarOperacao">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IOperations/CancelarOperacao" message="tns:IOperations_CancelarOperacao_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IOperations/CancelarOperacaoResponse" message="tns:IOperations_CancelarOperacao_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IOperations/CancelarOperacaoWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IOperations_CancelarOperacao_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarStatusOperacao">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IOperations/ConsultarStatusOperacao" message="tns:IOperations_ConsultarStatusOperacao_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IOperations/ConsultarStatusOperacaoResponse" message="tns:IOperations_ConsultarStatusOperacao_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IOperations/ConsultarStatusOperacaoWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IOperations_ConsultarStatusOperacao_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfigurarFundoDeTroco">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IOperations/ConfigurarFundoDeTroco" message="tns:IOperations_ConfigurarFundoDeTroco_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IOperations/ConfigurarFundoDeTrocoResponse" message="tns:IOperations_ConfigurarFundoDeTroco_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IOperations/ConfigurarFundoDeTrocoWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IOperations_ConfigurarFundoDeTroco_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TerminalAbrir">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IOperations/TerminalAbrir" message="tns:IOperations_TerminalAbrir_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IOperations/TerminalAbrirResponse" message="tns:IOperations_TerminalAbrir_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IOperations/TerminalAbrirWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IOperations_TerminalAbrir_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TerminalFechar">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IOperations/TerminalFechar" message="tns:IOperations_TerminalFechar_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IOperations/TerminalFecharResponse" message="tns:IOperations_TerminalFechar_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IOperations/TerminalFecharWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IOperations_TerminalFechar_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DepositoIniciar">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IOperations/DepositoIniciar" message="tns:IOperations_DepositoIniciar_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IOperations/DepositoIniciarResponse" message="tns:IOperations_DepositoIniciar_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IOperations/DepositoIniciarWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IOperations_DepositoIniciar_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DepositoContinuar">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IOperations/DepositoContinuar" message="tns:IOperations_DepositoContinuar_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IOperations/DepositoContinuarResponse" message="tns:IOperations_DepositoContinuar_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IOperations/DepositoContinuarWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IOperations_DepositoContinuar_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DepositoFinalizar">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IOperations/DepositoFinalizar" message="tns:IOperations_DepositoFinalizar_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IOperations/DepositoFinalizarResponse" message="tns:IOperations_DepositoFinalizar_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IOperations/DepositoFinalizarWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IOperations_DepositoFinalizar_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DepositoCancelar">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IOperations/DepositoCancelar" message="tns:IOperations_DepositoCancelar_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IOperations/DepositoCancelarResponse" message="tns:IOperations_DepositoCancelar_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IOperations/DepositoCancelarWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IOperations_DepositoCancelar_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sacar">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IOperations/Sacar" message="tns:IOperations_Sacar_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IOperations/SacarResponse" message="tns:IOperations_Sacar_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IOperations/SacarWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IOperations_Sacar_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContarNotas">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IOperations/ContarNotas" message="tns:IOperations_ContarNotas_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IOperations/ContarNotasResponse" message="tns:IOperations_ContarNotas_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IOperations/ContarNotasWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IOperations_ContarNotas_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AbastecimentoIniciar">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IOperations/AbastecimentoIniciar" message="tns:IOperations_AbastecimentoIniciar_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IOperations/AbastecimentoIniciarResponse" message="tns:IOperations_AbastecimentoIniciar_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IOperations/AbastecimentoIniciarWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IOperations_AbastecimentoIniciar_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AbastecimentoEncerrar">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IOperations/AbastecimentoEncerrar" message="tns:IOperations_AbastecimentoEncerrar_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IOperations/AbastecimentoEncerrarResponse" message="tns:IOperations_AbastecimentoEncerrar_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IOperations/AbastecimentoEncerrarWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IOperations_AbastecimentoEncerrar_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetTCR">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IOperations/ResetTCR" message="tns:IOperations_ResetTCR_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IOperations/ResetTCRResponse" message="tns:IOperations_ResetTCR_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IOperations/ResetTCRWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IOperations_ResetTCR_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfiguracaoAtualVerificar">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IOperations/ConfiguracaoAtualVerificar" message="tns:IOperations_ConfiguracaoAtualVerificar_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IOperations/ConfiguracaoAtualVerificarResponse" message="tns:IOperations_ConfiguracaoAtualVerificar_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IOperations/ConfiguracaoAtualVerificarWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IOperations_ConfiguracaoAtualVerificar_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfiguracaoAtualAceitar">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IOperations/ConfiguracaoAtualAceitar" message="tns:IOperations_ConfiguracaoAtualAceitar_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IOperations/ConfiguracaoAtualAceitarResponse" message="tns:IOperations_ConfiguracaoAtualAceitar_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IOperations/ConfiguracaoAtualAceitarWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IOperations_ConfiguracaoAtualAceitar_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IReasons">
+    <wsdl:operation name="CadastrarMotivoOperacao">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IReasons/CadastrarMotivoOperacao" message="tns:IReasons_CadastrarMotivoOperacao_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IReasons/CadastrarMotivoOperacaoResponse" message="tns:IReasons_CadastrarMotivoOperacao_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IReasons/CadastrarMotivoOperacaoWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IReasons_CadastrarMotivoOperacao_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoverMotivoOperacao">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IReasons/RemoverMotivoOperacao" message="tns:IReasons_RemoverMotivoOperacao_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IReasons/RemoverMotivoOperacaoResponse" message="tns:IReasons_RemoverMotivoOperacao_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IReasons/RemoverMotivoOperacaoWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IReasons_RemoverMotivoOperacao_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarMotivoOperacao">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IReasons/AtualizarMotivoOperacao" message="tns:IReasons_AtualizarMotivoOperacao_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IReasons/AtualizarMotivoOperacaoResponse" message="tns:IReasons_AtualizarMotivoOperacao_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IReasons/AtualizarMotivoOperacaoWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IReasons_AtualizarMotivoOperacao_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarMotivosOperacao">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IReasons/ConsultarMotivosOperacao" message="tns:IReasons_ConsultarMotivosOperacao_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IReasons/ConsultarMotivosOperacaoResponse" message="tns:IReasons_ConsultarMotivosOperacao_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IReasons/ConsultarMotivosOperacaoWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IReasons_ConsultarMotivosOperacao_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IUsers">
+    <wsdl:operation name="CadastrarUsuario">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IUsers/CadastrarUsuario" message="tns:IUsers_CadastrarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IUsers/CadastrarUsuarioResponse" message="tns:IUsers_CadastrarUsuario_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IUsers/CadastrarUsuarioWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IUsers_CadastrarUsuario_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarUsuario">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IUsers/AtualizarUsuario" message="tns:IUsers_AtualizarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IUsers/AtualizarUsuarioResponse" message="tns:IUsers_AtualizarUsuario_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IUsers/AtualizarUsuarioWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IUsers_AtualizarUsuario_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExcluirUsuario">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IUsers/ExcluirUsuario" message="tns:IUsers_ExcluirUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IUsers/ExcluirUsuarioResponse" message="tns:IUsers_ExcluirUsuario_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IUsers/ExcluirUsuarioWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IUsers_ExcluirUsuario_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfigurarPrivilegios">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IUsers/ConfigurarPrivilegios" message="tns:IUsers_ConfigurarPrivilegios_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IUsers/ConfigurarPrivilegiosResponse" message="tns:IUsers_ConfigurarPrivilegios_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IUsers/ConfigurarPrivilegiosWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IUsers_ConfigurarPrivilegios_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AlterarLimiteSaque">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IUsers/AlterarLimiteSaque" message="tns:IUsers_AlterarLimiteSaque_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IUsers/AlterarLimiteSaqueResponse" message="tns:IUsers_AlterarLimiteSaque_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IUsers/AlterarLimiteSaqueWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IUsers_AlterarLimiteSaque_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterPrivilegios">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IUsers/ObterPrivilegios" message="tns:IUsers_ObterPrivilegios_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IUsers/ObterPrivilegiosResponse" message="tns:IUsers_ObterPrivilegios_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IUsers/ObterPrivilegiosWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IUsers_ObterPrivilegios_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterPrivilegiosDeUsuario">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IUsers/ObterPrivilegiosDeUsuario" message="tns:IUsers_ObterPrivilegiosDeUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IUsers/ObterPrivilegiosDeUsuarioResponse" message="tns:IUsers_ObterPrivilegiosDeUsuario_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IUsers/ObterPrivilegiosDeUsuarioWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IUsers_ObterPrivilegiosDeUsuario_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterUsuarios">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IUsers/ObterUsuarios" message="tns:IUsers_ObterUsuarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IUsers/ObterUsuariosResponse" message="tns:IUsers_ObterUsuarios_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IUsers/ObterUsuariosWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IUsers_ObterUsuarios_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IContent">
+    <wsdl:operation name="ConsultarConteudoTCR">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/IContent/ConsultarConteudoTCR" message="tns:IContent_ConsultarConteudoTCR_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/IContent/ConsultarConteudoTCRResponse" message="tns:IContent_ConsultarConteudoTCR_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/IContent/ConsultarConteudoTCRWtServiceFaultFault" name="WtServiceFaultFault" message="tns:IContent_ConsultarConteudoTCR_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ICalendar">
+    <wsdl:operation name="AbrirDia">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/ICalendar/AbrirDia" message="tns:ICalendar_AbrirDia_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/ICalendar/AbrirDiaResponse" message="tns:ICalendar_AbrirDia_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/ICalendar/AbrirDiaWtServiceFaultFault" name="WtServiceFaultFault" message="tns:ICalendar_AbrirDia_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FecharDia">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/ICalendar/FecharDia" message="tns:ICalendar_FecharDia_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/ICalendar/FecharDiaResponse" message="tns:ICalendar_FecharDia_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/ICalendar/FecharDiaWtServiceFaultFault" name="WtServiceFaultFault" message="tns:ICalendar_FecharDia_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReabrirDia">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/ICalendar/ReabrirDia" message="tns:ICalendar_ReabrirDia_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/ICalendar/ReabrirDiaResponse" message="tns:ICalendar_ReabrirDia_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/ICalendar/ReabrirDiaWtServiceFaultFault" name="WtServiceFaultFault" message="tns:ICalendar_ReabrirDia_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DiaAberto">
+      <wsdl:input wsaw:Action="http://okibrasil.com/wtservice/ICalendar/DiaAberto" message="tns:ICalendar_DiaAberto_InputMessage" />
+      <wsdl:output wsaw:Action="http://okibrasil.com/wtservice/ICalendar/DiaAbertoResponse" message="tns:ICalendar_DiaAberto_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://okibrasil.com/wtservice/ICalendar/DiaAbertoWtServiceFaultFault" name="WtServiceFaultFault" message="tns:ICalendar_DiaAberto_WtServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="operations" type="tns:IOperations">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CadastrarOperacao">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IOperations/CadastrarOperacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarOperacao">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IOperations/CancelarOperacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarStatusOperacao">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IOperations/ConsultarStatusOperacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfigurarFundoDeTroco">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IOperations/ConfigurarFundoDeTroco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TerminalAbrir">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IOperations/TerminalAbrir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TerminalFechar">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IOperations/TerminalFechar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DepositoIniciar">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IOperations/DepositoIniciar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DepositoContinuar">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IOperations/DepositoContinuar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DepositoFinalizar">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IOperations/DepositoFinalizar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DepositoCancelar">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IOperations/DepositoCancelar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Sacar">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IOperations/Sacar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ContarNotas">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IOperations/ContarNotas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AbastecimentoIniciar">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IOperations/AbastecimentoIniciar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AbastecimentoEncerrar">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IOperations/AbastecimentoEncerrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ResetTCR">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IOperations/ResetTCR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfiguracaoAtualVerificar">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IOperations/ConfiguracaoAtualVerificar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfiguracaoAtualAceitar">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IOperations/ConfiguracaoAtualAceitar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="reasons" type="tns:IReasons">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CadastrarMotivoOperacao">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IReasons/CadastrarMotivoOperacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RemoverMotivoOperacao">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IReasons/RemoverMotivoOperacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarMotivoOperacao">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IReasons/AtualizarMotivoOperacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarMotivosOperacao">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IReasons/ConsultarMotivosOperacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="users" type="tns:IUsers">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CadastrarUsuario">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IUsers/CadastrarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarUsuario">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IUsers/AtualizarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ExcluirUsuario">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IUsers/ExcluirUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfigurarPrivilegios">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IUsers/ConfigurarPrivilegios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AlterarLimiteSaque">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IUsers/AlterarLimiteSaque" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObterPrivilegios">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IUsers/ObterPrivilegios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObterPrivilegiosDeUsuario">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IUsers/ObterPrivilegiosDeUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObterUsuarios">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IUsers/ObterUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="content" type="tns:IContent">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsultarConteudoTCR">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/IContent/ConsultarConteudoTCR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="calendar" type="tns:ICalendar">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AbrirDia">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/ICalendar/AbrirDia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FecharDia">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/ICalendar/FecharDia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReabrirDia">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/ICalendar/ReabrirDia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DiaAberto">
+      <soap:operation soapAction="http://okibrasil.com/wtservice/ICalendar/DiaAberto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WtServiceFaultFault">
+        <soap:fault use="literal" name="WtServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wtService">
+    <wsdl:port name="operations" binding="tns:operations">
+      <soap:address location="http://localhost/wtservice/operations" />
+    </wsdl:port>
+    <wsdl:port name="reasons" binding="tns:reasons">
+      <soap:address location="http://localhost/wtservice/reasons" />
+    </wsdl:port>
+    <wsdl:port name="users" binding="tns:users">
+      <soap:address location="http://localhost/wtservice/users" />
+    </wsdl:port>
+    <wsdl:port name="content" binding="tns:content">
+      <soap:address location="http://localhost/wtservice/content" />
+    </wsdl:port>
+    <wsdl:port name="calendar" binding="tns:calendar">
+      <soap:address location="http://localhost/wtservice/calendar" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

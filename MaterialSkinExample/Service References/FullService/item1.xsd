@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://okibrasil.com/wtservice" elementFormDefault="qualified" targetNamespace="http://okibrasil.com/wtservice" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/wtservice/?xsd=xsd2" namespace="http://okibrasil.com/wtservice/types" />
+  <xs:element name="CadastrarOperacao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://okibrasil.com/wtservice/types" minOccurs="1" name="registerData" nillable="true" type="q1:DadosCadastrarOperacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarOperacaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://okibrasil.com/wtservice/types" minOccurs="0" name="CadastrarOperacaoResult" nillable="true" type="q2:RespostaOperacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelarOperacao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://okibrasil.com/wtservice/types" minOccurs="1" name="cancelData" nillable="true" type="q3:DadosCancelarOperacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelarOperacaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://okibrasil.com/wtservice/types" minOccurs="0" name="CancelarOperacaoResult" nillable="true" type="q4:RespostaOperacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarStatusOperacao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://okibrasil.com/wtservice/types" minOccurs="1" name="statusData" nillable="true" type="q5:DadosConsultarStatusOperacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarStatusOperacaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://okibrasil.com/wtservice/types" minOccurs="0" name="ConsultarStatusOperacaoResult" nillable="true" type="q6:RespostaConsultarStatusOperacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConfigurarFundoDeTroco">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q7:Autenticacao" />
+        <xs:element xmlns:q8="http://okibrasil.com/wtservice/types" minOccurs="1" name="funds" nillable="true" type="q8:ArrayOfDadosFundoDeTroco" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConfigurarFundoDeTrocoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://okibrasil.com/wtservice/types" minOccurs="0" name="ConfigurarFundoDeTrocoResult" nillable="true" type="q9:RetornoPadrao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TerminalAbrir">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q10:Autenticacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TerminalAbrirResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://okibrasil.com/wtservice/types" minOccurs="0" name="TerminalAbrirResult" nillable="true" type="q11:RetornoPadrao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TerminalFechar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q12:Autenticacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TerminalFecharResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://okibrasil.com/wtservice/types" minOccurs="0" name="TerminalFecharResult" nillable="true" type="q13:RetornoPadrao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DepositoIniciar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q14:Autenticacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DepositoIniciarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://okibrasil.com/wtservice/types" minOccurs="0" name="DepositoIniciarResult" nillable="true" type="q15:RetornoPadrao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DepositoContinuar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q16:Autenticacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DepositoContinuarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://okibrasil.com/wtservice/types" minOccurs="0" name="DepositoContinuarResult" nillable="true" type="q17:RetornoOperacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DepositoFinalizar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q18:Autenticacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DepositoFinalizarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://okibrasil.com/wtservice/types" minOccurs="0" name="DepositoFinalizarResult" nillable="true" type="q19:RetornoOperacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DepositoCancelar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q20:Autenticacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DepositoCancelarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://okibrasil.com/wtservice/types" minOccurs="0" name="DepositoCancelarResult" nillable="true" type="q21:RetornoOperacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Sacar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q22:Autenticacao" />
+        <xs:element minOccurs="1" name="iTotalValue" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SacarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://okibrasil.com/wtservice/types" minOccurs="0" name="SacarResult" nillable="true" type="q23:RetornoOperacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContarNotas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q24:Autenticacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContarNotasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://okibrasil.com/wtservice/types" minOccurs="0" name="ContarNotasResult" nillable="true" type="q25:RetornoOperacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AbastecimentoIniciar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q26:Autenticacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AbastecimentoIniciarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://okibrasil.com/wtservice/types" minOccurs="0" name="AbastecimentoIniciarResult" nillable="true" type="q27:RetornoPadrao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AbastecimentoEncerrar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q28:Autenticacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AbastecimentoEncerrarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://okibrasil.com/wtservice/types" minOccurs="0" name="AbastecimentoEncerrarResult" nillable="true" type="q29:RetornoOperacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetTCR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q30:Autenticacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetTCRResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://okibrasil.com/wtservice/types" minOccurs="0" name="ResetTCRResult" nillable="true" type="q31:RetornoPadrao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConfiguracaoAtualVerificar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q32:Autenticacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConfiguracaoAtualVerificarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://okibrasil.com/wtservice/types" minOccurs="0" name="ConfiguracaoAtualVerificarResult" nillable="true" type="q33:ConfiguracaoCassette" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConfiguracaoAtualAceitar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q34:Autenticacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConfiguracaoAtualAceitarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://okibrasil.com/wtservice/types" minOccurs="0" name="ConfiguracaoAtualAceitarResult" nillable="true" type="q35:RetornoPadrao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarMotivoOperacao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q36:Autenticacao" />
+        <xs:element xmlns:q37="http://okibrasil.com/wtservice/types" minOccurs="1" name="reason" nillable="true" type="q37:DadosMotivo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarMotivoOperacaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://okibrasil.com/wtservice/types" minOccurs="0" name="CadastrarMotivoOperacaoResult" nillable="true" type="q38:RetornoPadrao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoverMotivoOperacao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q39:Autenticacao" />
+        <xs:element minOccurs="1" name="TipoMotivo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="1" name="IdMotivo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoverMotivoOperacaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://okibrasil.com/wtservice/types" minOccurs="0" name="RemoverMotivoOperacaoResult" nillable="true" type="q40:RetornoPadrao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarMotivoOperacao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q41:Autenticacao" />
+        <xs:element xmlns:q42="http://okibrasil.com/wtservice/types" minOccurs="1" name="reason" nillable="true" type="q42:DadosMotivo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarMotivoOperacaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://okibrasil.com/wtservice/types" minOccurs="0" name="AtualizarMotivoOperacaoResult" nillable="true" type="q43:RetornoPadrao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarMotivosOperacao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q44:Autenticacao" />
+        <xs:element minOccurs="1" name="TipoMotivo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="1" name="IdMotivo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarMotivosOperacaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://okibrasil.com/wtservice/types" minOccurs="0" name="ConsultarMotivosOperacaoResult" nillable="true" type="q45:DadosConsultaMotivo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q46:Autenticacao" />
+        <xs:element xmlns:q47="http://okibrasil.com/wtservice/types" minOccurs="1" name="registerUserData" nillable="true" type="q47:DadosCadastrarUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://okibrasil.com/wtservice/types" minOccurs="0" name="CadastrarUsuarioResult" nillable="true" type="q48:RetornoPadrao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q49:Autenticacao" />
+        <xs:element xmlns:q50="http://okibrasil.com/wtservice/types" minOccurs="1" name="updateUserData" nillable="true" type="q50:DadosAtualizarUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://okibrasil.com/wtservice/types" minOccurs="0" name="AtualizarUsuarioResult" nillable="true" type="q51:RetornoPadrao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExcluirUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q52:Autenticacao" />
+        <xs:element xmlns:q53="http://okibrasil.com/wtservice/types" minOccurs="1" name="deleteUserData" nillable="true" type="q53:DadosExcluirUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExcluirUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://okibrasil.com/wtservice/types" minOccurs="0" name="ExcluirUsuarioResult" nillable="true" type="q54:RetornoPadrao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConfigurarPrivilegios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q55:Autenticacao" />
+        <xs:element xmlns:q56="http://okibrasil.com/wtservice/types" minOccurs="1" name="privilegesData" nillable="true" type="q56:AlterarPrivilegios" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConfigurarPrivilegiosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://okibrasil.com/wtservice/types" minOccurs="0" name="ConfigurarPrivilegiosResult" nillable="true" type="q57:RetornoPadrao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AlterarLimiteSaque">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q58:Autenticacao" />
+        <xs:element xmlns:q59="http://okibrasil.com/wtservice/types" minOccurs="1" name="changeLimitData" nillable="true" type="q59:AlterarLimite" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AlterarLimiteSaqueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://okibrasil.com/wtservice/types" minOccurs="0" name="AlterarLimiteSaqueResult" nillable="true" type="q60:RetornoPadrao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterPrivilegios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q61:Autenticacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterPrivilegiosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://okibrasil.com/wtservice/types" minOccurs="0" name="ObterPrivilegiosResult" nillable="true" type="q62:ObterPrivilegios" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterPrivilegiosDeUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q63:Autenticacao" />
+        <xs:element minOccurs="1" name="funcional" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterPrivilegiosDeUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://okibrasil.com/wtservice/types" minOccurs="0" name="ObterPrivilegiosDeUsuarioResult" nillable="true" type="q64:ObterPrivilegiosDeUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterUsuarios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q65:Autenticacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterUsuariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://okibrasil.com/wtservice/types" minOccurs="0" name="ObterUsuariosResult" nillable="true" type="q66:ObterUsuarios" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarConteudoTCR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q67:Autenticacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarConteudoTCRResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://okibrasil.com/wtservice/types" minOccurs="0" name="ConsultarConteudoTCRResult" nillable="true" type="q68:DadosConteudoTCR" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AbrirDia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q69:Autenticacao" />
+        <xs:element minOccurs="1" name="day" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AbrirDiaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://okibrasil.com/wtservice/types" minOccurs="0" name="AbrirDiaResult" nillable="true" type="q70:RetornoPadrao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FecharDia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q71:Autenticacao" />
+        <xs:element minOccurs="1" name="day" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FecharDiaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://okibrasil.com/wtservice/types" minOccurs="0" name="FecharDiaResult" nillable="true" type="q72:RetornoPadrao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReabrirDia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q73:Autenticacao" />
+        <xs:element minOccurs="1" name="day" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReabrirDiaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://okibrasil.com/wtservice/types" minOccurs="0" name="ReabrirDiaResult" nillable="true" type="q74:RetornoPadrao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DiaAberto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://okibrasil.com/wtservice/types" minOccurs="1" name="authData" nillable="true" type="q75:Autenticacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DiaAbertoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://okibrasil.com/wtservice/types" minOccurs="0" name="DiaAbertoResult" nillable="true" type="q76:RetornoPadrao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

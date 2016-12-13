@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2e645b93-abde-4ee6-9bee-26b516f3e1d6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/wtservice/?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="6e8f6b7a-7cae-4609-969a-8245c69761be" SourceId="1" SourceUrl="http://localhost/wtservice/?xsd=xsd2" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="505561aa-6dae-4ab7-9202-969777d8967b" SourceId="1" SourceUrl="http://localhost/wtservice/?xsd=xsd0" />
+    <MetadataFile FileName="wtService.wsdl" MetadataType="Wsdl" ID="20b04e58-c15e-47c2-bec2-2aaecfccb54a" SourceId="1" SourceUrl="http://localhost/wtservice/?wsdl" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="ceeb92e0-07bb-43a1-8398-9df4a8e4556d" SourceId="1" SourceUrl="http://localhost/wtservice/?xsd=xsd4" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="10e0ad74-93de-4bc1-b37f-c395c758eef9" SourceId="1" SourceUrl="http://localhost/wtservice/?xsd=xsd3" />
+    <MetadataFile FileName="item4.xsd" MetadataType="Schema" ID="1f777a16-eec8-4831-ac8a-afec5dae67dd" SourceId="1" SourceUrl="http://localhost/wtservice/?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
