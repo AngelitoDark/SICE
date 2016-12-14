@@ -260,6 +260,13 @@ namespace MaterialSkinExample
 
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Retiro retiro = new Retiro();
+            retiro.Show();
+            this.Hide();
+        }
+
         public void Log(string logMessage, TextWriter w)
         {
             string EstadoFecha = (DateTime.Now.ToLongDateString() + DateTime.Now.ToLongTimeString());

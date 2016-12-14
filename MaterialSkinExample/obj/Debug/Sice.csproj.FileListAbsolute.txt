@@ -22,3 +22,4 @@ C:\Users\oki\Documents\SICE\MaterialSkinExample\obj\Debug\MaterialSkinExample.My
 C:\Users\oki\Documents\SICE\MaterialSkinExample\obj\Debug\MaterialSkinExample.Properties.Resources.resources
 C:\Users\oki\Documents\SICE\MaterialSkinExample\obj\Debug\MaterialSkinExample.Deposito.resources
 C:\Users\oki\Documents\SICE\MaterialSkinExample\obj\Debug\Sice.csproj.GenerateResource.Cache
+C:\Users\oki\Documents\SICE\MaterialSkinExample\obj\Debug\MaterialSkinExample.Retiro.resources

@@ -123,6 +123,12 @@
     </Compile>
     <Compile Include="Querys.cs" />
     <Compile Include="Response.cs" />
+    <Compile Include="Retiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Retiro.Designer.cs">
+      <DependentUpon>Retiro.cs</DependentUpon>
+    </Compile>
     <Compile Include="SendJSon.cs" />
     <Compile Include="Service References\FullService\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -162,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Deposito.resx">
       <DependentUpon>Deposito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Retiro.resx">
+      <DependentUpon>Retiro.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -76,8 +76,16 @@ namespace MaterialSkinExample
            // MessageBox.Show("CANTIDAD " + cant0);
             //  MyMessageBox.ShowBox("" + dm0);
         }
+        public int _retiro;
+        public void Retiro() {
 
-
+            authData.Usuario = user;
+            authData.Terminal = terminal;
+            authData.Senha = Pasword;
+         operaciones.Sacar(authData, _retiro) ;
+            // string mensaje =   operaciones.Sacar(authData, _retiro).Retorno;
+            // MessageBox.Show(mensaje);
+        }
 
 
         // Cargando  el retorno del json
