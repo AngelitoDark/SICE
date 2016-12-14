@@ -65,6 +65,12 @@
             this.lblC6 = new System.Windows.Forms.Label();
             this.lbltotalbilletes = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblNo_Cuenta = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lbl_Cajero = new System.Windows.Forms.Label();
+            this.btnprint = new System.Windows.Forms.PictureBox();
+            this.iTalk_Separator1 = new iTalk_Separator();
             this.iTalk_Label1 = new iTalk_Label();
             this.iTalk_HeaderLabel1 = new iTalk_HeaderLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -73,6 +79,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnprint)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -199,7 +206,7 @@
             this.groupBox2.Controls.Add(this.lblC6);
             this.groupBox2.Controls.Add(this.lbltotalbilletes);
             this.groupBox2.Controls.Add(this.pictureBox3);
-            this.groupBox2.Location = new System.Drawing.Point(151, 232);
+            this.groupBox2.Location = new System.Drawing.Point(250, 249);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(616, 360);
             this.groupBox2.TabIndex = 62;
@@ -232,7 +239,7 @@
             // lblT6
             // 
             this.lblT6.AutoSize = true;
-            this.lblT6.BackColor = System.Drawing.Color.Transparent;
+            this.lblT6.BackColor = System.Drawing.Color.White;
             this.lblT6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.lblT6.Location = new System.Drawing.Point(526, 266);
             this.lblT6.Name = "lblT6";
@@ -257,7 +264,7 @@
             // lblD6
             // 
             this.lblD6.AutoSize = true;
-            this.lblD6.BackColor = System.Drawing.Color.Transparent;
+            this.lblD6.BackColor = System.Drawing.Color.White;
             this.lblD6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.lblD6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblD6.Location = new System.Drawing.Point(111, 266);
@@ -306,7 +313,7 @@
             // lblT4
             // 
             this.lblT4.AutoSize = true;
-            this.lblT4.BackColor = System.Drawing.Color.Transparent;
+            this.lblT4.BackColor = System.Drawing.Color.White;
             this.lblT4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.lblT4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblT4.Location = new System.Drawing.Point(526, 191);
@@ -332,7 +339,7 @@
             // lblD4
             // 
             this.lblD4.AutoSize = true;
-            this.lblD4.BackColor = System.Drawing.Color.Transparent;
+            this.lblD4.BackColor = System.Drawing.Color.White;
             this.lblD4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.lblD4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblD4.Location = new System.Drawing.Point(111, 191);
@@ -381,7 +388,7 @@
             // lblT2
             // 
             this.lblT2.AutoSize = true;
-            this.lblT2.BackColor = System.Drawing.Color.Transparent;
+            this.lblT2.BackColor = System.Drawing.Color.White;
             this.lblT2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.lblT2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblT2.Location = new System.Drawing.Point(526, 110);
@@ -394,7 +401,7 @@
             // lblC2
             // 
             this.lblC2.AutoSize = true;
-            this.lblC2.BackColor = System.Drawing.Color.Transparent;
+            this.lblC2.BackColor = System.Drawing.Color.White;
             this.lblC2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.lblC2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblC2.Location = new System.Drawing.Point(351, 110);
@@ -407,7 +414,7 @@
             // lblD2
             // 
             this.lblD2.AutoSize = true;
-            this.lblD2.BackColor = System.Drawing.Color.Transparent;
+            this.lblD2.BackColor = System.Drawing.Color.White;
             this.lblD2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.lblD2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblD2.Location = new System.Drawing.Point(111, 110);
@@ -503,7 +510,7 @@
             // lblC6
             // 
             this.lblC6.AutoSize = true;
-            this.lblC6.BackColor = System.Drawing.Color.Transparent;
+            this.lblC6.BackColor = System.Drawing.Color.White;
             this.lblC6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.lblC6.Location = new System.Drawing.Point(351, 266);
             this.lblC6.Name = "lblC6";
@@ -535,6 +542,72 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(65, 187);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(136, 29);
+            this.label4.TabIndex = 64;
+            this.label4.Text = "No.Cuenta";
+            // 
+            // lblNo_Cuenta
+            // 
+            this.lblNo_Cuenta.AutoSize = true;
+            this.lblNo_Cuenta.BackColor = System.Drawing.SystemColors.Window;
+            this.lblNo_Cuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNo_Cuenta.Location = new System.Drawing.Point(207, 187);
+            this.lblNo_Cuenta.Name = "lblNo_Cuenta";
+            this.lblNo_Cuenta.Size = new System.Drawing.Size(30, 25);
+            this.lblNo_Cuenta.TabIndex = 63;
+            this.lblNo_Cuenta.Text = " 0";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(761, 88);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(120, 29);
+            this.label5.TabIndex = 67;
+            this.label5.Text = "Estacion ";
+            // 
+            // lbl_Cajero
+            // 
+            this.lbl_Cajero.AutoSize = true;
+            this.lbl_Cajero.BackColor = System.Drawing.SystemColors.Window;
+            this.lbl_Cajero.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.lbl_Cajero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_Cajero.Location = new System.Drawing.Point(885, 88);
+            this.lbl_Cajero.Name = "lbl_Cajero";
+            this.lbl_Cajero.Size = new System.Drawing.Size(55, 29);
+            this.lbl_Cajero.TabIndex = 66;
+            this.lbl_Cajero.Text = "201";
+            // 
+            // btnprint
+            // 
+            this.btnprint.BackColor = System.Drawing.Color.Transparent;
+            this.btnprint.Image = ((System.Drawing.Image)(resources.GetObject("btnprint.Image")));
+            this.btnprint.Location = new System.Drawing.Point(828, 606);
+            this.btnprint.Name = "btnprint";
+            this.btnprint.Size = new System.Drawing.Size(130, 130);
+            this.btnprint.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnprint.TabIndex = 68;
+            this.btnprint.TabStop = false;
+            this.btnprint.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // iTalk_Separator1
+            // 
+            this.iTalk_Separator1.BackColor = System.Drawing.SystemColors.Window;
+            this.iTalk_Separator1.Location = new System.Drawing.Point(-13, 229);
+            this.iTalk_Separator1.Name = "iTalk_Separator1";
+            this.iTalk_Separator1.Size = new System.Drawing.Size(383, 23);
+            this.iTalk_Separator1.TabIndex = 65;
+            this.iTalk_Separator1.Text = "iTalk_Separator1";
+            // 
             // iTalk_Label1
             // 
             this.iTalk_Label1.AutoSize = true;
@@ -563,6 +636,12 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(982, 742);
+            this.Controls.Add(this.btnprint);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbl_Cajero);
+            this.Controls.Add(this.iTalk_Separator1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblNo_Cuenta);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
@@ -573,6 +652,7 @@
             this.Name = "Deposito_D";
             this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.close);
             this.Load += new System.EventHandler(this.Deposito_D_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -582,6 +662,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnprint)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -627,5 +708,11 @@
         public System.Windows.Forms.Label lblT6;
         public System.Windows.Forms.Label lblC6;
         public System.Windows.Forms.Label lbltotalbilletes;
+        private iTalk_Separator iTalk_Separator1;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label lblNo_Cuenta;
+        public System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbl_Cajero;
+        private System.Windows.Forms.PictureBox btnprint;
     }
 }

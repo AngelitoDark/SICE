@@ -250,9 +250,12 @@ namespace MaterialSkinExample
            // MessageBox.Show(mensaje);
 
             Deposito_D deposito_d = new Deposito_D();
-
+            deposito_d.lblNo_Cuenta.Text = lblDCuenta.Text;
             deposito_d.Show();
             this.Hide();
+
+
+ 
 
         }
 
