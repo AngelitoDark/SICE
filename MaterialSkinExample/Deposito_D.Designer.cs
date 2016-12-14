@@ -583,9 +583,9 @@
             this.lbl_Cajero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl_Cajero.Location = new System.Drawing.Point(885, 88);
             this.lbl_Cajero.Name = "lbl_Cajero";
-            this.lbl_Cajero.Size = new System.Drawing.Size(55, 29);
+            this.lbl_Cajero.Size = new System.Drawing.Size(69, 29);
             this.lbl_Cajero.TabIndex = 66;
-            this.lbl_Cajero.Text = "201";
+            this.lbl_Cajero.Text = "2001";
             // 
             // btnprint
             // 

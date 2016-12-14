@@ -254,8 +254,9 @@ namespace MaterialSkinExample
             deposito_d.Show();
             this.Hide();
 
+            string FechaInicio = String.Format(" {0:s}  ", DateTime.Now + DateTime.Now.ToString("%K"));
+            Deposito_D.FechaInicio = FechaInicio;
 
- 
 
         }
 

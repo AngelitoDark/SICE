@@ -12,6 +12,9 @@ using MaterialSkin.Controls;
 using MySql.Data.MySqlClient;
 using System.Drawing.Printing;
 using System.Threading;
+using System.IO;
+using System.Net;
+using Newtonsoft.Json.Linq;
 
 namespace MaterialSkinExample
 {
@@ -24,6 +27,8 @@ namespace MaterialSkinExample
         static FullService.OperationsClient operaciones = new FullService.OperationsClient();
         static FullService.ConfiguracaoCassette casett = new FullService.ConfiguracaoCassette();
         static FullService.DadosCassete dados = new FullService.DadosCassete();
+
+        public static string FechaInicio;
 
 
 
@@ -103,6 +108,18 @@ namespace MaterialSkinExample
             //    PrintTicket();
             //}
 
+            int vacio = 0;
+            vacio = Convert.ToInt32(lblTotal.Text);
+           
+
+            if (vacio>0)
+            {
+                CadenaJson();
+            }
+            else
+            {
+              //  btnprint.Visible = false;
+            }
         }
 
 
@@ -197,7 +214,7 @@ namespace MaterialSkinExample
 
             g.DrawString("Depósito de EFECTIVO\n" + "Ubicación: Suc. CEDA\n" + "Id Cajero: 201\n", fBody1, sb, 10, ESPACIO);
             g.DrawString("Transacción: " + numtransaccion, fBody1, sb, 10, ESPACIO + 60);
-            g.DrawString("No. Cuenta: " + cuenta, fBody1, sb, 10, ESPACIO + 75);
+            g.DrawString("No. Cuenta: " + cuenta+"****", fBody1, sb, 10, ESPACIO + 75);
             g.DrawString("Fecha: " + DateTime.Now.ToString("dd/MM/yyyy") + "  Hora: " + /*DateTime.Now.ToString("hh:mm:ss")*/ hora1 + "\n", fBody1, sb, 10, ESPACIO + 90);
             g.DrawString("========================================\n", fBody1, sb, 10, ESPACIO + 105);
             g.DrawString("Cantidad     Denominación      Total\n", fBody1, sb, 10, ESPACIO + 125);
@@ -249,6 +266,117 @@ namespace MaterialSkinExample
             g.DrawString("========================================\n", fBody1, sb, 10, ESPACIO + 145 + Mov); Mov = Mov + 20;
             g.DrawString("Para aclaraciones de los depósitos realizados\nponemos a su disposición nuestras líneas de\natención.\n\nMéxico D.F.:\nMonterrey:\nGuadalajara:\nResto del país:\n", fBody1, sb, 10, ESPACIO + 145 + Mov);
         }
+        // creacion de cadena json 
+
+
+        public void CadenaJson()
+        {
+            Deposito deposito = new Deposito();
+            int m_IdEstacion = Convert.ToInt32(lbl_Cajero.Text);
+            string m_Ubicacion = "CEDA";
+            int m_Ciclo = 1;
+            int m_Folio = 287;
+            int IdCategoriaMensaje = 1;
+            int IdTipoMensaje = 1000;
+            int VersionProtocolo = 3;
+
+            string m_FechaHoraFin = String.Format(" {0:s}  ", DateTime.Now + DateTime.Now.ToString("%K"));
+            string m_IdMoneda = "MXN";
+            string m_IdCliente = "1330";
+            string m_Cliente = "Banorte-586082157";
+            string m_BancoCuenta = "Banorte";
+            string m_Cuenta = lblNo_Cuenta.Text;
+            string m_Referencia = "";
+            string m_ClaveOperadorLocal = "586082157";
+            string m_NombreCompletoOperador = "Banorte-586082157";
+            string m_SaldoProcesado = lblTotal.Text;
+            int m_MontoDeclarado;
+            int m_TotalIncidentes = 0;
+            string m_Envases = "";
+            MySqlConnection con = new MySqlConnection("Server=localhost; User=OKI; Password=OKI2016; database=tlock; port=3306;");
+            MySqlCommand cmd = new MySqlCommand();
+            con.Open();
+            cmd.Connection = con;
+            cmd.CommandText = ("select sum(total) as total from transaccion where no_cuenta = '" + lblNo_Cuenta.Text + "'");
+            string m_SaldoAnterior = cmd.ExecuteScalar().ToString();
+            con.Close();
+            //fin consulta 
+
+            int saldoanterior = Convert.ToInt32(m_SaldoAnterior);
+                int m_MontoProcesado = Convert.ToInt32(m_SaldoProcesado);
+    //    int     m_MontoProcesado = 1;
+                  m_MontoDeclarado = saldoanterior + m_MontoProcesado;
+
+            string MXN20c = lblC1.Text;
+            string MXN20d = lblD1.Text;
+
+            string MXN50c = lblC2.Text;
+            string MXN50d = lblD2.Text;
+
+            string MXN100c = lblC3.Text;
+            string MXN100d = lblD3.Text;
+
+            string MXN200c = lblC4.Text;
+            string MXN200d = lblD4.Text;
+
+            string MXN500c = lblC5.Text;
+            string MXN500d = lblD5.Text;
+
+            string MXN1000c = lblC6.Text;
+            string MXN1000d = lblD6.Text;
+
+            try
+            {
+                string webAddr = "http://187.174.220.229/presol/publico/pd.aspx";
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(webAddr);
+                httpWebRequest.ContentType = "application/json; charset=utf-8";
+                httpWebRequest.Method = "POST";
+
+                using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+                {
+                    string json = @"{ m_IdEstacion: " + m_IdEstacion + ",IdCategoriaMensaje: '" + IdCategoriaMensaje + "',IdTipoMensaje:'" + IdTipoMensaje + "',VersionProtocolo:'" + VersionProtocolo + "',  m_Ubicacion: '" + m_Ubicacion +
+"',m_Ciclo:" + m_Ciclo + ",m_Folio:" + m_Folio + ",m_FechaHoraInicio:'" + FechaInicio + "',m_FechaHoraFin:'" + m_FechaHoraFin +
+"',m_IdMoneda:'" + m_IdMoneda + "',m_IdCliente:'" + m_IdCliente + "',m_Cliente:'" + m_Cliente +
+"',m_BancoCuenta:'" + m_BancoCuenta + "',m_Cuenta:'" + m_Cuenta + "',m_Referencia:'" + m_Referencia +
+"',m_ClaveOperadorLocal:'" + m_ClaveOperadorLocal + "',m_NombreCompletoOperador:'" + m_NombreCompletoOperador +
+"',m_ClaveOperadorLocal:'" + m_ClaveOperadorLocal + "',m_SaldoAnterior:" + m_SaldoAnterior +
+",m_MontoProcesado:" + m_MontoProcesado + ",m_MontoDeclarado:" + m_MontoDeclarado +
+",m_TotalIncidentes:" + m_TotalIncidentes + ",   m_DenominacionContenedor:  {'1':" + "{'1000':" + MXN1000c + ",'500':" + MXN500c +
+",'200':" + MXN200c + ",'100':" + MXN100c + ",'50':" + MXN50c + ",'20':" + MXN20c + "}" + "},m_Envases:{}}";
+
+                    JObject jobj = JObject.Parse(json);
+                    streamWriter.Write(json); streamWriter.Flush();
+
+                                       DateTime namefile = DateTime.Now;
+                    int i = 58;
+
+                    char c = (char)i;
+
+                    string m_archivo = namefile.Day.ToString() + "-" + namefile.Month.ToString() + "-" + namefile.Year.ToString() + "h" + namefile.Hour.ToString()+ "m" + namefile.Minute.ToString()+ "s" + namefile.Second.ToString() + ".json";
+                                  
+                    var texto = jobj;
+                       StreamWriter file = new  StreamWriter(@"C:\Directorio SICE\JSONS_D\ " + m_archivo);
+
+                   
+                    file.WriteLine(texto);
+                    file.Close();
+
+                }
+                var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                {
+                    var responseText = streamReader.ReadToEnd();
+                }
+
+            }
+            catch (WebException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+        }
+
 
 
         private void lblD6_Click(object sender, EventArgs e)
@@ -383,8 +511,30 @@ namespace MaterialSkinExample
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            SaveTable();
-             PrintTicket();
+
+            
+            
+
+
+            int vacio = 0;
+            vacio = Convert.ToInt32(lblTotal.Text);
+
+
+            if (vacio > 0)
+            {
+                SaveTable();
+                PrintTicket();
+
+
+            }
+            else
+            {
+                MainForm mainform = new MainForm();
+                mainform.Show();
+                this.Hide();
+            }
+
+
         }
     }
 }

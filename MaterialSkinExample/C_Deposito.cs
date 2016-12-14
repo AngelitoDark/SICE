@@ -262,8 +262,8 @@ namespace MaterialSkinExample
         {
             Deposito deposito = new Deposito();
             int m_IdEstacion = Convert.ToInt32(lblCajero.Text);
-            string m_Ubicacion = "BANORTE";
-            int m_Ciclo = 27;
+            string m_Ubicacion = "CEDA";
+            int m_Ciclo = 1;
             int m_Folio = 287;
 
             string m_FechaHoraFin = String.Format(" {0:s}  ", DateTime.Now + DateTime.Now.ToString("%K"));
@@ -333,7 +333,14 @@ namespace MaterialSkinExample
                     streamWriter.Write(json); streamWriter.Flush();
 
                     var texto = jobj;
-                    System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Directorio SICE\transaccion.json");
+                    //   System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Directorio SICE\transaccion.json");
+
+                    DateTime namefile = DateTime.Now;
+                    string m_archivo = namefile.Day.ToString() + "-" + namefile.Month.ToString() + "-" + namefile.Year.ToString() + "h" + namefile.Hour.ToString() + "m" + namefile.Minute.ToString() + "s" + namefile.Second.ToString() + ".json";
+
+                    //var texto = jobj;
+                    StreamWriter file = new StreamWriter(@"C:\Directorio SICE\JSONS_N\" + m_archivo);
+
                     file.WriteLine(texto);
                     file.Close();
 
