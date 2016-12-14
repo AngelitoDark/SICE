@@ -233,7 +233,7 @@
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(27, 29);
             this.lblTotal.TabIndex = 133;
-            this.lblTotal.Text = "$";
+            this.lblTotal.Text = "0";
             this.lblTotal.Click += new System.EventHandler(this.label5_Click);
             // 
             // lblT6
@@ -326,7 +326,7 @@
             // lblC4
             // 
             this.lblC4.AutoSize = true;
-            this.lblC4.BackColor = System.Drawing.Color.Transparent;
+            this.lblC4.BackColor = System.Drawing.Color.White;
             this.lblC4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.lblC4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblC4.Location = new System.Drawing.Point(351, 191);
@@ -500,11 +500,11 @@
             this.lblC7.AutoSize = true;
             this.lblC7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.lblC7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblC7.Location = new System.Drawing.Point(367, 307);
+            this.lblC7.Location = new System.Drawing.Point(360, 307);
             this.lblC7.Name = "lblC7";
-            this.lblC7.Size = new System.Drawing.Size(97, 29);
+            this.lblC7.Size = new System.Drawing.Size(118, 29);
             this.lblC7.TabIndex = 130;
-            this.lblC7.Text = "TOTAL";
+            this.lblC7.Text = "TOTAL $";
             this.lblC7.Click += new System.EventHandler(this.lblC7_Click);
             // 
             // lblC6

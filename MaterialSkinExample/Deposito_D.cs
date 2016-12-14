@@ -31,7 +31,7 @@ namespace MaterialSkinExample
         public Deposito_D()
         {
             InitializeComponent();
-            groupBox1.Location = new Point(325, 130);
+            groupBox1.Location = new Point(350, 130);
             groupBox1.Size = new Size(420, 408);
         }
 
