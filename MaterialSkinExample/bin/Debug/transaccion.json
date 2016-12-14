@@ -1,0 +1,31 @@
+{
+  "m_IdEstacion": 201,
+  "m_Ubicacion": "BANORTE",
+  "m_Ciclo": 27,
+  "m_Folio": 287,
+  "m_FechaHoraInicio": " 24/10/2016 12:35:26-05:00  ",
+  "m_FechaHoraFin": " 24/10/2016 12:38:28-05:00  ",
+  "m_IdMoneda": "MXN",
+  "m_IdCliente": "1330",
+  "m_Cliente": "Banorte-586082157",
+  "m_BancoCuenta": "Banorte",
+  "m_Cuenta": "12113007",
+  "m_Referencia": "",
+  "m_ClaveOperadorLocal": "586082157",
+  "m_NombreCompletoOperador": "Banorte-586082157",
+  "m_SaldoAnterior": 34580,
+  "m_MontoProcesado": 100,
+  "m_MontoDeclarado": 34680,
+  "m_TotalIncidentes": 0,
+  "m_DenominacionContenedor": {
+    "1": {
+      "1000": 0,
+      "500": 0,
+      "200": 0,
+      "100": 1,
+      "50": 0,
+      "20": 0
+    }
+  },
+  "m_Envases": {}
+}

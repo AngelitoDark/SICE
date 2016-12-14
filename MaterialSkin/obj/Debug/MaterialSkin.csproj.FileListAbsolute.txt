@@ -1,0 +1,192 @@
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-\MaterialSkin-master\MaterialSkin\bin\Debug\MaterialSkin.dll
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-\MaterialSkin-master\MaterialSkin\bin\Debug\MaterialSkin.pdb
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.Properties.Resources.resources
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.csproj.GenerateResource.Cache
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.dll
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.pdb
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-\MaterialSkin-master\MaterialSkin\bin\Debug\MaterialSkin.dll.config
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.csprojResolveAssemblyReference.cache
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.Controls.MaterialFlatButton.resources
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.Controls.MaterialForm.resources
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-\MaterialSkin-master\MaterialSkin\bin\Debug\MetroFramework.Design.dll
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-\MaterialSkin-master\MaterialSkin\bin\Debug\MetroFramework.dll
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-\MaterialSkin-master\MaterialSkin\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MaterialSkin.dll.config
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MaterialSkin.dll
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MaterialSkin.pdb
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.csprojResolveAssemblyReference.cache
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.Controls.MaterialFlatButton.resources
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.Controls.MaterialForm.resources
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.Properties.Resources.resources
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.csproj.GenerateResource.Cache
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.dll
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.pdb
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\Newtonsoft.Json.dll
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\Newtonsoft.Json.xml
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MetroFramework.Design.dll
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MetroFramework.dll
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-10.64\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MaterialSkin.dll.config
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-10.64\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MaterialSkin.dll
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-10.64\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MaterialSkin.pdb
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-10.64\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MetroFramework.Design.dll
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-10.64\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MetroFramework.dll
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-10.64\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-10.64\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\Newtonsoft.Json.dll
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-10.64\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\Newtonsoft.Json.xml
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-10.64\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.csprojResolveAssemblyReference.cache
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-10.64\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.Controls.MaterialFlatButton.resources
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-10.64\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.Controls.MaterialForm.resources
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-10.64\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.Properties.Resources.resources
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-10.64\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.csproj.GenerateResource.Cache
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-10.64\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.dll
+C:\Users\oki\Documents\Visual Studio 2015\Projects\Nueva carpeta\MaterialSkin-10.64\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.pdb
+\\itautecserv01\G\PROYECTOS\Residentes\P-Jorge\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MaterialSkin.dll.config
+\\itautecserv01\G\PROYECTOS\Residentes\P-Jorge\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MaterialSkin.dll
+\\itautecserv01\G\PROYECTOS\Residentes\P-Jorge\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MaterialSkin.pdb
+\\itautecserv01\G\PROYECTOS\Residentes\P-Jorge\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MetroFramework.Design.dll
+\\itautecserv01\G\PROYECTOS\Residentes\P-Jorge\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MetroFramework.dll
+\\itautecserv01\G\PROYECTOS\Residentes\P-Jorge\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MetroFramework.Fonts.dll
+\\itautecserv01\G\PROYECTOS\Residentes\P-Jorge\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\Newtonsoft.Json.dll
+\\itautecserv01\G\PROYECTOS\Residentes\P-Jorge\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\Newtonsoft.Json.xml
+\\itautecserv01\G\PROYECTOS\Residentes\P-Jorge\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.csprojResolveAssemblyReference.cache
+\\itautecserv01\G\PROYECTOS\Residentes\P-Jorge\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.Controls.MaterialFlatButton.resources
+\\itautecserv01\G\PROYECTOS\Residentes\P-Jorge\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.Controls.MaterialForm.resources
+\\itautecserv01\G\PROYECTOS\Residentes\P-Jorge\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.Properties.Resources.resources
+\\itautecserv01\G\PROYECTOS\Residentes\P-Jorge\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.csproj.GenerateResource.Cache
+\\itautecserv01\G\PROYECTOS\Residentes\P-Jorge\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.dll
+\\itautecserv01\G\PROYECTOS\Residentes\P-Jorge\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.pdb
+R:\P-Luis\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MaterialSkin.dll.config
+R:\P-Luis\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MaterialSkin.dll
+R:\P-Luis\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MaterialSkin.pdb
+R:\P-Luis\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MetroFramework.Design.dll
+R:\P-Luis\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MetroFramework.dll
+R:\P-Luis\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MetroFramework.Fonts.dll
+R:\P-Luis\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\Newtonsoft.Json.dll
+R:\P-Luis\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\Newtonsoft.Json.xml
+R:\P-Luis\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.csprojResolveAssemblyReference.cache
+R:\P-Luis\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.Controls.MaterialFlatButton.resources
+R:\P-Luis\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.Controls.MaterialForm.resources
+R:\P-Luis\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.Properties.Resources.resources
+R:\P-Luis\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.csproj.GenerateResource.Cache
+R:\P-Luis\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.dll
+R:\P-Luis\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.pdb
+R:\Pruebas sice\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MaterialSkin.dll.config
+R:\Pruebas sice\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MaterialSkin.dll
+R:\Pruebas sice\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MaterialSkin.pdb
+R:\Pruebas sice\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MetroFramework.Design.dll
+R:\Pruebas sice\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MetroFramework.dll
+R:\Pruebas sice\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\MetroFramework.Fonts.dll
+R:\Pruebas sice\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\Newtonsoft.Json.dll
+R:\Pruebas sice\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\bin\Debug\Newtonsoft.Json.xml
+R:\Pruebas sice\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.csprojResolveAssemblyReference.cache
+R:\Pruebas sice\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.Controls.MaterialFlatButton.resources
+R:\Pruebas sice\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.Controls.MaterialForm.resources
+R:\Pruebas sice\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.Properties.Resources.resources
+R:\Pruebas sice\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.csproj.GenerateResource.Cache
+R:\Pruebas sice\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.dll
+R:\Pruebas sice\4-11-2016\MaterialSkin-1\MaterialSkin-1\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.pdb
+R:\Pruebas sice\8-11-2016-2\SICE\MaterialSkin\bin\Debug\MaterialSkin.dll.config
+R:\Pruebas sice\8-11-2016-2\SICE\MaterialSkin\bin\Debug\MaterialSkin.dll
+R:\Pruebas sice\8-11-2016-2\SICE\MaterialSkin\bin\Debug\MaterialSkin.pdb
+R:\Pruebas sice\8-11-2016-2\SICE\MaterialSkin\bin\Debug\MetroFramework.Design.dll
+R:\Pruebas sice\8-11-2016-2\SICE\MaterialSkin\bin\Debug\MetroFramework.dll
+R:\Pruebas sice\8-11-2016-2\SICE\MaterialSkin\bin\Debug\MetroFramework.Fonts.dll
+R:\Pruebas sice\8-11-2016-2\SICE\MaterialSkin\bin\Debug\Newtonsoft.Json.dll
+R:\Pruebas sice\8-11-2016-2\SICE\MaterialSkin\bin\Debug\Newtonsoft.Json.xml
+R:\Pruebas sice\8-11-2016-2\SICE\MaterialSkin\obj\Debug\MaterialSkin.csprojResolveAssemblyReference.cache
+R:\Pruebas sice\8-11-2016-2\SICE\MaterialSkin\obj\Debug\MaterialSkin.Controls.MaterialFlatButton.resources
+R:\Pruebas sice\8-11-2016-2\SICE\MaterialSkin\obj\Debug\MaterialSkin.Controls.MaterialForm.resources
+R:\Pruebas sice\8-11-2016-2\SICE\MaterialSkin\obj\Debug\MaterialSkin.Properties.Resources.resources
+R:\Pruebas sice\8-11-2016-2\SICE\MaterialSkin\obj\Debug\MaterialSkin.csproj.GenerateResource.Cache
+R:\Pruebas sice\8-11-2016-2\SICE\MaterialSkin\obj\Debug\MaterialSkin.dll
+R:\Pruebas sice\8-11-2016-2\SICE\MaterialSkin\obj\Debug\MaterialSkin.pdb
+C:\Users\oki\Desktop\8-11-2016-2 - copia Martes\SICE\MaterialSkin\bin\Debug\MaterialSkin.dll.config
+C:\Users\oki\Desktop\8-11-2016-2 - copia Martes\SICE\MaterialSkin\bin\Debug\MaterialSkin.dll
+C:\Users\oki\Desktop\8-11-2016-2 - copia Martes\SICE\MaterialSkin\bin\Debug\MaterialSkin.pdb
+C:\Users\oki\Desktop\8-11-2016-2 - copia Martes\SICE\MaterialSkin\bin\Debug\MetroFramework.Design.dll
+C:\Users\oki\Desktop\8-11-2016-2 - copia Martes\SICE\MaterialSkin\bin\Debug\MetroFramework.dll
+C:\Users\oki\Desktop\8-11-2016-2 - copia Martes\SICE\MaterialSkin\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\oki\Desktop\8-11-2016-2 - copia Martes\SICE\MaterialSkin\bin\Debug\Newtonsoft.Json.dll
+C:\Users\oki\Desktop\8-11-2016-2 - copia Martes\SICE\MaterialSkin\bin\Debug\Newtonsoft.Json.xml
+C:\Users\oki\Desktop\8-11-2016-2 - copia Martes\SICE\MaterialSkin\obj\Debug\MaterialSkin.csprojResolveAssemblyReference.cache
+C:\Users\oki\Desktop\8-11-2016-2 - copia Martes\SICE\MaterialSkin\obj\Debug\MaterialSkin.Controls.MaterialFlatButton.resources
+C:\Users\oki\Desktop\8-11-2016-2 - copia Martes\SICE\MaterialSkin\obj\Debug\MaterialSkin.Controls.MaterialForm.resources
+C:\Users\oki\Desktop\8-11-2016-2 - copia Martes\SICE\MaterialSkin\obj\Debug\MaterialSkin.Properties.Resources.resources
+C:\Users\oki\Desktop\8-11-2016-2 - copia Martes\SICE\MaterialSkin\obj\Debug\MaterialSkin.csproj.GenerateResource.Cache
+C:\Users\oki\Desktop\8-11-2016-2 - copia Martes\SICE\MaterialSkin\obj\Debug\MaterialSkin.dll
+C:\Users\oki\Desktop\8-11-2016-2 - copia Martes\SICE\MaterialSkin\obj\Debug\MaterialSkin.pdb
+P:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\bin\Debug\MaterialSkin.dll.config
+P:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\bin\Debug\MaterialSkin.dll
+P:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\bin\Debug\MaterialSkin.pdb
+P:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\bin\Debug\MetroFramework.Design.dll
+P:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\bin\Debug\MetroFramework.dll
+P:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\bin\Debug\MetroFramework.Fonts.dll
+P:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\bin\Debug\Newtonsoft.Json.dll
+P:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\bin\Debug\Newtonsoft.Json.xml
+P:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\obj\Debug\MaterialSkin.csprojResolveAssemblyReference.cache
+P:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\obj\Debug\MaterialSkin.Controls.MaterialFlatButton.resources
+P:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\obj\Debug\MaterialSkin.Controls.MaterialForm.resources
+P:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\obj\Debug\MaterialSkin.Properties.Resources.resources
+P:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\obj\Debug\MaterialSkin.csproj.GenerateResource.Cache
+P:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\obj\Debug\MaterialSkin.dll
+P:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\obj\Debug\MaterialSkin.pdb
+R:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\bin\Debug\MaterialSkin.dll.config
+R:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\bin\Debug\MaterialSkin.dll
+R:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\bin\Debug\MaterialSkin.pdb
+R:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\bin\Debug\MetroFramework.Design.dll
+R:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\bin\Debug\MetroFramework.dll
+R:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\bin\Debug\MetroFramework.Fonts.dll
+R:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\bin\Debug\Newtonsoft.Json.dll
+R:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\bin\Debug\Newtonsoft.Json.xml
+R:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\obj\Debug\MaterialSkin.csprojResolveAssemblyReference.cache
+R:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\obj\Debug\MaterialSkin.Controls.MaterialFlatButton.resources
+R:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\obj\Debug\MaterialSkin.Controls.MaterialForm.resources
+R:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\obj\Debug\MaterialSkin.Properties.Resources.resources
+R:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\obj\Debug\MaterialSkin.csproj.GenerateResource.Cache
+R:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\obj\Debug\MaterialSkin.dll
+R:\P-Luis\8-11-2016-2 - copia Martes\SICE\MaterialSkin\obj\Debug\MaterialSkin.pdb
+R:\P-Luis\22-11-2016-2 -martes\SICE\MaterialSkin\bin\Debug\MaterialSkin.dll.config
+R:\P-Luis\22-11-2016-2 -martes\SICE\MaterialSkin\bin\Debug\MaterialSkin.dll
+R:\P-Luis\22-11-2016-2 -martes\SICE\MaterialSkin\bin\Debug\MaterialSkin.pdb
+R:\P-Luis\22-11-2016-2 -martes\SICE\MaterialSkin\bin\Debug\MetroFramework.Design.dll
+R:\P-Luis\22-11-2016-2 -martes\SICE\MaterialSkin\bin\Debug\MetroFramework.dll
+R:\P-Luis\22-11-2016-2 -martes\SICE\MaterialSkin\bin\Debug\MetroFramework.Fonts.dll
+R:\P-Luis\22-11-2016-2 -martes\SICE\MaterialSkin\bin\Debug\Newtonsoft.Json.dll
+R:\P-Luis\22-11-2016-2 -martes\SICE\MaterialSkin\bin\Debug\Newtonsoft.Json.xml
+R:\P-Luis\22-11-2016-2 -martes\SICE\MaterialSkin\obj\Debug\MaterialSkin.csprojResolveAssemblyReference.cache
+R:\P-Luis\22-11-2016-2 -martes\SICE\MaterialSkin\obj\Debug\MaterialSkin.Controls.MaterialFlatButton.resources
+R:\P-Luis\22-11-2016-2 -martes\SICE\MaterialSkin\obj\Debug\MaterialSkin.Controls.MaterialForm.resources
+R:\P-Luis\22-11-2016-2 -martes\SICE\MaterialSkin\obj\Debug\MaterialSkin.Properties.Resources.resources
+R:\P-Luis\22-11-2016-2 -martes\SICE\MaterialSkin\obj\Debug\MaterialSkin.csproj.GenerateResource.Cache
+R:\P-Luis\22-11-2016-2 -martes\SICE\MaterialSkin\obj\Debug\MaterialSkin.dll
+R:\P-Luis\22-11-2016-2 -martes\SICE\MaterialSkin\obj\Debug\MaterialSkin.pdb
+R:\P-Luis\23-11-2016-2 -Miercoles\SICE\MaterialSkin\bin\Debug\MaterialSkin.dll.config
+R:\P-Luis\23-11-2016-2 -Miercoles\SICE\MaterialSkin\bin\Debug\MaterialSkin.dll
+R:\P-Luis\23-11-2016-2 -Miercoles\SICE\MaterialSkin\bin\Debug\MaterialSkin.pdb
+R:\P-Luis\23-11-2016-2 -Miercoles\SICE\MaterialSkin\bin\Debug\MetroFramework.Design.dll
+R:\P-Luis\23-11-2016-2 -Miercoles\SICE\MaterialSkin\bin\Debug\MetroFramework.dll
+R:\P-Luis\23-11-2016-2 -Miercoles\SICE\MaterialSkin\bin\Debug\MetroFramework.Fonts.dll
+R:\P-Luis\23-11-2016-2 -Miercoles\SICE\MaterialSkin\bin\Debug\Newtonsoft.Json.dll
+R:\P-Luis\23-11-2016-2 -Miercoles\SICE\MaterialSkin\bin\Debug\Newtonsoft.Json.xml
+R:\P-Luis\23-11-2016-2 -Miercoles\SICE\MaterialSkin\obj\Debug\MaterialSkin.csprojResolveAssemblyReference.cache
+R:\P-Luis\23-11-2016-2 -Miercoles\SICE\MaterialSkin\obj\Debug\MaterialSkin.Controls.MaterialFlatButton.resources
+R:\P-Luis\23-11-2016-2 -Miercoles\SICE\MaterialSkin\obj\Debug\MaterialSkin.Controls.MaterialForm.resources
+R:\P-Luis\23-11-2016-2 -Miercoles\SICE\MaterialSkin\obj\Debug\MaterialSkin.Properties.Resources.resources
+R:\P-Luis\23-11-2016-2 -Miercoles\SICE\MaterialSkin\obj\Debug\MaterialSkin.csproj.GenerateResource.Cache
+R:\P-Luis\23-11-2016-2 -Miercoles\SICE\MaterialSkin\obj\Debug\MaterialSkin.dll
+R:\P-Luis\23-11-2016-2 -Miercoles\SICE\MaterialSkin\obj\Debug\MaterialSkin.pdb
+R:\P-Luis\24-11-2016 Jueves\SICE\MaterialSkin\bin\Debug\MaterialSkin.dll.config
+R:\P-Luis\24-11-2016 Jueves\SICE\MaterialSkin\bin\Debug\MaterialSkin.dll
+R:\P-Luis\24-11-2016 Jueves\SICE\MaterialSkin\bin\Debug\MaterialSkin.pdb
+R:\P-Luis\24-11-2016 Jueves\SICE\MaterialSkin\bin\Debug\MetroFramework.Design.dll
+R:\P-Luis\24-11-2016 Jueves\SICE\MaterialSkin\bin\Debug\MetroFramework.dll
+R:\P-Luis\24-11-2016 Jueves\SICE\MaterialSkin\bin\Debug\MetroFramework.Fonts.dll
+R:\P-Luis\24-11-2016 Jueves\SICE\MaterialSkin\bin\Debug\Newtonsoft.Json.dll
+R:\P-Luis\24-11-2016 Jueves\SICE\MaterialSkin\bin\Debug\Newtonsoft.Json.xml
+R:\P-Luis\24-11-2016 Jueves\SICE\MaterialSkin\obj\Debug\MaterialSkin.Controls.MaterialFlatButton.resources
+R:\P-Luis\24-11-2016 Jueves\SICE\MaterialSkin\obj\Debug\MaterialSkin.Controls.MaterialForm.resources
+R:\P-Luis\24-11-2016 Jueves\SICE\MaterialSkin\obj\Debug\MaterialSkin.Properties.Resources.resources
+R:\P-Luis\24-11-2016 Jueves\SICE\MaterialSkin\obj\Debug\MaterialSkin.csproj.GenerateResource.Cache
+R:\P-Luis\24-11-2016 Jueves\SICE\MaterialSkin\obj\Debug\MaterialSkin.dll
+R:\P-Luis\24-11-2016 Jueves\SICE\MaterialSkin\obj\Debug\MaterialSkin.pdb
