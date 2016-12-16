@@ -77,12 +77,43 @@ namespace MaterialSkinExample
             //  MyMessageBox.ShowBox("" + dm0);
         }
         public int _retiro;
+
         public void Retiro() {
 
             authData.Usuario = user;
             authData.Terminal = terminal;
             authData.Senha = Pasword;
-         operaciones.Sacar(authData, _retiro) ;
+
+            string json  = operaciones.Sacar(authData, _retiro).Retorno;
+ 
+            TResponse wtResponse = JsonConvert.DeserializeObject<TResponse>(json);
+            //  MessageBox.Show("" + webTellerResponse.rsmdata.Denom[1]);
+            Total_depositados = wtResponse.iTotalAmount;
+            //    MyMessageBox.ShowBox(""+Total_depositados);
+
+
+
+            dm0 = wtResponse.rsmdata.Denom[0];
+            dm1 = wtResponse.rsmdata.Denom[1];
+            dm2 = wtResponse.rsmdata.Denom[2];
+            dm3 = wtResponse.rsmdata.Denom[3];
+            dm4 = wtResponse.rsmdata.Denom[4];
+            dm5 = wtResponse.rsmdata.Denom[5];
+
+
+            cant0 = wtResponse.rsmdata.Notes[0];
+            cant1 = wtResponse.rsmdata.Notes[1];
+            cant2 = wtResponse.rsmdata.Notes[2];
+            cant3 = wtResponse.rsmdata.Notes[3];
+            cant4 = wtResponse.rsmdata.Notes[4];
+            cant5 = wtResponse.rsmdata.Notes[5];
+
+         
+            //retiro.r1 = dm0;
+            //dm0 = retiro.r1;
+
+            //    MyMessageBox.ShowBox("y" + dm0+"x"+cant0);
+
             // string mensaje =   operaciones.Sacar(authData, _retiro).Retorno;
             // MessageBox.Show(mensaje);
         }

@@ -264,6 +264,9 @@ namespace MaterialSkinExample
         {
             Retiro retiro = new Retiro();
             retiro.Show();
+               retiro.lblR_Cuenta.Text=lblDCuenta.Text;
+
+
             this.Hide();
         }
 
