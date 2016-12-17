@@ -38,15 +38,16 @@
             this.lblNo_Cajero = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.txtRetiro = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.txt_Contraseña = new System.Windows.Forms.TextBox();
             this.iTalk_Separator1 = new iTalk_Separator();
             this.iTalk_Separator3 = new iTalk_Separator();
             this.iTalk_Label1 = new iTalk_Label();
             this.iTalk_HeaderLabel1 = new iTalk_HeaderLabel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txt_Contraseña = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.loading = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -158,6 +159,70 @@
             this.txtRetiro.Size = new System.Drawing.Size(175, 47);
             this.txtRetiro.TabIndex = 65;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.button1.FlatAppearance.BorderSize = 3;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(91, 275);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(241, 84);
+            this.button1.TabIndex = 66;
+            this.button1.Text = "Cancelar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.txt_Contraseña);
+            this.groupBox1.Location = new System.Drawing.Point(346, 329);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(439, 381);
+            this.groupBox1.TabIndex = 67;
+            this.groupBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Window;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(23, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(401, 25);
+            this.label1.TabIndex = 68;
+            this.label1.Text = " Ingresa contraseña para confirmar retiro";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.button2.FlatAppearance.BorderSize = 3;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Location = new System.Drawing.Point(91, 172);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(241, 84);
+            this.button2.TabIndex = 67;
+            this.button2.Text = "RETIRO\r\n";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // txt_Contraseña
+            // 
+            this.txt_Contraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Contraseña.Location = new System.Drawing.Point(117, 79);
+            this.txt_Contraseña.Name = "txt_Contraseña";
+            this.txt_Contraseña.Size = new System.Drawing.Size(175, 47);
+            this.txt_Contraseña.TabIndex = 66;
+            // 
             // iTalk_Separator1
             // 
             this.iTalk_Separator1.BackColor = System.Drawing.SystemColors.Window;
@@ -201,75 +266,23 @@
             this.iTalk_HeaderLabel1.TabIndex = 47;
             this.iTalk_HeaderLabel1.Text = "SICE";
             // 
-            // button1
+            // loading
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(91, 275);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(241, 84);
-            this.button1.TabIndex = 66;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.txt_Contraseña);
-            this.groupBox1.Location = new System.Drawing.Point(346, 329);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(439, 381);
-            this.groupBox1.TabIndex = 67;
-            this.groupBox1.TabStop = false;
-            // 
-            // txt_Contraseña
-            // 
-            this.txt_Contraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Contraseña.Location = new System.Drawing.Point(117, 79);
-            this.txt_Contraseña.Name = "txt_Contraseña";
-            this.txt_Contraseña.Size = new System.Drawing.Size(175, 47);
-            this.txt_Contraseña.TabIndex = 66;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.button2.FlatAppearance.BorderSize = 3;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(91, 172);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(241, 84);
-            this.button2.TabIndex = 67;
-            this.button2.Text = "RETIRO\r\n";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.Window;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(401, 25);
-            this.label1.TabIndex = 68;
-            this.label1.Text = " Ingresa contraseña para confirmar retiro";
+            this.loading.BackColor = System.Drawing.Color.White;
+            this.loading.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loading.Location = new System.Drawing.Point(137, 274);
+            this.loading.Name = "loading";
+            this.loading.Size = new System.Drawing.Size(166, 151);
+            this.loading.TabIndex = 69;
+            this.loading.Text = "Espere... \r\n\r\n Retirando Efectivo";
+            this.loading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Retiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1044, 780);
+            this.Controls.Add(this.loading);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtRetiro);
             this.Controls.Add(this.button4);
@@ -316,5 +329,6 @@
         public System.Windows.Forms.TextBox txt_Contraseña;
         public System.Windows.Forms.Label lblR_Cuenta;
         public System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label loading;
     }
 }

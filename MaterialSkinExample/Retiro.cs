@@ -1,6 +1,7 @@
 ﻿using MaterialSkin;
 using MaterialSkin.Controls;
 using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,30 +10,57 @@ using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MaterialSkinExample
 {
-    public partial class Retiro : MaterialForm 
+    public partial class Retiro : MaterialForm
     {
+
+        static string user = "TCR";
+        static String Pasword = "12345";
+        static string terminal = "123";
+        static FullService.Autenticacao authData = new FullService.Autenticacao();
+        static FullService.OperationsClient operaciones = new FullService.OperationsClient();
+        static FullService.ConfiguracaoCassette casett = new FullService.ConfiguracaoCassette();
+        static FullService.DadosCassete dados = new FullService.DadosCassete();
+
 
         private readonly MaterialSkinManager materialSkinManager;
-        public int  r1;
+        // public int  r1;
+        // Continuando con el Deposito
+        int dm0;
+        int dm1;
+        int dm2;
+        int dm3;
+        int dm4;
+        int dm5;
+
+        //Cantidades por unidad
+        int cant0;
+        int cant1;
+        int cant2;
+        int cant3;
+        int cant4;
+        int cant5;
+        int totalretiro;
 
 
-    public Retiro()
-    {
-        InitializeComponent();
+
+        public Retiro()
+        {
+            InitializeComponent();
 
 
 
-        materialSkinManager = MaterialSkinManager.Instance;
-        materialSkinManager.AddFormToManage(this);
-        materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-        materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey900, Primary.BlueGrey100, Primary.gris500, Accent.LightBlue200, TextShade.WHITE);
+            materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey900, Primary.BlueGrey100, Primary.gris500, Accent.LightBlue200, TextShade.WHITE);
 
-    }
+        }
         Response resp = new Response();
         private void Retiro_Load(object sender, EventArgs e)
         {
@@ -40,7 +68,13 @@ namespace MaterialSkinExample
             groupBox1.Visible = false;
             groupBox1.Location = new Point(316, 254);
             groupBox1.Size = new Size(439, 381);
-           
+
+            loading.Visible = false;
+            loading.Location = new Point(150, 242);
+            loading.Size = new Size(703, 471);
+
+
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -55,7 +89,7 @@ namespace MaterialSkinExample
             {
 
                 resp._retiro = Convert.ToInt32(txtRetiro.Text);
-               groupBox1.Visible = true;
+                groupBox1.Visible = true;
             }
 
 
@@ -75,6 +109,22 @@ namespace MaterialSkinExample
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+            Thread th = new Thread(new ThreadStart(operacion_retiro));
+            th.Start();
+
+            th.Join();
+            MainForm mainform = new MainForm();
+            this.Hide();
+            mainform.Show();
+
+
+
+
+
+        }
+        public void operacion_retiro()
+        {
             if (string.IsNullOrEmpty(txt_Contraseña.Text))
             {
                 string result = MyMessageBox.ShowBox("Debes Ingresar Contraseña.", "Mensaje");
@@ -93,10 +143,9 @@ namespace MaterialSkinExample
 
                     if (Cuenta == lblR_Cuenta.Text.Trim() && Contraseña == txt_Contraseña.Text.Trim())
                     {
-                        resp.Retiro();
+                        loading.Visible = true;
+                        //  resp.Retiro();
                         PrintTicket();
-                        //Process.Start("shutdown.exe", "-f");
-                        // string errorcontraseña = MyMessageBox.ShowBox(" El equipo se Apagara.", "Mensaje");
                     }
 
                 }
@@ -107,8 +156,8 @@ namespace MaterialSkinExample
                     string errorcontraseña = MyMessageBox.ShowBox(" Contraseña Incorrecta.", "Mensaje");
                     txt_Contraseña.Clear();
                 }
-        }
 
+        }
 
 
         public void PrintTicket()
@@ -118,23 +167,75 @@ namespace MaterialSkinExample
             pd.PrintController = new StandardPrintController();
             pd.Print();
 
-            MainForm mainform = new MainForm();
-            mainform.Show();
-            this.Hide();
         }
-        Response respuesta = new Response();
+        //    Response respuesta = new Response();
         //Nuevo Ticket
         void pd_PrintPage(object sender, PrintPageEventArgs e)
         {
+
+            authData.Usuario = user;
+            authData.Terminal = terminal;
+            authData.Senha = Pasword;
+            int RETIRO = Convert.ToInt32(txtRetiro.Text);
+            string json = operaciones.Sacar(authData, RETIRO).Retorno;
+
+            TResponse wtResponse = JsonConvert.DeserializeObject<TResponse>(json);
+
+            dm0 = wtResponse.rsmdata.Denom[0];
+            dm1 = wtResponse.rsmdata.Denom[1];
+            dm2 = wtResponse.rsmdata.Denom[2];
+            dm3 = wtResponse.rsmdata.Denom[3];
+            dm4 = wtResponse.rsmdata.Denom[4];
+            dm5 = wtResponse.rsmdata.Denom[5];
+
+            cant0 = wtResponse.rsmdata.Notes[0];
+            cant1 = wtResponse.rsmdata.Notes[1];
+            cant2 = wtResponse.rsmdata.Notes[2];
+            cant3 = wtResponse.rsmdata.Notes[3];
+            cant4 = wtResponse.rsmdata.Notes[4];
+            cant5 = wtResponse.rsmdata.Notes[5];
+
+
+            int total1 = cant0 * dm0;
+            int total2 = cant1 * dm1;
+            int total3 = cant2 * dm2;
+            int total4 = cant3 * dm3;
+            int total5 = cant4 * dm4;
+            int total6 = cant5 * dm5;
+
+            //Salvando las tablas 
+
+            int no_cuenta = Convert.ToInt32(lblR_Cuenta.Text);
+
+            int id_cajero = Convert.ToInt32(lblNo_Cajero.Text);
+            int MXN20 = cant0;
+            int MXN50 = cant1;
+            int MXN100 = cant2;
+            int MXN200 = cant3;
+            int MXN500 = cant4;
+            int MXN1000 = cant5;
+            int Total_Billetes = MXN20 + MXN50 + MXN100 + MXN200 + MXN500 + MXN1000;
+            //totalretiro = 
+            int mTotal = wtResponse.iTotalAmount;
+            MySqlConnection conn = new MySqlConnection("Server=localhost; User=OKI; Password=OKI2016; database=tlock; port=3306;");
+            MySqlCommand cmdd = new MySqlCommand();
+            conn.Open();
+            cmdd.Connection = conn;
+            cmdd.CommandText = "Insert into  retiro ( id_cajero, no_Cuenta, MXN20, MXN50, MXN100, MXN200, MXN500,MXN1000,    totalBilletes,total) VALUES ( '" + id_cajero + "','" + no_cuenta + "','" +
+                    MXN20 + "','" +
+                    MXN50 + "','" +
+                    MXN100 + "','" +
+                    MXN200 + "','" +
+                  MXN500 + "','" +
+                   MXN1000 + "','" +
+                    Total_Billetes + "','" +
+                    mTotal + "')";
+            cmdd.ExecuteScalar();
+            conn.Close();
+
+            ///--------------------------
             string hora1 = DateTime.Now.ToString("HH:mm:ss");
-         /*   int cant1 = Convert.ToInt32(lblC1.Text);  // Conversión de datos de string a enteros
-            int cant2 = Convert.ToInt32(lblC2.Text);  //..  
-            int cant3 = Convert.ToInt32(lblC3.Text);  //..
-            int cant4 = Convert.ToInt32(lblC4.Text);  //..
-            int cant5 = Convert.ToInt32(lblC5.Text);  //..
-            int cant6 = Convert.ToInt32(lblC6.Text);  // Conversión de datos de string a enteros
-            int Billetes = cant1 + cant2 + cant3 + cant4 + cant5 + cant6;  //Suma total de cantidades
-            */
+
             string cuenta = lblR_Cuenta.Text; //Número de cuenta cliente
             int Mov = 0;
             //Consulta SQL  
@@ -143,7 +244,7 @@ namespace MaterialSkinExample
             con.Open();
             cmd.Connection = con;
 
-            cmd.CommandText = ("select max(id_transaccion)from transaccion");
+            cmd.CommandText = ("select max(id_transaccion)from retiro");
 
             string numtransaccion = cmd.ExecuteScalar().ToString();
 
@@ -151,7 +252,6 @@ namespace MaterialSkinExample
             // Fin de Consulta SQL
 
             int ESPACIO = 85;  // Interlineado estandar entre texto
-            //string logo = Application.StartupPath + "\\logo.png";  //Carga de logotipo
             Graphics g = e.Graphics;  //Uso de graficos para impresión de ticket
 
             string logo = Application.StartupPath + "\\logo.jpg";
@@ -165,70 +265,121 @@ namespace MaterialSkinExample
             g.DrawString("No. Cuenta: " + cuenta + "****", fBody1, sb, 10, ESPACIO + 75);
             g.DrawString("Fecha: " + DateTime.Now.ToString("dd/MM/yyyy") + "  Hora: " + /*DateTime.Now.ToString("hh:mm:ss")*/ hora1 + "\n", fBody1, sb, 10, ESPACIO + 90);
             g.DrawString("========================================\n", fBody1, sb, 10, ESPACIO + 105);
-             g.DrawString("Cantidad     Denominación      Total\n", fBody1, sb, 10, ESPACIO + 125);
-
-            //lblD1.Text = (respuesta.dm0).ToString();
-            //lblD2.Text = (respuesta.dm1).ToString();
-            //lblD3.Text = (respuesta.dm2).ToString();
-            //lblD4.Text = (respuesta.dm3).ToString();
-            //lblD5.Text = (respuesta.dm4).ToString();
-            //lblD6.Text = (respuesta.dm5).ToString();
+            g.DrawString("Cantidad      Denominación        Total\n", fBody1, sb, 10, ESPACIO + 125);
 
 
-            // if (respuesta.dm0 >= 1)
-            //{
+          
 
-           string text = (respuesta.dm0).ToString();
 
-            g.DrawString( r1.ToString(), fBody1, sb, 30, ESPACIO + 145);
-                g.DrawString("$ 20", fBody1, sb, 100, ESPACIO + 145);
-               // g.DrawString(lblT1.Text, fBody1, sb, 180, ESPACIO + 145);
+            if (cant0 >= 1)
+            {
+
+                g.DrawString(cant0.ToString(), fBody1, sb, 30, ESPACIO + 145);
+                g.DrawString("$ " + dm0, fBody1, sb, 100, ESPACIO + 145);
+                g.DrawString(total1.ToString(), fBody1, sb, 180, ESPACIO + 145);
                 Mov = Mov + 20;
-          // }
-        /*   if (cant2 >= 1)
-          {
-              g.DrawString(lblC2.Text, fBody1, sb, 30, ESPACIO + 145 + Mov);
-              g.DrawString(lblD2.Text, fBody1, sb, 100, ESPACIO + 145 + Mov);
-              g.DrawString(lblT2.Text, fBody1, sb, 180, ESPACIO + 145 + Mov);
-              Mov = Mov + 20;
-          }
-          if (cant3 >= 1)
-          {
-              g.DrawString(lblC3.Text, fBody1, sb, 30, ESPACIO + 145 + Mov);
-              g.DrawString(lblD3.Text, fBody1, sb, 100, ESPACIO + 145 + Mov);
-              g.DrawString(lblT3.Text, fBody1, sb, 180, ESPACIO + 145 + Mov);
-              Mov = Mov + 20;
-          }
-          if (cant4 >= 1)
-          {
-              g.DrawString(lblC4.Text, fBody1, sb, 30, ESPACIO + 145 + Mov);
-              g.DrawString(lblD4.Text, fBody1, sb, 100, ESPACIO + 145 + Mov);
-              g.DrawString(lblT4.Text, fBody1, sb, 180, ESPACIO + 145 + Mov);
-              Mov = Mov + 20;
-          }
-          if (cant5 >= 1)
-          {
-              g.DrawString(lblC5.Text, fBody1, sb, 30, ESPACIO + 145 + Mov);
-              g.DrawString(lblD5.Text, fBody1, sb, 100, ESPACIO + 145 + Mov);
-              g.DrawString(lblT5.Text, fBody1, sb, 180, ESPACIO + 145 + Mov);
-              Mov = Mov + 20;
-          }
-          if (cant6 >= 1)
-          {
-              g.DrawString(lblC6.Text, fBody1, sb, 30, ESPACIO + 145 + Mov);
-              g.DrawString(lblD6.Text, fBody1, sb, 100, ESPACIO + 145 + Mov);
-              g.DrawString(lblT6.Text, fBody1, sb, 180, ESPACIO + 145 + Mov);
-              Mov = Mov + 20;
-          }
-          g.DrawString("========================================\n", fBody1, sb, 10, ESPACIO + 145 + Mov); Mov = Mov + 20;
-        */
-        //g.DrawString("Saldo Anterior:" + 12 + "\n", fBody1, sb, 10, ESPACIO + 145 + Mov); Mov = Mov + 20;
-        //    g.DrawString("Total Retiro: " + "$" + txtRetiro.Text + "\n", fBody1, sb, 10, ESPACIO + 145 + Mov); Mov = Mov + 20;
-        //    g.DrawString("========================================\n", fBody1, sb, 10, ESPACIO + 145 + Mov); Mov = Mov + 20;
+            }
+            if (cant1 >= 1)
+            {
+                g.DrawString(cant1.ToString(), fBody1, sb, 30, ESPACIO + 145 + Mov);
+                g.DrawString("$ " + dm1, fBody1, sb, 100, ESPACIO + 145 + Mov);
+                g.DrawString(total2.ToString(), fBody1, sb, 180, ESPACIO + 145 + Mov);
+                Mov = Mov + 20;
+            }
+            if (cant2 >= 1)
+            {
+                g.DrawString(cant2.ToString(), fBody1, sb, 30, ESPACIO + 145 + Mov);
+                g.DrawString("$ " + dm2, fBody1, sb, 100, ESPACIO + 145 + Mov);
+                g.DrawString(total3.ToString(), fBody1, sb, 180, ESPACIO + 145 + Mov);
+                Mov = Mov + 20;
+            }
+            if (cant3 >= 1)
+            {
+                g.DrawString(cant3.ToString(), fBody1, sb, 30, ESPACIO + 145 + Mov);
+                g.DrawString("$ " + dm3, fBody1, sb, 100, ESPACIO + 145 + Mov);
+                g.DrawString(total4.ToString(), fBody1, sb, 180, ESPACIO + 145 + Mov);
+                Mov = Mov + 20;
+            }
+            if (cant4 >= 1)
+            {
+                g.DrawString(cant4.ToString(), fBody1, sb, 30, ESPACIO + 145 + Mov);
+                g.DrawString("$ " + dm4, fBody1, sb, 100, ESPACIO + 145 + Mov);
+                g.DrawString(total5.ToString(), fBody1, sb, 180, ESPACIO + 145 + Mov);
+                Mov = Mov + 20;
+            }
+            if (cant5 >= 1)
+            {
+                g.DrawString(cant5.ToString(), fBody1, sb, 30, ESPACIO + 145 + Mov);
+                g.DrawString("$ " + dm5, fBody1, sb, 100, ESPACIO + 145 + Mov);
+                g.DrawString(total6.ToString(), fBody1, sb, 180, ESPACIO + 145 + Mov);
+                Mov = Mov + 20;
+            }
+            g.DrawString("========================================\n", fBody1, sb, 10, ESPACIO + 145 + Mov); Mov = Mov + 20;
+            totalretiro = wtResponse.iTotalAmount;
+            if (wtResponse.iTotalAmount == wtResponse.iTotalAmount)
+            {
+
+            }
+            else
+            {
+                if (RETIRO != totalretiro)
+                {
+                    MyMessageBox.ShowBox("Retiro incompleto");
+                    g.DrawString(" ----- Retiro incompleto cajero vacio ----- " + "\n", fBody1, sb, 10, ESPACIO + 145 + Mov); Mov = Mov + 20;
+                    operaciones.ResetTCR(authData);//reseteto del TCR
+                }
+                else
+                {
+                    MyMessageBox.ShowBox("Operacion exitosa no olvide retirar su ticket");
+                }
+            }
+
+
+
+            g.DrawString("Retiro Efectuado:" + totalretiro.ToString() + "\n", fBody1, sb, 10, ESPACIO + 145 + Mov); Mov = Mov + 20;
+            //    g.DrawString("Total Retiro: " + "$" + txtRetiro.Text + "\n", fBody1, sb, 10, ESPACIO + 145 + Mov); Mov = Mov + 20;
+            g.DrawString("========================================\n", fBody1, sb, 10, ESPACIO + 145 + Mov); Mov = Mov + 20;
             g.DrawString("Para aclaraciones de los depósitos realizados\nponemos a su disposición nuestras líneas de\natención.\n\nMéxico D.F.:\nMonterrey:\nGuadalajara:\nResto del país:\n", fBody1, sb, 10, ESPACIO + 145 + Mov);
+
+
+          
+
         }
-        // creacion de cadena json 
+
 
 
     }
+
+
+    public class TResponse
+    {
+        public int iTotalAmount { get; set; }
+        public string szCurrency { get; set; }
+        public int iArrayReject { get; set; }
+        public RsmData rsmdata { get; set; }
+        public RejectData rejecdata { get; set; }
+    }
+    public class RsmData
+    {
+        public string szCurrency { get; set; }
+        public int iArrayReject { get; set; }
+        public IList<int> Denom { get; set; }
+        public IList<int> Notes { get; set; }
+        public IList<Codes> CurrencyCode { get; set; }
+    }
+
+    public class Codes
+    {
+        public string Data { get; set; }
+    }
+
+    public class RejectData
+    {
+        public IList<int> Denom { get; set; }
+        public IList<int> Notes { get; set; }
+        public IList<int> bCurrencyCode { get; set; }
+        public IList<int> bCategory { get; set; }
+        public IList<int> bRjCode { get; set; }
+    }
+    // }
 }
