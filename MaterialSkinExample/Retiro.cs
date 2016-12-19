@@ -125,6 +125,12 @@ namespace MaterialSkinExample
         }
         public void operacion_retiro()
         {
+
+
+
+
+
+
             if (string.IsNullOrEmpty(txt_Contraseña.Text))
             {
                 string result = MyMessageBox.ShowBox("Debes Ingresar Contraseña.", "Mensaje");
@@ -143,9 +149,43 @@ namespace MaterialSkinExample
 
                     if (Cuenta == lblR_Cuenta.Text.Trim() && Contraseña == txt_Contraseña.Text.Trim())
                     {
-                        loading.Visible = true;
-                        //  resp.Retiro();
-                        PrintTicket();
+
+                        try
+                        {
+                            
+                            MySqlConnection _con = new MySqlConnection("Server=localhost; User=OKI; Password=OKI2016; database=tlock; port=3306;");
+                            MySqlCommand _cmd = new MySqlCommand();
+                            _con.Open();
+                            _cmd.Connection = _con;
+                            DateTime fecha = DateTime.Now;
+
+                            string formato = (fecha.Year + "-" + fecha.Month + "-" + fecha.Day) + "%";
+                            _cmd.CommandText = (" select sum(total) as total from transaccion where fecha_Transaccion LIKE '" + formato + "' and no_cuenta ='" + lblR_Cuenta.Text + "'");
+                           
+                            int _txtRetiro = Convert.ToInt32(txtRetiro.Text);
+                            int saldo_R = Convert.ToInt32(_cmd.ExecuteScalar());
+                            _con.Close();
+                          //  MessageBox.Show("" + saldo_R);
+
+                            if (_txtRetiro>saldo_R)
+                            {
+                                MyMessageBox.ShowBox("La cantidad solicitada no está Disponible");
+                            }
+                            else
+                            {
+                               // MyMessageBox.ShowBox("Ejecutando");
+                                 loading.Visible = true;
+                      
+                           PrintTicket();
+                            }
+                            
+                        }
+                        catch (Exception)
+                        {
+
+                            MessageBox.Show("eror en la consulta ");
+                        }
+
                     }
 
                 }
@@ -268,7 +308,7 @@ namespace MaterialSkinExample
             g.DrawString("Cantidad      Denominación        Total\n", fBody1, sb, 10, ESPACIO + 125);
 
 
-          
+
 
 
             if (cant0 >= 1)
@@ -342,7 +382,7 @@ namespace MaterialSkinExample
             g.DrawString("Para aclaraciones de los depósitos realizados\nponemos a su disposición nuestras líneas de\natención.\n\nMéxico D.F.:\nMonterrey:\nGuadalajara:\nResto del país:\n", fBody1, sb, 10, ESPACIO + 145 + Mov);
 
 
-          
+
 
         }
 
