@@ -74,6 +74,8 @@ namespace MaterialSkinExample
             loading.Size = new Size(703, 471);
 
 
+            this.ActiveControl = null;
+
 
         }
 
@@ -114,9 +116,9 @@ namespace MaterialSkinExample
             th.Start();
 
             th.Join();
-            MainForm mainform = new MainForm();
-            this.Hide();
-            mainform.Show();
+            //MainForm mainform = new MainForm();
+            //this.Hide();
+            //mainform.Show();
 
 
 
@@ -125,12 +127,6 @@ namespace MaterialSkinExample
         }
         public void operacion_retiro()
         {
-
-
-
-
-
-
             if (string.IsNullOrEmpty(txt_Contraseña.Text))
             {
                 string result = MyMessageBox.ShowBox("Debes Ingresar Contraseña.", "Mensaje");
@@ -152,38 +148,51 @@ namespace MaterialSkinExample
 
                         try
                         {
-                            
+
                             MySqlConnection _con = new MySqlConnection("Server=localhost; User=OKI; Password=OKI2016; database=tlock; port=3306;");
                             MySqlCommand _cmd = new MySqlCommand();
+                            MySqlCommand R_cmd = new MySqlCommand();
                             _con.Open();
                             _cmd.Connection = _con;
+                            R_cmd.Connection = _con;
                             DateTime fecha = DateTime.Now;
 
                             string formato = (fecha.Year + "-" + fecha.Month + "-" + fecha.Day) + "%";
                             _cmd.CommandText = (" select sum(total) as total from transaccion where fecha_Transaccion LIKE '" + formato + "' and no_cuenta ='" + lblR_Cuenta.Text + "'");
-                           
-                            int _txtRetiro = Convert.ToInt32(txtRetiro.Text);
-                            int saldo_R = Convert.ToInt32(_cmd.ExecuteScalar());
-                            _con.Close();
-                          //  MessageBox.Show("" + saldo_R);
+                            R_cmd.CommandText = (" select sum(total) as total from retiro where fecha_Transaccion LIKE '" + formato + "' and no_cuenta ='" + lblR_Cuenta.Text + "'");
 
-                            if (_txtRetiro>saldo_R)
+                            string cons = R_cmd.ExecuteScalar().ToString();
+                            int valor = Convert.ToInt32(cons);
+                            //  MessageBox.Show(""+valor);
+                            int _txtRetiro = Convert.ToInt32(txtRetiro.Text);
+                            int saldo_D = Convert.ToInt32(_cmd.ExecuteScalar());
+                            _con.Close();
+
+                            if (_txtRetiro > saldo_D)
                             {
                                 MyMessageBox.ShowBox("La cantidad solicitada no está Disponible");
                             }
                             else
                             {
-                               // MyMessageBox.ShowBox("Ejecutando");
-                                 loading.Visible = true;
-                      
-                           PrintTicket();
+                                if (saldo_D == valor)
+                                {
+                                    MyMessageBox.ShowBox("Saldo insuficiente para retiro ");
+                                }
+                                else {
+
+                                    loading.Visible = true;
+
+                                    PrintTicket();
+                                }
+
                             }
-                            
+
+
                         }
                         catch (Exception)
                         {
 
-                            MessageBox.Show("eror en la consulta ");
+                            MessageBox.Show("error en la consulta");
                         }
 
                     }
@@ -296,7 +305,7 @@ namespace MaterialSkinExample
 
             string logo = Application.StartupPath + "\\logo.jpg";
             Font fBody = new Font("Arial Narrow", 9, FontStyle.Bold); //Cambio de estilo 
-            Font fBody1 = new Font("Arial Narrow", 9, FontStyle.Regular); //Estilo utilizado en ticket
+            Font fBody1 = new Font("Arial Narrow", 10, FontStyle.Regular); //Estilo utilizado en ticket
             SolidBrush sb = new SolidBrush(Color.Black);  //Color de texto
             g.DrawImage(Image.FromFile(logo), 130, -10, 160, 90);
 
@@ -305,7 +314,7 @@ namespace MaterialSkinExample
             g.DrawString("No. Cuenta: " + cuenta + "****", fBody1, sb, 10, ESPACIO + 75);
             g.DrawString("Fecha: " + DateTime.Now.ToString("dd/MM/yyyy") + "  Hora: " + /*DateTime.Now.ToString("hh:mm:ss")*/ hora1 + "\n", fBody1, sb, 10, ESPACIO + 90);
             g.DrawString("========================================\n", fBody1, sb, 10, ESPACIO + 105);
-            g.DrawString("Cantidad      Denominación        Total\n", fBody1, sb, 10, ESPACIO + 125);
+            g.DrawString("Cantidad         Denominación          Total\n", fBody1, sb, 10, ESPACIO + 125);
 
 
 
@@ -316,42 +325,42 @@ namespace MaterialSkinExample
 
                 g.DrawString(cant0.ToString(), fBody1, sb, 30, ESPACIO + 145);
                 g.DrawString("$ " + dm0, fBody1, sb, 100, ESPACIO + 145);
-                g.DrawString(total1.ToString(), fBody1, sb, 180, ESPACIO + 145);
+                g.DrawString("$ " + total1.ToString("N"), fBody1, sb, 180, ESPACIO + 145);
                 Mov = Mov + 20;
             }
             if (cant1 >= 1)
             {
                 g.DrawString(cant1.ToString(), fBody1, sb, 30, ESPACIO + 145 + Mov);
                 g.DrawString("$ " + dm1, fBody1, sb, 100, ESPACIO + 145 + Mov);
-                g.DrawString(total2.ToString(), fBody1, sb, 180, ESPACIO + 145 + Mov);
+                g.DrawString("$ " + total2.ToString("N"), fBody1, sb, 180, ESPACIO + 145 + Mov);
                 Mov = Mov + 20;
             }
             if (cant2 >= 1)
             {
                 g.DrawString(cant2.ToString(), fBody1, sb, 30, ESPACIO + 145 + Mov);
                 g.DrawString("$ " + dm2, fBody1, sb, 100, ESPACIO + 145 + Mov);
-                g.DrawString(total3.ToString(), fBody1, sb, 180, ESPACIO + 145 + Mov);
+                g.DrawString("$ " + total3.ToString("N"), fBody1, sb, 180, ESPACIO + 145 + Mov);
                 Mov = Mov + 20;
             }
             if (cant3 >= 1)
             {
                 g.DrawString(cant3.ToString(), fBody1, sb, 30, ESPACIO + 145 + Mov);
                 g.DrawString("$ " + dm3, fBody1, sb, 100, ESPACIO + 145 + Mov);
-                g.DrawString(total4.ToString(), fBody1, sb, 180, ESPACIO + 145 + Mov);
+                g.DrawString("$ " + total4.ToString("N"), fBody1, sb, 180, ESPACIO + 145 + Mov);
                 Mov = Mov + 20;
             }
             if (cant4 >= 1)
             {
                 g.DrawString(cant4.ToString(), fBody1, sb, 30, ESPACIO + 145 + Mov);
                 g.DrawString("$ " + dm4, fBody1, sb, 100, ESPACIO + 145 + Mov);
-                g.DrawString(total5.ToString(), fBody1, sb, 180, ESPACIO + 145 + Mov);
+                g.DrawString("$ " + total5.ToString("N"), fBody1, sb, 180, ESPACIO + 145 + Mov);
                 Mov = Mov + 20;
             }
             if (cant5 >= 1)
             {
                 g.DrawString(cant5.ToString(), fBody1, sb, 30, ESPACIO + 145 + Mov);
                 g.DrawString("$ " + dm5, fBody1, sb, 100, ESPACIO + 145 + Mov);
-                g.DrawString(total6.ToString(), fBody1, sb, 180, ESPACIO + 145 + Mov);
+                g.DrawString("$ " + total6.ToString("N"), fBody1, sb, 180, ESPACIO + 145 + Mov);
                 Mov = Mov + 20;
             }
             g.DrawString("========================================\n", fBody1, sb, 10, ESPACIO + 145 + Mov); Mov = Mov + 20;
@@ -376,7 +385,7 @@ namespace MaterialSkinExample
 
 
 
-            g.DrawString("Retiro Efectuado:" + totalretiro.ToString() + "\n", fBody1, sb, 10, ESPACIO + 145 + Mov); Mov = Mov + 20;
+            g.DrawString("Retiro Efectuado:" + "$ " + totalretiro.ToString("N") + "\n", fBody1, sb, 10, ESPACIO + 145 + Mov); Mov = Mov + 20;
             //    g.DrawString("Total Retiro: " + "$" + txtRetiro.Text + "\n", fBody1, sb, 10, ESPACIO + 145 + Mov); Mov = Mov + 20;
             g.DrawString("========================================\n", fBody1, sb, 10, ESPACIO + 145 + Mov); Mov = Mov + 20;
             g.DrawString("Para aclaraciones de los depósitos realizados\nponemos a su disposición nuestras líneas de\natención.\n\nMéxico D.F.:\nMonterrey:\nGuadalajara:\nResto del país:\n", fBody1, sb, 10, ESPACIO + 145 + Mov);
@@ -385,9 +394,160 @@ namespace MaterialSkinExample
 
 
         }
+        bool foco=true;
+        private void btn1_Click(object sender, EventArgs e)
+        {
+            if (foco=false)
+            {
+                txtRetiro.Text = txtRetiro.Text + "1";
+            }
 
 
+            if (foco = false )
+            {
+             //   txtRetiro.
+              //  txtRetiro.Focused = false;
+             //   txtRetiro.Focus()=false;
+                txt_Contraseña.Text = txt_Contraseña.Text + "1";
+            }
+            //;
+        }
 
+        private void btn2_Click(object sender, EventArgs e)
+        {
+            if (txtRetiro.Focus())
+            {
+                txtRetiro.Text = txtRetiro.Text + "2";
+            }
+            else
+
+            if (txt_Contraseña.Focus())
+            {
+                txt_Contraseña.Text = txt_Contraseña.Text + "2";
+            }
+        }
+
+        private void btn3_Click(object sender, EventArgs e)
+        {
+            if (txtRetiro.Focus())
+            {
+                txtRetiro.Text = txtRetiro.Text + "3";
+            }
+
+
+            if (txt_Contraseña.Focus())
+            {
+                txt_Contraseña.Text = txt_Contraseña.Text + "3";
+            }
+        }
+
+        private void btn4_Click(object sender, EventArgs e)
+        {
+            if (txtRetiro.Focus())
+            {
+                txtRetiro.Text = txtRetiro.Text + "4";
+            }
+
+
+            if (txt_Contraseña.Focus())
+            {
+                txt_Contraseña.Text = txt_Contraseña.Text + "4";
+            }
+        }
+
+        private void btn5_Click(object sender, EventArgs e)
+        {
+            if (txtRetiro.Focus())
+            {
+                txtRetiro.Text = txtRetiro.Text + "5";
+            }
+
+
+            if (txt_Contraseña.Focus())
+            {
+                txt_Contraseña.Text = txt_Contraseña.Text + "5";
+            }
+        }
+
+        private void btn6_Click(object sender, EventArgs e)
+        {
+            if (txtRetiro.Focus())
+            {
+                txtRetiro.Text = txtRetiro.Text + "6";
+            }
+
+
+            if (txt_Contraseña.Focus())
+            {
+                txt_Contraseña.Text = txt_Contraseña.Text + "6";
+            }
+        }
+
+        private void btn7_Click(object sender, EventArgs e)
+        {
+            if (txtRetiro.Focus())
+            {
+                txtRetiro.Text = txtRetiro.Text + "7";
+            }
+
+
+            if (txt_Contraseña.Focus())
+            {
+                txt_Contraseña.Text = txt_Contraseña.Text + "7";
+            }
+        }
+
+        private void btn8_Click(object sender, EventArgs e)
+        {
+            if (txtRetiro.Focus())
+            {
+                txtRetiro.Text = txtRetiro.Text + "8";
+            }
+
+
+            if (txt_Contraseña.Focus())
+            {
+                txt_Contraseña.Text = txt_Contraseña.Text + "8";
+            }
+        }
+
+        private void btn9_Click(object sender, EventArgs e)
+        {
+            if (txtRetiro.Focus())
+            {
+                txtRetiro.Text = txtRetiro.Text + "9";
+            }
+
+
+            if (txt_Contraseña.Focus())
+            {
+                txt_Contraseña.Text = txt_Contraseña.Text + "9";
+            }
+        }
+
+        private void btn0_Click(object sender, EventArgs e)
+        {
+            if (txtRetiro.Focus())
+            {
+                txtRetiro.Text = txtRetiro.Text + "0";
+            }
+
+
+            if (txt_Contraseña.Focus())
+            {
+                txt_Contraseña.Text = txt_Contraseña.Text + "0";
+            }
+        }
+
+        private void txtRetiro_TextChanged(object sender, EventArgs e)
+        {
+            foco = true;
+        }
+
+        private void txt_Contraseña_TextChanged(object sender, EventArgs e)
+        {
+            foco = false;
+        }
     }
 
 
