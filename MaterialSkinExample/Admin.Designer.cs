@@ -58,6 +58,7 @@
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.chkAdmin = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.txtRepitepass = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtPass = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -77,6 +78,18 @@
             this.btn3 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
+            this.mListView = new iTalk_Listview();
+            this.no_cuenta = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.n_transaccion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Id_Cajero = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MXN20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MXN50 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MXN100 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MXN200 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MXN500 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MXN1000 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TotalBilletes = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Total = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button4 = new System.Windows.Forms.Button();
             this.txtCuenta = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.button3 = new System.Windows.Forms.Button();
@@ -107,22 +120,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblCuentaAdmin = new System.Windows.Forms.Label();
-            this.chkAdmin = new System.Windows.Forms.CheckBox();
             this.iTalk_Label2 = new iTalk_Label();
             this.iTalk_HeaderLabel1 = new iTalk_HeaderLabel();
             this.iTalk_Separator3 = new iTalk_Separator();
-            this.mListView = new iTalk_Listview();
-            this.no_cuenta = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.n_transaccion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Id_Cajero = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MXN20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MXN50 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MXN100 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MXN200 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MXN500 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MXN1000 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.TotalBilletes = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Total = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.tclNumeric3.SuspendLayout();
@@ -148,7 +148,7 @@
             this.metroTabControl1.Location = new System.Drawing.Point(28, 138);
             this.metroTabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(974, 604);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.White;
             this.metroTabControl1.TabIndex = 0;
@@ -657,6 +657,18 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 1;
             // 
+            // chkAdmin
+            // 
+            this.chkAdmin.AutoSize = true;
+            this.chkAdmin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.chkAdmin.Location = new System.Drawing.Point(82, 170);
+            this.chkAdmin.Name = "chkAdmin";
+            this.chkAdmin.Size = new System.Drawing.Size(118, 22);
+            this.chkAdmin.TabIndex = 34;
+            this.chkAdmin.Text = "Administrador";
+            this.chkAdmin.UseVisualStyleBackColor = true;
+            this.chkAdmin.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -769,6 +781,7 @@
             this.groupBox1.Size = new System.Drawing.Size(959, 515);
             this.groupBox1.TabIndex = 37;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // tclNumerico
             // 
@@ -995,6 +1008,97 @@
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = true;
             this.btn1.Click += new System.EventHandler(this.btn1_Click);
+            // 
+            // mListView
+            // 
+            this.mListView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.no_cuenta,
+            this.n_transaccion,
+            this.Id_Cajero,
+            this.MXN20,
+            this.MXN50,
+            this.MXN100,
+            this.MXN200,
+            this.MXN500,
+            this.MXN1000,
+            this.TotalBilletes,
+            this.Total});
+            this.mListView.GridLines = true;
+            this.mListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.mListView.Location = new System.Drawing.Point(4, 128);
+            this.mListView.Margin = new System.Windows.Forms.Padding(4);
+            this.mListView.Name = "mListView";
+            this.mListView.Size = new System.Drawing.Size(948, 282);
+            this.mListView.TabIndex = 0;
+            this.mListView.UseCompatibleStateImageBehavior = false;
+            this.mListView.View = System.Windows.Forms.View.Details;
+            this.mListView.SelectedIndexChanged += new System.EventHandler(this.mListView_SelectedIndexChanged);
+            // 
+            // no_cuenta
+            // 
+            this.no_cuenta.Text = "No Cuenta";
+            this.no_cuenta.Width = 101;
+            // 
+            // n_transaccion
+            // 
+            this.n_transaccion.Text = "No Transaccion";
+            this.n_transaccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.n_transaccion.Width = 127;
+            // 
+            // Id_Cajero
+            // 
+            this.Id_Cajero.Text = "No Cajero";
+            this.Id_Cajero.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Id_Cajero.Width = 89;
+            // 
+            // MXN20
+            // 
+            this.MXN20.Text = "MXN20";
+            this.MXN20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.MXN20.Width = 75;
+            // 
+            // MXN50
+            // 
+            this.MXN50.Text = "MXN50";
+            this.MXN50.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.MXN50.Width = 71;
+            // 
+            // MXN100
+            // 
+            this.MXN100.Text = "MXN100";
+            this.MXN100.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.MXN100.Width = 72;
+            // 
+            // MXN200
+            // 
+            this.MXN200.Text = "MXN200";
+            this.MXN200.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.MXN200.Width = 72;
+            // 
+            // MXN500
+            // 
+            this.MXN500.Text = "MXN500";
+            this.MXN500.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.MXN500.Width = 75;
+            // 
+            // MXN1000
+            // 
+            this.MXN1000.Text = "MXN1000";
+            this.MXN1000.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.MXN1000.Width = 80;
+            // 
+            // TotalBilletes
+            // 
+            this.TotalBilletes.Text = "Total Billetes";
+            this.TotalBilletes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TotalBilletes.Width = 112;
+            // 
+            // Total
+            // 
+            this.Total.Text = "Total";
+            this.Total.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Total.Width = 65;
             // 
             // button4
             // 
@@ -1474,18 +1578,6 @@
             this.lblCuentaAdmin.TabIndex = 52;
             this.lblCuentaAdmin.Text = "1";
             // 
-            // chkAdmin
-            // 
-            this.chkAdmin.AutoSize = true;
-            this.chkAdmin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.chkAdmin.Location = new System.Drawing.Point(82, 170);
-            this.chkAdmin.Name = "chkAdmin";
-            this.chkAdmin.Size = new System.Drawing.Size(118, 22);
-            this.chkAdmin.TabIndex = 34;
-            this.chkAdmin.Text = "Administrador";
-            this.chkAdmin.UseVisualStyleBackColor = true;
-            this.chkAdmin.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
             // iTalk_Label2
             // 
             this.iTalk_Label2.AutoSize = true;
@@ -1519,97 +1611,6 @@
             this.iTalk_Separator3.Size = new System.Drawing.Size(998, 10);
             this.iTalk_Separator3.TabIndex = 46;
             this.iTalk_Separator3.Text = "iTalk_Separator3";
-            // 
-            // mListView
-            // 
-            this.mListView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.no_cuenta,
-            this.n_transaccion,
-            this.Id_Cajero,
-            this.MXN20,
-            this.MXN50,
-            this.MXN100,
-            this.MXN200,
-            this.MXN500,
-            this.MXN1000,
-            this.TotalBilletes,
-            this.Total});
-            this.mListView.GridLines = true;
-            this.mListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.mListView.Location = new System.Drawing.Point(4, 128);
-            this.mListView.Margin = new System.Windows.Forms.Padding(4);
-            this.mListView.Name = "mListView";
-            this.mListView.Size = new System.Drawing.Size(948, 282);
-            this.mListView.TabIndex = 0;
-            this.mListView.UseCompatibleStateImageBehavior = false;
-            this.mListView.View = System.Windows.Forms.View.Details;
-            this.mListView.SelectedIndexChanged += new System.EventHandler(this.mListView_SelectedIndexChanged);
-            // 
-            // no_cuenta
-            // 
-            this.no_cuenta.Text = "No Cuenta";
-            this.no_cuenta.Width = 101;
-            // 
-            // n_transaccion
-            // 
-            this.n_transaccion.Text = "No Transaccion";
-            this.n_transaccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.n_transaccion.Width = 127;
-            // 
-            // Id_Cajero
-            // 
-            this.Id_Cajero.Text = "No Cajero";
-            this.Id_Cajero.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Id_Cajero.Width = 89;
-            // 
-            // MXN20
-            // 
-            this.MXN20.Text = "MXN20";
-            this.MXN20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MXN20.Width = 75;
-            // 
-            // MXN50
-            // 
-            this.MXN50.Text = "MXN50";
-            this.MXN50.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MXN50.Width = 71;
-            // 
-            // MXN100
-            // 
-            this.MXN100.Text = "MXN100";
-            this.MXN100.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MXN100.Width = 72;
-            // 
-            // MXN200
-            // 
-            this.MXN200.Text = "MXN200";
-            this.MXN200.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MXN200.Width = 72;
-            // 
-            // MXN500
-            // 
-            this.MXN500.Text = "MXN500";
-            this.MXN500.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MXN500.Width = 75;
-            // 
-            // MXN1000
-            // 
-            this.MXN1000.Text = "MXN1000";
-            this.MXN1000.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MXN1000.Width = 80;
-            // 
-            // TotalBilletes
-            // 
-            this.TotalBilletes.Text = "Total Billetes";
-            this.TotalBilletes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TotalBilletes.Width = 112;
-            // 
-            // Total
-            // 
-            this.Total.Text = "Total";
-            this.Total.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Total.Width = 65;
             // 
             // Admin
             // 

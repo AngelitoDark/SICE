@@ -1070,5 +1070,10 @@ namespace MaterialSkinExample
                 state = 0;//Para crear usuario Estandar
             }
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

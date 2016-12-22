@@ -297,10 +297,15 @@ namespace MaterialSkinExample
             MySqlCommand cmd = new MySqlCommand();
             con.Open();
             cmd.Connection = con;
-            cmd.CommandText = ("select sum(total) as total from transaccion where no_cuenta = '" + lblNo_Cuenta.Text + "'");
+
+            // consulta 
+            //SELECT IFNULL(SUM(total), 0) AS total from transaccion where no_cuenta =12113008;
+            cmd.CommandText = ("select IFNULL(sum(total),0) as total from transaccion where no_cuenta = '" + lblNo_Cuenta.Text + "'");
             string m_SaldoAnterior = cmd.ExecuteScalar().ToString();
             con.Close();
-            //fin consulta 
+            //fin consulta " "=0
+            //""=?
+            //null==0
 
             int saldoanterior = Convert.ToInt32(m_SaldoAnterior);
                 int m_MontoProcesado = Convert.ToInt32(m_SaldoProcesado);
