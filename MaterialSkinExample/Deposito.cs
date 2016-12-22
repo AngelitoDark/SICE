@@ -266,6 +266,9 @@ namespace MaterialSkinExample
             retiro.Show();
                retiro.lblR_Cuenta.Text=lblDCuenta.Text;
 
+            
+            string FechaInicio = String.Format(" {0:s}  ", DateTime.Now + DateTime.Now.ToString("%K"));
+            Retiro.FechaInicio = FechaInicio;
 
             this.Hide();
         }

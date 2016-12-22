@@ -2,13 +2,17 @@
 using MaterialSkin.Controls;
 using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
+using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -46,7 +50,7 @@ namespace MaterialSkinExample
         int cant4;
         int cant5;
         int totalretiro;
-
+        public static string FechaInicio;
 
 
         public Retiro()
@@ -335,42 +339,42 @@ namespace MaterialSkinExample
 
                 g.DrawString(cant0.ToString(), fBody1, sb, 30, ESPACIO + 145);
                 g.DrawString("$ " + dm0, fBody1, sb, 100, ESPACIO + 145);
-                g.DrawString("$ " + total1.ToString("N"), fBody1, sb, 180, ESPACIO + 145);
+                g.DrawString("$ " + total1.ToString("#,#", CultureInfo.InvariantCulture), fBody1, sb, 180, ESPACIO + 145);
                 Mov = Mov + 20;
             }
             if (cant1 >= 1)
             {
                 g.DrawString(cant1.ToString(), fBody1, sb, 30, ESPACIO + 145 + Mov);
                 g.DrawString("$ " + dm1, fBody1, sb, 100, ESPACIO + 145 + Mov);
-                g.DrawString("$ " + total2.ToString("N"), fBody1, sb, 180, ESPACIO + 145 + Mov);
+                g.DrawString("$ " + total2.ToString("#,#", CultureInfo.InvariantCulture), fBody1, sb, 180, ESPACIO + 145 + Mov);
                 Mov = Mov + 20;
             }
             if (cant2 >= 1)
             {
                 g.DrawString(cant2.ToString(), fBody1, sb, 30, ESPACIO + 145 + Mov);
                 g.DrawString("$ " + dm2, fBody1, sb, 100, ESPACIO + 145 + Mov);
-                g.DrawString("$ " + total3.ToString("N"), fBody1, sb, 180, ESPACIO + 145 + Mov);
+                g.DrawString("$ " + total3.ToString("#,#", CultureInfo.InvariantCulture), fBody1, sb, 180, ESPACIO + 145 + Mov);
                 Mov = Mov + 20;
             }
             if (cant3 >= 1)
             {
                 g.DrawString(cant3.ToString(), fBody1, sb, 30, ESPACIO + 145 + Mov);
                 g.DrawString("$ " + dm3, fBody1, sb, 100, ESPACIO + 145 + Mov);
-                g.DrawString("$ " + total4.ToString("N"), fBody1, sb, 180, ESPACIO + 145 + Mov);
+                g.DrawString("$ " + total4.ToString("#,#", CultureInfo.InvariantCulture), fBody1, sb, 180, ESPACIO + 145 + Mov);
                 Mov = Mov + 20;
             }
             if (cant4 >= 1)
             {
                 g.DrawString(cant4.ToString(), fBody1, sb, 30, ESPACIO + 145 + Mov);
                 g.DrawString("$ " + dm4, fBody1, sb, 100, ESPACIO + 145 + Mov);
-                g.DrawString("$ " + total5.ToString("N"), fBody1, sb, 180, ESPACIO + 145 + Mov);
+                g.DrawString("$ " + total5.ToString("#,#", CultureInfo.InvariantCulture), fBody1, sb, 180, ESPACIO + 145 + Mov);
                 Mov = Mov + 20;
             }
             if (cant5 >= 1)
             {
                 g.DrawString(cant5.ToString(), fBody1, sb, 30, ESPACIO + 145 + Mov);
                 g.DrawString("$ " + dm5, fBody1, sb, 100, ESPACIO + 145 + Mov);
-                g.DrawString("$ " + total6.ToString("N"), fBody1, sb, 180, ESPACIO + 145 + Mov);
+                g.DrawString("$ " + total6.ToString("#,#", CultureInfo.InvariantCulture), fBody1, sb, 180, ESPACIO + 145 + Mov);
                 Mov = Mov + 20;
             }
             g.DrawString("========================================\n", fBody1, sb, 10, ESPACIO + 145 + Mov); Mov = Mov + 20;
@@ -396,12 +400,133 @@ namespace MaterialSkinExample
 
     //        MyMessageBox.ShowBox("Operacion exitosa no olvide retirar su ticket");
 
-            g.DrawString("Retiro Efectuado:" + "$ " + totalretiro.ToString("N") + "\n", fBody1, sb, 10, ESPACIO + 145 + Mov); Mov = Mov + 20;
+            g.DrawString("Retiro Efectuado:" + "$ " + totalretiro.ToString("#,#", CultureInfo.InvariantCulture) + "\n", fBody1, sb, 10, ESPACIO + 145 + Mov); Mov = Mov + 20;
             //    g.DrawString("Total Retiro: " + "$" + txtRetiro.Text + "\n", fBody1, sb, 10, ESPACIO + 145 + Mov); Mov = Mov + 20;
             g.DrawString("========================================\n", fBody1, sb, 10, ESPACIO + 145 + Mov); Mov = Mov + 20;
             g.DrawString("Para aclaraciones de los depósitos realizados\nponemos a su disposición nuestras líneas de\natención.\n\nMéxico D.F.:\nMonterrey:\nGuadalajara:\nResto del país:\n", fBody1, sb, 10, ESPACIO + 145 + Mov);
 
+            /////////////////////////////////////////////////////////////////////////////////
+            
 
+            Deposito deposito = new Deposito();
+            int m_IdEstacion = Convert.ToInt32(lblNo_Cajero.Text);
+            string m_Ubicacion = "CEDA";
+            int m_Ciclo = 1;
+            int m_Folio = 287;
+            int IdCategoriaMensaje = 1;
+            int IdTipoMensaje = 1000;
+            int VersionProtocolo = 3;
+
+            string m_FechaHoraFin = String.Format(" {0:s}  ", DateTime.Now + DateTime.Now.ToString("%K"));
+            string m_IdMoneda = "MXN";
+            string m_IdCliente = "1330";
+            string m_Cliente = "Banorte-586082157";
+            string m_BancoCuenta = "Banorte";
+            string m_Cuenta = lblR_Cuenta.Text;
+            string m_Referencia = "";
+            string m_ClaveOperadorLocal = "586082157";
+            string m_NombreCompletoOperador = "Banorte-586082157";
+            string m_SaldoProcesado; ;
+            int m_MontoDeclarado;
+            int m_TotalIncidentes = 0;
+            string m_Envases = "";
+            MySqlConnection conx = new MySqlConnection("Server=localhost; User=OKI; Password=OKI2016; database=tlock; port=3306;");
+            MySqlCommand cmdx = new MySqlCommand();
+            MySqlCommand cmdt = new MySqlCommand();
+            MySqlCommand cmdr = new MySqlCommand();
+            conx.Open();
+            cmdx.Connection = conx;
+           
+            cmdr.Connection = conx;
+            DateTime fecha = DateTime.Now;
+            string formato = (fecha.Year + "-" + fecha.Month + "-" + fecha.Day) + "%";
+
+            // consulta 
+            //SELECT IFNULL(SUM(total), 0) AS total from transaccion where no_cuenta =12113008;
+            cmdx.CommandText = ("select IFNULL(sum(total),0) as total from transaccion where fecha_Transaccion LIKE '" + formato + "' and no_cuenta ='" + lblR_Cuenta.Text + "'");
+            cmdr.CommandText = ("select IFNULL(sum(total),0) as total from retiro where fecha_Transaccion LIKE '" + formato + "' and no_cuenta ='" + lblR_Cuenta.Text + "'");
+             
+            int dep = Convert.ToInt32(cmdx.ExecuteScalar().ToString());
+            int ret = Convert.ToInt32(cmdr.ExecuteScalar().ToString());
+
+          //  string m_SaldoAnterior = cmdx.ExecuteScalar().ToString();
+
+            conx.Close();
+            
+            int m_SaldoAnterior = dep - ret;
+            int m_MontoProcesado = totalretiro;
+            //    int     m_MontoProcesado = 1;
+            m_MontoDeclarado = m_SaldoAnterior;
+
+            int MXN20c = cant0; // lblC1.Text;
+            int MXN20d = dm0; //lblD1.Text;
+
+            int MXN50c = cant1;
+            int MXN50d = dm1;
+
+            int MXN100c = cant2;
+            int MXN100d = dm2;
+
+            int MXN200c = cant3;
+            int MXN200d = dm3;
+
+            int MXN500c = cant4;
+            int MXN500d = dm4;
+
+            int MXN1000c = cant5;
+            int MXN1000d = dm5;
+
+            try
+            {
+                string webAddr = "http://187.174.220.229/presol/publico/pd.aspx";
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(webAddr);
+                httpWebRequest.ContentType = "application/json; charset=utf-8";
+                httpWebRequest.Method = "POST";
+
+                using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+                {
+                    string jsonn = @"{ m_IdEstacion: " + m_IdEstacion + ",IdCategoriaMensaje: '" + IdCategoriaMensaje + "',IdTipoMensaje:'" + IdTipoMensaje + "',VersionProtocolo:'" + VersionProtocolo + "',  m_Ubicacion: '" + m_Ubicacion +
+"',m_Ciclo:" + m_Ciclo + ",m_Folio:" + m_Folio + ",m_FechaHoraInicio:'" + FechaInicio + "',m_FechaHoraFin:'" + m_FechaHoraFin +
+"',m_IdMoneda:'" + m_IdMoneda + "',m_IdCliente:'" + m_IdCliente + "',m_Cliente:'" + m_Cliente +
+"',m_BancoCuenta:'" + m_BancoCuenta + "',m_Cuenta:'" + m_Cuenta + "',m_Referencia:'" + m_Referencia +
+"',m_ClaveOperadorLocal:'" + m_ClaveOperadorLocal + "',m_NombreCompletoOperador:'" + m_NombreCompletoOperador +
+"',m_ClaveOperadorLocal:'" + m_ClaveOperadorLocal + "',m_SaldoAnterior:" + m_SaldoAnterior +
+",m_MontoProcesado:" + m_MontoProcesado + ",m_MontoDeclarado:" + m_MontoDeclarado +
+",m_TotalIncidentes:" + m_TotalIncidentes + ",   m_DenominacionContenedor:  {'1':" + "{'1000':" + MXN1000c + ",'500':" + MXN500c +
+",'200':" + MXN200c + ",'100':" + MXN100c + ",'50':" + MXN50c + ",'20':" + MXN20c + "}" + "},m_Envases:{}}";
+
+                    JObject jobj = JObject.Parse(jsonn);
+                    streamWriter.Write(jsonn); streamWriter.Flush();
+
+                    DateTime namefile = DateTime.Now;
+                    int i = 58;
+
+                    char c = (char)i;
+
+                    string m_archivo = namefile.Day.ToString() + "-" + namefile.Month.ToString() + "-" + namefile.Year.ToString() + "h" + namefile.Hour.ToString() + "m" + namefile.Minute.ToString() + "s" + namefile.Second.ToString() + ".json";
+
+                    var texto = jobj;
+                    StreamWriter file = new StreamWriter(@"C:\Directorio SICE\JSONS_R\ " + m_archivo);
+
+
+                    file.WriteLine(texto);
+                    file.Close();
+
+                }
+                var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                {
+                    var responseText = streamReader.ReadToEnd();
+                }
+
+            }
+            catch (WebException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 
         }

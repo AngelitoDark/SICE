@@ -47,3 +47,4 @@ P:\shared\SICE\MaterialSkinExample\obj\Debug\MaterialSkinExample.Properties.Reso
 P:\shared\SICE\MaterialSkinExample\obj\Debug\MaterialSkinExample.Deposito.resources
 P:\shared\SICE\MaterialSkinExample\obj\Debug\MaterialSkinExample.Retiro.resources
 P:\shared\SICE\MaterialSkinExample\obj\Debug\Sice.csproj.GenerateResource.Cache
+P:\shared\SICE\MaterialSkinExample\bin\Debug\tlockCajeros.dll

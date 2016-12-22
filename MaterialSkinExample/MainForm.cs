@@ -240,10 +240,12 @@ namespace MaterialSkinExample
             string path = @"C:\Directorio SICE";
             string path_D = @"C:\Directorio SICE\JSONS_D";
             string path_N = @"C:\Directorio SICE\JSONS_N";
+            string path_R = @"C:\Directorio SICE\JSONS_R";
+            string path_file = @"C:\Directorio SICE\Reportes tlock";
             try
             {
                 //Deternimar si el directorio existe 
-                if (Directory.Exists(path) && Directory.Exists(path_D) && Directory.Exists(path_N))
+                if (Directory.Exists(path) && Directory.Exists(path_D) && Directory.Exists(path_N) && Directory.Exists(path_R) && Directory.Exists(path_file))
                 {
                     //  Console.WriteLine("That path exists already.");
                     return;
@@ -253,6 +255,8 @@ namespace MaterialSkinExample
                 DirectoryInfo di = Directory.CreateDirectory(path);
                 DirectoryInfo di_d = Directory.CreateDirectory(path_D);
                 DirectoryInfo di_N = Directory.CreateDirectory(path_N);
+                DirectoryInfo di_r = Directory.CreateDirectory(path_R);
+                DirectoryInfo di_f = Directory.CreateDirectory(path_file);
                 //Directorio creado exitosamente
             }
             catch (Exception e)

@@ -12,6 +12,7 @@ using System.Drawing.Printing;
 using System.Net;
 using System.IO;
 using System.Threading;
+using tlockCajeros;
 
 namespace MaterialSkinExample
 {
@@ -260,6 +261,9 @@ namespace MaterialSkinExample
         public static string FechaInicio;
         public void json2()
         {
+
+
+
             Deposito deposito = new Deposito();
             int m_IdEstacion = Convert.ToInt32(lblCajero.Text);
             string m_Ubicacion = "CEDA";
@@ -330,15 +334,25 @@ namespace MaterialSkinExample
 ",m_TotalIncidentes:" + m_TotalIncidentes + ",   m_DenominacionContenedor:  {'1':" + "{'1000':" + MXN1000c + ",'500':" + MXN500c +
 ",'200':" + MXN200c + ",'100':" + MXN100c + ",'50':" + MXN50c + ",'20':" + MXN20c + "}" + "},m_Envases:{}}";
 
+
                     JObject jobj = JObject.Parse(json);
+
+                    string cadena = jobj.ToString();
+
+
+                    //libreria de tlock 
+                    //    tlockCajeros.codificaMensajes.Codificar tlock = new codificaMensajes();
+                    tlockCajeros.codificaMensajes.Codificar(cadena);
+            
+                    var encrypt = tlockCajeros.codificaMensajes.Codificar(cadena);
+                 //  MessageBox.Show(x);
+
+                    // tlockCajeros.
+
                     streamWriter.Write(json); streamWriter.Flush();
-
                     var texto = jobj;
-                    //   System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Directorio SICE\transaccion.json");
-
                     DateTime namefile = DateTime.Now;
                     string m_archivo = namefile.Day.ToString() + "-" + namefile.Month.ToString() + "-" + namefile.Year.ToString() + "h" + namefile.Hour.ToString() + "m" + namefile.Minute.ToString() + "s" + namefile.Second.ToString() + ".json";
-
                     //var texto = jobj;
                     StreamWriter file = new StreamWriter(@"C:\Directorio SICE\JSONS_N\" + m_archivo);
 
@@ -346,10 +360,16 @@ namespace MaterialSkinExample
                     file.Close();
 
                 }
+
+
+
+
                 var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
                 using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
                 {
                     var responseText = streamReader.ReadToEnd();
+
+                    MessageBox.Show(responseText);
                 }
 
             }

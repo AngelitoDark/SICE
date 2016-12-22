@@ -68,6 +68,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="tlockCajeros">
+      <HintPath>C:\Users\oki\Documents\TLOCK Archivos\tlockCajeros\tlockCajeros.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.cs">
