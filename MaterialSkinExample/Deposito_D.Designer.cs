@@ -604,7 +604,7 @@
             this.iTalk_Separator1.BackColor = System.Drawing.SystemColors.Window;
             this.iTalk_Separator1.Location = new System.Drawing.Point(-13, 229);
             this.iTalk_Separator1.Name = "iTalk_Separator1";
-            this.iTalk_Separator1.Size = new System.Drawing.Size(383, 23);
+            this.iTalk_Separator1.Size = new System.Drawing.Size(289, 23);
             this.iTalk_Separator1.TabIndex = 65;
             this.iTalk_Separator1.Text = "iTalk_Separator1";
             // 

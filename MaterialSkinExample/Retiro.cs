@@ -66,27 +66,24 @@ namespace MaterialSkinExample
 
         }
         Response resp = new Response();
+
+        public static string cuenta;
         private void Retiro_Load(object sender, EventArgs e)
         {
             lblR_Cuenta.Text = groupBox1.Text;
-
-            groupBox1.Visible = false;
-
-            groupBox1.Location = new Point(13, 281);
+                        groupBox1.Visible = false;
+                        groupBox1.Location = new Point(13, 310);
             groupBox1.Size = new Size(425, 248);
 
-
-
-            //   197; 72
+            //13; 310
             loading.Visible = false;
-
-            loading.Location = new Point(150,170);
+                        loading.Location = new Point(150,170);
             loading.Size = new Size(642, 400);
+                                    gruporetiro.Text = lblR_Cuenta.Text;
+                        this.ActiveControl = null;
 
+            
 
-            gruporetiro.Text = lblR_Cuenta.Text;
-
-            this.ActiveControl = null;
 
 
         }
@@ -113,6 +110,9 @@ namespace MaterialSkinExample
         {
             Deposito deposito = new Deposito();
             deposito.Show();
+
+            deposito.lblDCuenta.Text = lblR_Cuenta.Text;
+          
             this.Hide();
         }
 
@@ -170,7 +170,7 @@ namespace MaterialSkinExample
                             // cmd.CommandText = ("select IFNULL(sum(total),0) as total from transaccion where no_cuenta = '" + lblNo_Cuenta.Text + "'");
                             string cons = R_cmd.ExecuteScalar().ToString();
                             int valor = Convert.ToInt32(cons);
-                            MessageBox.Show("" + valor);
+                         //   MessageBox.Show("" + valor);
                             int _txtRetiro = Convert.ToInt32(txtRetiro.Text);
                             int saldo_D = Convert.ToInt32(_cmd.ExecuteScalar());
                             _con.Close();
@@ -711,6 +711,66 @@ namespace MaterialSkinExample
         }
 
         private void loading_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblD_saldo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        private void check_click(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                MySqlConnection _con = new MySqlConnection("Server=localhost; User=OKI; Password=OKI2016; database=tlock; port=3306;");
+                MySqlCommand _cmd = new MySqlCommand();
+                MySqlCommand R_cmd = new MySqlCommand();
+                _con.Open();
+                _cmd.Connection = _con;
+                R_cmd.Connection = _con;
+                DateTime fecha = DateTime.Now;
+
+                string formato = (fecha.Year + "-" + fecha.Month + "-" + fecha.Day) + "%";
+                _cmd.CommandText = ("select IFNULL(sum(total),0) as total from transaccion where fecha_Transaccion LIKE '" + formato + "' and no_cuenta ='" + lblR_Cuenta.Text + "'");
+                R_cmd.CommandText = ("select IFNULL(sum(total),0) as total from retiro where fecha_Transaccion LIKE '" + formato + "' and no_cuenta ='" + lblR_Cuenta.Text + "'");
+                string retiro = R_cmd.ExecuteScalar().ToString();
+                string deposito = _cmd.ExecuteScalar().ToString();
+
+                int ret = Convert.ToInt32(retiro);
+                int dep = Convert.ToInt32(deposito);
+                int saldo = dep - ret;
+
+               // MessageBox.Show("el saldo es " + dep + "XDD" + ret);
+                lblD_saldo.Text = "Tu saldo disponible es de: $ " + saldo.ToString("N");
+
+                _con.Close();
+
+
+                if (saldo==0)
+                {
+                    btnRetiro.Enabled = false;
+                    txtRetiro.Enabled = false;
+                    tclNumerico.Visible = false;
+
+                }
+
+
+
+
+
+            }
+            else
+            {
+                lblD_saldo.Text = "";
+            }
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
         }

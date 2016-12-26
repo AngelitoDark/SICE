@@ -36,12 +36,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblR_Cuenta = new System.Windows.Forms.Label();
             this.lblNo_Cajero = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnRetiro = new System.Windows.Forms.Button();
             this.txtRetiro = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
             this.txt_Contraseña = new System.Windows.Forms.TextBox();
             this.loading = new System.Windows.Forms.Label();
             this.tclNumerico = new System.Windows.Forms.GroupBox();
@@ -57,13 +57,14 @@
             this.btn2 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.gruporetiro = new System.Windows.Forms.GroupBox();
+            this.lblD_saldo = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.iTalk_Separator1 = new iTalk_Separator();
             this.iTalk_Separator3 = new iTalk_Separator();
             this.iTalk_Label1 = new iTalk_Label();
             this.iTalk_HeaderLabel1 = new iTalk_HeaderLabel();
-            this.gruporetiro = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -153,26 +154,26 @@
             this.lblNo_Cajero.TabIndex = 58;
             this.lblNo_Cajero.Text = "2001";
             // 
-            // button4
+            // btnRetiro
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.button4.FlatAppearance.BorderSize = 3;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(97, 172);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(250, 50);
-            this.button4.TabIndex = 64;
-            this.button4.Text = "RETIRO\r\n";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnRetiro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRetiro.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.btnRetiro.FlatAppearance.BorderSize = 3;
+            this.btnRetiro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRetiro.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btnRetiro.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnRetiro.Location = new System.Drawing.Point(97, 179);
+            this.btnRetiro.Name = "btnRetiro";
+            this.btnRetiro.Size = new System.Drawing.Size(250, 50);
+            this.btnRetiro.TabIndex = 64;
+            this.btnRetiro.Text = "RETIRO\r\n";
+            this.btnRetiro.UseVisualStyleBackColor = false;
+            this.btnRetiro.Click += new System.EventHandler(this.button4_Click);
             // 
             // txtRetiro
             // 
             this.txtRetiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRetiro.Location = new System.Drawing.Point(72, 105);
+            this.txtRetiro.Location = new System.Drawing.Point(72, 122);
             this.txtRetiro.Name = "txtRetiro";
             this.txtRetiro.Size = new System.Drawing.Size(315, 47);
             this.txtRetiro.TabIndex = 65;
@@ -180,27 +181,27 @@
             this.txtRetiro.Click += new System.EventHandler(this.onclick_retiro);
             this.txtRetiro.TextChanged += new System.EventHandler(this.txtRetiro_TextChanged);
             // 
-            // button1
+            // btnCancelar
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(97, 239);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(250, 50);
-            this.button1.TabIndex = 66;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.btnCancelar.FlatAppearance.BorderSize = 3;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCancelar.Location = new System.Drawing.Point(97, 243);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(250, 50);
+            this.btnCancelar.TabIndex = 66;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.btnAceptar);
             this.groupBox1.Controls.Add(this.txt_Contraseña);
             this.groupBox1.Location = new System.Drawing.Point(13, 310);
             this.groupBox1.Name = "groupBox1";
@@ -220,21 +221,21 @@
             this.label1.TabIndex = 68;
             this.label1.Text = " Ingresa contraseña para confirmar retiro";
             // 
-            // button2
+            // btnAceptar
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.button2.FlatAppearance.BorderSize = 3;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(91, 144);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(250, 50);
-            this.button2.TabIndex = 67;
-            this.button2.Text = "ACEPTAR";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAceptar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.btnAceptar.FlatAppearance.BorderSize = 3;
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptar.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAceptar.Location = new System.Drawing.Point(91, 144);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(250, 50);
+            this.btnAceptar.TabIndex = 67;
+            this.btnAceptar.Text = "ACEPTAR";
+            this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.button2_Click);
             // 
             // txt_Contraseña
             // 
@@ -484,11 +485,66 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.Window;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(97, 62);
+            this.label2.Location = new System.Drawing.Point(97, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(257, 25);
             this.label2.TabIndex = 71;
             this.label2.Text = " Ingresa cantidad a retirar";
+            // 
+            // gruporetiro
+            // 
+            this.gruporetiro.BackColor = System.Drawing.Color.White;
+            this.gruporetiro.Controls.Add(this.checkBox1);
+            this.gruporetiro.Controls.Add(this.lblD_saldo);
+            this.gruporetiro.Controls.Add(this.label5);
+            this.gruporetiro.Controls.Add(this.groupBox1);
+            this.gruporetiro.Controls.Add(this.label2);
+            this.gruporetiro.Controls.Add(this.btnCancelar);
+            this.gruporetiro.Controls.Add(this.btnRetiro);
+            this.gruporetiro.Controls.Add(this.txtRetiro);
+            this.gruporetiro.Location = new System.Drawing.Point(251, 114);
+            this.gruporetiro.Name = "gruporetiro";
+            this.gruporetiro.Size = new System.Drawing.Size(453, 578);
+            this.gruporetiro.TabIndex = 72;
+            this.gruporetiro.TabStop = false;
+            this.gruporetiro.Text = "groupBox2";
+            // 
+            // lblD_saldo
+            // 
+            this.lblD_saldo.AutoSize = true;
+            this.lblD_saldo.BackColor = System.Drawing.Color.Transparent;
+            this.lblD_saldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblD_saldo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblD_saldo.Location = new System.Drawing.Point(68, 55);
+            this.lblD_saldo.Name = "lblD_saldo";
+            this.lblD_saldo.Size = new System.Drawing.Size(0, 20);
+            this.lblD_saldo.TabIndex = 74;
+            this.lblD_saldo.Click += new System.EventHandler(this.lblD_saldo_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(41, 129);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(30, 31);
+            this.label5.TabIndex = 73;
+            this.label5.Text = "$";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.BackColor = System.Drawing.Color.White;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(149, 15);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(128, 32);
+            this.checkBox1.TabIndex = 73;
+            this.checkBox1.Text = "Ver Saldo";
+            this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkBox1.Click += new System.EventHandler(this.check_click);
             // 
             // iTalk_Separator1
             // 
@@ -532,46 +588,6 @@
             this.iTalk_HeaderLabel1.Size = new System.Drawing.Size(85, 46);
             this.iTalk_HeaderLabel1.TabIndex = 47;
             this.iTalk_HeaderLabel1.Text = "SICE";
-            // 
-            // gruporetiro
-            // 
-            this.gruporetiro.Controls.Add(this.label6);
-            this.gruporetiro.Controls.Add(this.label5);
-            this.gruporetiro.Controls.Add(this.groupBox1);
-            this.gruporetiro.Controls.Add(this.label2);
-            this.gruporetiro.Controls.Add(this.button1);
-            this.gruporetiro.Controls.Add(this.button4);
-            this.gruporetiro.Controls.Add(this.txtRetiro);
-            this.gruporetiro.Location = new System.Drawing.Point(251, 114);
-            this.gruporetiro.Name = "gruporetiro";
-            this.gruporetiro.Size = new System.Drawing.Size(453, 578);
-            this.gruporetiro.TabIndex = 72;
-            this.gruporetiro.TabStop = false;
-            this.gruporetiro.Text = "groupBox2";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(41, 112);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(30, 31);
-            this.label5.TabIndex = 73;
-            this.label5.Text = "$";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(75, 15);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(305, 31);
-            this.label6.TabIndex = 74;
-            this.label6.Text = "Saldo Disponible 1000";
             // 
             // Retiro
             // 
@@ -619,11 +635,11 @@
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblNo_Cajero;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnRetiro;
         public System.Windows.Forms.TextBox txtRetiro;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAceptar;
         public System.Windows.Forms.TextBox txt_Contraseña;
         public System.Windows.Forms.Label lblR_Cuenta;
         public System.Windows.Forms.Label label1;
@@ -643,6 +659,7 @@
         public System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox gruporetiro;
         public System.Windows.Forms.Label label5;
-        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Label lblD_saldo;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

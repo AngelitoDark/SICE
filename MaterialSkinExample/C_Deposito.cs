@@ -150,12 +150,12 @@ namespace MaterialSkinExample
             SolidBrush sb = new SolidBrush(Color.Black);  //Color de texto
             g.DrawImage(Image.FromFile(logo), 130, -10, 160, 90);
 
-            g.DrawString("Depósito de EFECTIVO\n" + "Ubicación: Suc. CEDA\n" + "Id Cajero: 201\n", fBody1, sb, 10, ESPACIO);
+            g.DrawString("Depósito de EFECTIVO\n" + "Ubicación: Suc. CEDA\n" + "Id Cajero: 2001\n", fBody1, sb, 10, ESPACIO);
             g.DrawString("Transacción: " + numtransaccion, fBody1, sb, 10, ESPACIO + 60);
             g.DrawString("No. Cuenta: " + cuenta, fBody1, sb, 10, ESPACIO + 75);
             g.DrawString("Fecha: " + DateTime.Now.ToString("dd/MM/yyyy") + "  Hora: " + /*DateTime.Now.ToString("hh:mm:ss")*/ hora1 + "\n", fBody1, sb, 10, ESPACIO + 90);
             g.DrawString("========================================\n", fBody1, sb, 10, ESPACIO + 105);
-            g.DrawString("Cantidad     Denominación      Total\n", fBody1, sb, 10, ESPACIO + 125);
+            g.DrawString("Cantidad        Denominación          Total\n", fBody1, sb, 10, ESPACIO + 125);
             if (cant1 >= 1)
             {
                 g.DrawString(lblC1.Text, fBody1, sb, 30, ESPACIO + 145);
@@ -263,7 +263,6 @@ namespace MaterialSkinExample
         {
 
 
-
             Deposito deposito = new Deposito();
             int m_IdEstacion = Convert.ToInt32(lblCajero.Text);
             string m_Ubicacion = "CEDA";
@@ -273,12 +272,12 @@ namespace MaterialSkinExample
             string m_FechaHoraFin = String.Format(" {0:s}  ", DateTime.Now + DateTime.Now.ToString("%K"));
             string m_IdMoneda = "MXN";
             string m_IdCliente = "1330";
-            string m_Cliente = "Banorte-586082157";
-            string m_BancoCuenta = "Banorte";
+            string m_Cliente = "N/A";
+            string m_BancoCuenta = "N/A";
             string m_Cuenta = lblCuenta.Text;
             string m_Referencia = "";
-            string m_ClaveOperadorLocal = "586082157";
-            string m_NombreCompletoOperador = "Banorte-586082157";
+            string m_ClaveOperadorLocal = "N/A";
+            string m_NombreCompletoOperador = "N/A";
             string m_SaldoProcesado = lblT7.Text;
             int m_MontoDeclarado;
             int m_TotalIncidentes = 0;
@@ -317,10 +316,22 @@ namespace MaterialSkinExample
 
             try
             {
-                string webAddr = "http://187.174.220.229/presol/publico/pd.aspx";
+
+                string IdEstacion = "2001";
+                string IdCategoriaMensaje = "1";
+                string IdTipoMensaje = "1000";
+                string VersionProtocolo = "23";
+ //http://187.174.220.229/sol/publico/pd.aspx?IdEstacion=200&IdMensaje=233495&IdCategoriaMensaje=1&IdTipoMensaje=1000&VersionProtocolo=2&c=”
+
+//string webAddr = "http://187.174.220.229/presol/publico/pd.aspx?&IdEstacion&IdCategoriaMensaje&IdTipoMensaje&VersionProtocolo";
+                string webAddr = "http://187.174.220.229/sol/publico/pd.aspx?IdEstacion=2001&IdCategoriaMensaje=1&IdTipoMensaje=1000&VersionProtocolo=2&c=";
+
+
                 var httpWebRequest = (HttpWebRequest)WebRequest.Create(webAddr);
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
                 httpWebRequest.Method = "POST";
+
+
 
                 using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
                 {
@@ -339,48 +350,49 @@ namespace MaterialSkinExample
 
                     string cadena = jobj.ToString();
 
+                    
 
-                    //libreria de tlock 
-                    //    tlockCajeros.codificaMensajes.Codificar tlock = new codificaMensajes();
-                    tlockCajeros.codificaMensajes.Codificar(cadena);
-            
                     var encrypt = tlockCajeros.codificaMensajes.Codificar(cadena);
-                 //  MessageBox.Show(x);
-
-                    // tlockCajeros.
 
                     streamWriter.Write(json); streamWriter.Flush();
                     var texto = jobj;
+
                     DateTime namefile = DateTime.Now;
                     string m_archivo = namefile.Day.ToString() + "-" + namefile.Month.ToString() + "-" + namefile.Year.ToString() + "h" + namefile.Hour.ToString() + "m" + namefile.Minute.ToString() + "s" + namefile.Second.ToString() + ".json";
                     //var texto = jobj;
                     StreamWriter file = new StreamWriter(@"C:\Directorio SICE\JSONS_N\" + m_archivo);
+                    StreamWriter file2 = new StreamWriter(@"C:\Directorio SICE\encript.txt");
 
                     file.WriteLine(texto);
                     file.Close();
 
+                    file2.WriteLine(encrypt);
+                    file2.Close();
+
                 }
-
-
-
-
                 var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+
                 using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
                 {
                     var responseText = streamReader.ReadToEnd();
 
-                    MessageBox.Show(responseText);
+                    WebResponse response = httpWebRequest.GetResponse();
+
+                    MessageBox.Show(responseText );
+                    MessageBox.Show(((HttpWebResponse)response).StatusDescription);
                 }
 
             }
             catch (WebException ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message+"error en ...");
+            
+
+
+
             }
-
-
         }
-
+    
         //Journals
 
         public void JournalContinuarDeposito()
