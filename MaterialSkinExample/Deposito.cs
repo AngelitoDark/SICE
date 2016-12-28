@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using System.IO;
+using System.Globalization;
 
 namespace MaterialSkinExample
 {
@@ -136,8 +137,14 @@ namespace MaterialSkinExample
         private void button2_Click(object sender, EventArgs e)
         {
             string result = MyMessageBox.ShowBox("Introduce los Billetes ", "Mensaje");
-                         string FechaInicio = String.Format(" {0:s}  ", DateTime.Now + DateTime.Now.ToString("%K"));
-                        C_Deposito.FechaInicio = FechaInicio;
+                       //  string FechaInicio = String.Format(" {0:s}  ", DateTime.Now + DateTime.Now.ToString("%K"));
+            DateTime fecha = DateTime.Now;
+            CultureInfo ci = CultureInfo.InvariantCulture;
+            string hora = String.Format(fecha.ToString("hh:mm:ss.ff", ci));
+            var zona = String.Format(DateTime.Now.ToString("%K"));
+            string FechaInicio = (fecha.Year + "-" + fecha.Month + "-" + fecha.Day) + ("T" + hora + zona);
+
+            C_Deposito.FechaInicio = FechaInicio;
                         C_Deposito.mCuenta = Convert.ToInt32(lblDCuenta.Text);
  WTcr wtcr = new WTcr();
             wtcr.PrepararDeposito();

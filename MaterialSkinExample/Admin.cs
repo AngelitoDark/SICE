@@ -25,6 +25,18 @@ namespace MaterialSkinExample
         byte state; // Variable que toma el valor en dado caso que sea elejido Administrador, este valor se guarda en la BD con 0 o 1
         private readonly MaterialSkinManager materialSkinManager;
 
+
+
+        static string user = "TCR";
+        static String Pasword = "12345";
+        static string terminal = "123";
+        static FullService.Autenticacao authData = new FullService.Autenticacao();
+        static FullService.OperationsClient operaciones = new FullService.OperationsClient();
+        static FullService.ConfiguracaoCassette casett = new FullService.ConfiguracaoCassette();
+        static FullService.DadosCassete dados = new FullService.DadosCassete();
+        static FullService.ContentClient[] contenido = new FullService.ContentClient[3];
+
+
         public Admin()
         {
             InitializeComponent();
@@ -1074,6 +1086,20 @@ namespace MaterialSkinExample
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void button31_Click_1(object sender, EventArgs e)
+        {
+            authData.Usuario = user;
+            authData.Terminal = terminal;
+            authData.Senha = Pasword;
+            string mensaje = operaciones.ResetTCR(authData).CodigoResposta;
+            string mensaje1 = operaciones.ResetTCR(authData).Mensagem;
+
+            //   richTextBox1.Text = (operaciones.AbastecimentoEncerrar(authData).ExtensionData).ToString();
+            //            lblMensaje.Text = TCR2.ContinueDeposit(TCR).RetData;
+            //  lblMensaje.Text = TCR2.StartDeposit(TCR).Message;
+            MessageBox.Show(mensaje);
         }
     }
 }

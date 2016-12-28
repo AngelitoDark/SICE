@@ -13,6 +13,8 @@ using System.Net;
 using System.IO;
 using System.Threading;
 using tlockCajeros;
+using System.Text;
+using System.Globalization;
 
 namespace MaterialSkinExample
 {
@@ -217,7 +219,7 @@ namespace MaterialSkinExample
             pd.Print();
         }
         // Variables que guardan informacion 
-        public int save = 0;
+        public int save = 100;
         public int c1 = 0, c2 = 0, c3 = 0, c4 = 0, c5 = 0, c6 = 0;
         //capturar btton
         private void materialFlatButton1_Click_1(object sender, EventArgs e)
@@ -269,7 +271,13 @@ namespace MaterialSkinExample
             int m_Ciclo = 1;
             int m_Folio = 287;
 
-            string m_FechaHoraFin = String.Format(" {0:s}  ", DateTime.Now + DateTime.Now.ToString("%K"));
+           // string m_FechaHoraFin = String.Format(" {0:s}  ", DateTime.Now + DateTime.Now.ToString("%K"));
+            DateTime fecha = DateTime.Now;
+            CultureInfo ci = CultureInfo.InvariantCulture;
+            string hora = String.Format(fecha.ToString("hh:mm:ss.ff", ci));
+            var zona = String.Format(DateTime.Now.ToString("%K"));
+            string m_FechaHoraFin = (fecha.Year + "-" + fecha.Month + "-" + fecha.Day) + ("T" + hora + zona);
+
             string m_IdMoneda = "MXN";
             string m_IdCliente = "1330";
             string m_Cliente = "N/A";
@@ -314,26 +322,29 @@ namespace MaterialSkinExample
             string MXN1000c = lblC6.Text;
             string MXN1000d = lblD6.Text;
 
+            /*
+
+
             try
             {
 
-                string IdEstacion = "2001";
-                string IdCategoriaMensaje = "1";
-                string IdTipoMensaje = "1000";
-                string VersionProtocolo = "23";
- //http://187.174.220.229/sol/publico/pd.aspx?IdEstacion=200&IdMensaje=233495&IdCategoriaMensaje=1&IdTipoMensaje=1000&VersionProtocolo=2&c=”
-
-//string webAddr = "http://187.174.220.229/presol/publico/pd.aspx?&IdEstacion&IdCategoriaMensaje&IdTipoMensaje&VersionProtocolo";
-                string webAddr = "http://187.174.220.229/sol/publico/pd.aspx?IdEstacion=2001&IdCategoriaMensaje=1&IdTipoMensaje=1000&VersionProtocolo=2&c=";
 
 
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create(webAddr);
+
+
+
+                string url = "http://187.174.220.229/presol/publico/pd.aspx?IdEstacion=2001&IdCategoriaMensaje=1&IdTipoMensaje=1000&VersionProtocolo=2&c=";
+              //  var request = (HttpWebRequest)WebRequest.Create(url);
+
+
+              //  string webAddr = "http://187.174.220.229/presol/publico/pd.aspx?";
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
                 httpWebRequest.Method = "POST";
 
 
 
-                using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+               using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
                 {
                     string json = @"{ m_IdEstacion: " + m_IdEstacion + ", m_Ubicacion: '" + m_Ubicacion +
 "',m_Ciclo:" + m_Ciclo + ",m_Folio:" + m_Folio + ",m_FechaHoraInicio:'" + FechaInicio + "',m_FechaHoraFin:'" + m_FechaHoraFin +
@@ -350,9 +361,12 @@ namespace MaterialSkinExample
 
                     string cadena = jobj.ToString();
 
-                    
+                    string IdEstacion = "2001";
+                    string IdCategoriaMensaje = "1";
+                    string IdTipoMensaje = "1000";
+                    string VersionProtocolo = "23";
 
-                    var encrypt = tlockCajeros.codificaMensajes.Codificar(cadena);
+                    var encrypt = tlockCajeros.codificaMensajes.Codificar(IdEstacion + IdCategoriaMensaje + IdTipoMensaje + VersionProtocolo + cadena);
 
                     streamWriter.Write(json); streamWriter.Flush();
                     var texto = jobj;
@@ -370,6 +384,8 @@ namespace MaterialSkinExample
                     file2.Close();
 
                 }
+
+                
                 var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
 
                 using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
@@ -377,22 +393,148 @@ namespace MaterialSkinExample
                     var responseText = streamReader.ReadToEnd();
 
                     WebResponse response = httpWebRequest.GetResponse();
-
-                    MessageBox.Show(responseText );
                     MessageBox.Show(((HttpWebResponse)response).StatusDescription);
                 }
 
             }
             catch (WebException ex)
             {
-                MessageBox.Show(ex.Message+"error en ...");
+                MessageBox.Show(ex.Message);
+         //   }
+         
+        }
+
+            
+        */
+
+
+
+
+
+            string json = @"{ m_IdEstacion: " + m_IdEstacion + ", m_Ubicacion: '" + m_Ubicacion +
+"',m_Ciclo:" + m_Ciclo + ",m_Folio:" + m_Folio + ",m_FechaHoraInicio:'" + FechaInicio + "',m_FechaHoraFin:'" + m_FechaHoraFin +
+"',m_IdMoneda:'" + m_IdMoneda + "',m_IdCliente:'" + m_IdCliente + "',m_Cliente:'" + m_Cliente +
+"',m_BancoCuenta:'" + m_BancoCuenta + "',m_Cuenta:'" + m_Cuenta + "',m_Referencia:'" + m_Referencia +
+"',m_ClaveOperadorLocal:'" + m_ClaveOperadorLocal + "',m_NombreCompletoOperador:'" + m_NombreCompletoOperador +
+"',m_ClaveOperadorLocal:'" + m_ClaveOperadorLocal + "',m_SaldoAnterior:" + m_SaldoAnterior +
+",m_MontoProcesado:" + m_MontoProcesado + ",m_MontoDeclarado:" + m_MontoDeclarado +
+",m_TotalIncidentes:" + m_TotalIncidentes + ",   m_DenominacionContenedor:  {'1':" + "{'1000':" + MXN1000c + ",'500':" + MXN500c +
+",'200':" + MXN200c + ",'100':" + MXN100c + ",'50':" + MXN50c + ",'20':" + MXN20c + "}" + "},m_Envases:{}}";
+
+
+            JObject jobj = JObject.Parse(json);
+
+            string cadena = jobj.ToString();
+
+
+            var encrypt = tlockCajeros.codificaMensajes.Codificar(cadena);
+            /*
+            string IdEstacion = "2001";
+            string IdCategoriaMensaje = "1";
+            string IdTipoMensaje = "1000";
+            string VersionProtocolo = "2";
+
             
 
 
+                        string url = "http://187.174.220.229/presol/publico/pd.aspx?IdEstacion=2001&IdCategoriaMensaje=1&IdTipoMensaje=1000&VersionProtocolo=2&c=";
+                        var httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
+                        httpWebRequest.ContentType = "application/json";
+                        httpWebRequest.Method = "POST";
+                        using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+                        {
+                            streamWriter.Write(encrypt);
+                            streamWriter.Flush();
+                            streamWriter.Close();
+                        }
+                        var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+                        using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                        {
+                            var result = streamReader.ReadToEnd();
+                            MessageBox.Show(result);
 
+                        }*/
+
+
+
+            ///////-------------------Envio de informacion Post
+
+
+            /*
+
+            // IdEstacion = 2001
+            //IdCategoriaMensaje = 1
+            //IdTipoMensaje = 1000
+            //VersionProtocolo = 3
+            string url = "http://187.174.220.229/presol/publico/pd.aspx?IdEstacion=2001&IdCategoriaMensaje=1&IdTipoMensaje=1000&VersionProtocolo=2&c=";
+            var request = (HttpWebRequest)WebRequest.Create(url);
+            var data = Encoding.ASCII.GetBytes(encrypt);
+            request.Method = "POST";
+            request.ContentType = "application/x-www-form-urlencoded";
+            request.ContentLength = data.Length;
+
+
+            using (var stream = request.GetRequestStream())
+            {
+                stream.Write(data, 0, data.Length);
             }
+
+            var response = (HttpWebResponse)request.GetResponse();
+
+            var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
+            MessageBox.Show(responseString + "");
+            */
+            ///////////////-----------------------Fin de envio post ---------
+
+
+            ////////////////////////////
+            string IdEstacion = "2001";
+            string IdCategoriaMensaje = "1";
+            string IdTipoMensaje = "1000";
+             string VersionProtocolo = "2";
+            //Parametros del POST 
+            string valor = "IdEstacion=2001&IdCategoriaMensaje=1&IdTipoMensaje=1000&VersionProtocolo=2&c=";
+            string url= "http://187.174.220.229/presol/publico/pd.aspx?IdEstacion=2001&IdCategoriaMensaje=1&IdTipoMensaje=1000&VersionProtocolo=2&c=" + encrypt;
+
+
+          //  string valor = "IdEstacion=2001&IdCategoriaMensaje=1&IdTipoMensaje=1000&VersionProtocolo=2&c=";
+            String paramsPost =/*valor +*/ encrypt;
+        //    string url = "http://187.174.220.229/presol/publico/pd.aspx?";
+
+            HttpWebRequest httpRequest = (HttpWebRequest)WebRequest.Create(url);
+            httpRequest.ContentType = "application/x-www-form-urlencoded";
+            httpRequest.Method = "POST";
+            // Cambiamos la version de peticion por HTTP 1,0 
+            httpRequest.ProtocolVersion = new Version(1, 0);
+            httpRequest.ContentLength = paramsPost.Length;
+            Stream stream = httpRequest.GetRequestStream();
+            stream.Write(Encoding.ASCII.GetBytes(paramsPost), 0, paramsPost.Length);
+            stream.Flush();
+            stream.Close();
+
+         var   httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+           var streamReader = new StreamReader(httpResponse.GetResponseStream());
+            String resultHtml = streamReader.ReadToEnd();
+
+            MessageBox.Show(resultHtml);
+
+            //////////////////////////////////
+
+            DateTime namefile = DateTime.Now;
+            string m_archivo = namefile.Day.ToString() + "-" + namefile.Month.ToString() + "-" + namefile.Year.ToString() + "h" + namefile.Hour.ToString() + "m" + namefile.Minute.ToString() + "s" + namefile.Second.ToString() + ".json";
+            var texto = jobj;
+            StreamWriter file = new StreamWriter(@"C:\Directorio SICE\JSONS_N\" + m_archivo);
+            StreamWriter file2 = new StreamWriter(@"C:\Directorio SICE\encript.txt");
+
+            file.WriteLine(texto);
+            file.Close();
+
+            file2.WriteLine(encrypt+ resultHtml);
+            file2.Close();
+            ///////////////////////////
+
+
         }
-    
         //Journals
 
         public void JournalContinuarDeposito()

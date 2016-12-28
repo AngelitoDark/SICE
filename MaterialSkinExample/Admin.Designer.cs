@@ -123,6 +123,7 @@
             this.iTalk_Label2 = new iTalk_Label();
             this.iTalk_HeaderLabel1 = new iTalk_HeaderLabel();
             this.iTalk_Separator3 = new iTalk_Separator();
+            this.button31 = new System.Windows.Forms.Button();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.tclNumeric3.SuspendLayout();
@@ -148,7 +149,7 @@
             this.metroTabControl1.Location = new System.Drawing.Point(28, 138);
             this.metroTabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 2;
             this.metroTabControl1.Size = new System.Drawing.Size(974, 604);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.White;
             this.metroTabControl1.TabIndex = 0;
@@ -1153,6 +1154,7 @@
             // 
             // metroTabPage3
             // 
+            this.metroTabPage3.Controls.Add(this.button31);
             this.metroTabPage3.Controls.Add(this.GrupoApagar);
             this.metroTabPage3.Controls.Add(this.button30);
             this.metroTabPage3.Controls.Add(this.button29);
@@ -1612,6 +1614,22 @@
             this.iTalk_Separator3.TabIndex = 46;
             this.iTalk_Separator3.Text = "iTalk_Separator3";
             // 
+            // button31
+            // 
+            this.button31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button31.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.button31.FlatAppearance.BorderSize = 3;
+            this.button31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button31.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.button31.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button31.Location = new System.Drawing.Point(387, 379);
+            this.button31.Name = "button31";
+            this.button31.Size = new System.Drawing.Size(206, 47);
+            this.button31.TabIndex = 45;
+            this.button31.Text = "Resetear TCR";
+            this.button31.UseVisualStyleBackColor = false;
+            this.button31.Click += new System.EventHandler(this.button31_Click_1);
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -1755,5 +1773,6 @@
         private System.Windows.Forms.Button button44;
         private System.Windows.Forms.Button btnReiniciar;
         private System.Windows.Forms.CheckBox chkAdmin;
+        private System.Windows.Forms.Button button31;
     }
 }
