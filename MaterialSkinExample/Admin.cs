@@ -17,6 +17,10 @@ using MaterialSkin.Controls;
 using System.Threading;
 using Newtonsoft.Json;
 using System.Diagnostics;
+using System.Globalization;
+using System.Drawing.Printing;
+using Newtonsoft.Json.Linq;
+using System.Net;
 
 namespace MaterialSkinExample
 {
@@ -53,6 +57,14 @@ namespace MaterialSkinExample
             m.txtUser.Text = lblCuentaAdmin.Text;
             //Maximizando Pantalla
             this.WindowState = FormWindowState.Maximized;
+            lblLoad.Visible = false;
+
+            lblLoad.Location = new Point(0, 39);
+            lblLoad.Size = new Size(956, 448);
+
+            ptr.Visible = false;
+
+            // estadotcr();
         }
 
         // Validar Campos de caja de texto
@@ -1101,5 +1113,243 @@ namespace MaterialSkinExample
             //  lblMensaje.Text = TCR2.StartDeposit(TCR).Message;
             MessageBox.Show(mensaje);
         }
+
+
+
+
+        public void estadotcr()
+        {
+
+
+
+            FullService.EstadoCassette estadocasett = new FullService.EstadoCassette();
+            FullService.DadosConteudoTCR tcr1 = new FullService.DadosConteudoTCR();
+            FullService.ContentClient tcr2 = new FullService.ContentClient();
+
+
+            FullService.DadosCassete tcr3 = new FullService.DadosCassete();
+
+
+
+
+
+
+            authData.Usuario = user;
+            authData.Terminal = terminal;
+            authData.Senha = Pasword;
+
+            //Caset A
+            lblidA.Text = tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[0].Id;
+            int denomA = Convert.ToInt32(tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[0].Denominacao);
+            lbldenomA.Text = "$ " + denomA.ToString();
+            int contadorA = Convert.ToInt32(tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[0].Contador);
+            lblcantA.Text = contadorA.ToString();
+            int totalA = denomA * contadorA;
+            lbltotalA.Text = "$ " + totalA;
+
+
+            //caset B
+            lblidB.Text = tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[1].Id;
+            int denomB = Convert.ToInt32(tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[1].Denominacao);
+            lbldenomB.Text = "$ " + denomB.ToString();
+            int contadorB = Convert.ToInt32(tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[1].Contador);
+            lblcantB.Text = contadorB.ToString();
+            int totalB = denomB * contadorB;
+            lbltotalB.Text = "$ " + totalB;
+
+            //caset C
+            lblidC.Text = tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[2].Id;
+            int denomC = Convert.ToInt32(tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[2].Denominacao);
+            lbldenomC.Text = "$ " + denomC.ToString();
+            int contadorC = Convert.ToInt32(tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[2].Contador);
+            lblcantC.Text = contadorC.ToString();
+            int totalC = denomC * contadorC;
+            lbltotalC.Text = "$ " + totalC;
+
+
+            //caset D
+            lblidD.Text = tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[3].Id;
+            int denomD = Convert.ToInt32(tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[3].Denominacao);
+            lbldenomD.Text = "$ " + denomD.ToString();
+            int contadorD = Convert.ToInt32(tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[3].Contador);
+            lblcantD.Text = contadorD.ToString();
+            int totalD = denomD * contadorD;
+            lbltotalD.Text = "$ " + totalD;
+
+
+            //caset E
+            lblidE.Text = tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[4].Id;
+            int denomE = Convert.ToInt32(tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[4].Denominacao);
+            lbldenomE.Text = "$ " + denomE.ToString();
+            int contadorE = Convert.ToInt32(tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[4].Contador);
+            lblcantE.Text = contadorE.ToString();
+            int totalE = denomE * contadorE;
+            lbltotalE.Text = "$ " + totalE;
+
+
+            //caset F
+            lblidF.Text = tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[5].Id;
+            int denomF = Convert.ToInt32(tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[5].Denominacao);
+            lbldenomF.Text = "$ " + denomF.ToString();
+            int contadorF = Convert.ToInt32(tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[5].Contador);
+            lblcantF.Text = contadorF.ToString();
+            int totalF = denomF * contadorF;
+            lbltotalF.Text = "$ " + totalF;
+
+            lbltotalcontenido.Text = "Contenido: $" + (totalA + totalB +
+                totalC + totalD + totalE + totalF +
+                10000).ToString("#,#", CultureInfo.InvariantCulture);
+
+            lblT_Billetes.Text = "Total de Billetes" + (contadorA + contadorB + contadorC + contadorD + contadorE + contadorF);
+
+            lblLoad.Visible = false;
+            chcContenido.Visible = true;
+            /*
+            // tcr1.InformacoesCassetes;
+            var x = tcr2.ConsultarConteudoTCR(authData).CodigoResposta;
+ 
+            string casetA = tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[0].Posicao;//A
+            string casetB = tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[1].Posicao;//B
+
+            string contadorA = tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[0].Contador;//A
+            string contadorB = tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[1].Contador;//B
+            string contadorC = tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[2].Contador;
+            string contadorD = tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[3].Contador;
+            string contadorE = tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[4].Contador;
+            string contadorF = tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[5].Contador;
+            int valorA = Convert.ToInt32(contadorA);
+            int valorB = Convert.ToInt32(contadorB);
+            int valorC = Convert.ToInt32(contadorC);
+            int valorD = Convert.ToInt32(contadorD);
+            int valorE = Convert.ToInt32(contadorE);
+            int valorF = Convert.ToInt32(contadorF);
+
+            int contenidoA = valorA * 20;
+            int contenidoB = valorB * 50;
+            int contenidoC = valorC * 100;
+            int contenidoD = valorD * 200;
+            int contenidoE = valorE * 500;
+            int contenidoF = valorF * 1000;
+
+
+            int estadotcr = contenidoA + contenidoB + contenidoC + contenidoD + contenidoE + contenidoF;
+            */
+            //  MessageBox.Show("El TCR contien $" + estadotcr + "total");
+        }
+
+        private void metroTabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //    if (metroTabControl1.SelectedTab == metroTabControl1.TabPages["contenidoTCR"])//your specific tabname
+            //    { 
+            //        Thread th = new Thread(new ThreadStart(estadotcr));
+            //        th.Start();
+            //        th.Join();
+            //    }
+        }
+
+        private void materialCheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chcContenido.Checked)
+
+            {
+                ptr.Visible = true;
+                lblLoad.Visible = true;
+                chcContenido.Visible = false;
+                //groupBox2.Visible = true;
+                Thread th = new Thread(new ThreadStart(estadotcr));
+                th.Start();
+                th.Join();
+
+            }
+
+        }
+
+        private void contenidoTCR_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            if (lblidA.Text == string.Empty)
+            {
+                chcContenido.Checked=true;
+              //  MyMessageBox.ShowBox(no_cuenta );
+            }
+            else
+            {
+                btnprintTicket();
+            }
+
+
+           
+        }
+
+        public void btnprintTicket()
+        {
+            PrintDocument pd = new PrintDocument();
+            pd.PrintPage += new PrintPageEventHandler(pd_PrintPage);
+            pd.PrintController = new StandardPrintController();
+            pd.Print();
+        }
+        //Ticket de contenido TCR
+
+        void pd_PrintPage(object sender, PrintPageEventArgs e)
+        {
+
+            Graphics g = e.Graphics;  //Uso de graficos para impresión de ticket
+            string logo = Application.StartupPath + "\\logo.jpg";
+            Font f = new Font("Arial Narrow", 10, FontStyle.Regular); //Estilo utilizado en ticket
+            SolidBrush b = new SolidBrush(Color.Black);  //Color de texto
+            g.DrawImage(Image.FromFile(logo), 130, -5, 160, 90);
+            g.DrawString("Impresión de contenido TCR   ", f, b, 10, 95);
+            g.DrawString("Fecha: " + DateTime.Now.ToString(), f, b, 10, 110);
+ 
+            g.DrawString("------------------ CASSETTE A------------------", f, b, 10, 125);
+            g.DrawString("Moneda: MXN", f, b, 10, +140);
+            g.DrawString("ID: " + lblidA.Text, f, b, 10, 155);
+            g.DrawString("Denominación: " + lbldenomA.Text, f, b, 10, 170);
+            g.DrawString("Cantidad: " + lblcantA.Text, f, b, 10, 185);
+            g.DrawString("Total: " + lbltotalA.Text, f, b, 10, 200);
+
+            g.DrawString("------------------ CASSETTE B------------------", f, b, 10, 215);
+            g.DrawString("Moneda: MXN", f, b, 10, +230);
+            g.DrawString("ID: " + lblidB.Text, f, b, 10, 245);
+            g.DrawString("Denominación: " + lbldenomB.Text, f, b, 10, 260);
+            g.DrawString("Cantidad: " + lblcantB.Text, f, b, 10, 275);
+            g.DrawString("Total: " + lbltotalB.Text, f, b, 10, 290);
+
+            g.DrawString("------------------ CASSETTE C------------------", f, b, 10, 305);
+            g.DrawString("Moneda: MXN", f, b, 10, +320);
+            g.DrawString("ID: " + lblidC.Text, f, b, 10, 335);
+            g.DrawString("Denominación: " + lbldenomC.Text, f, b, 10, 350);
+            g.DrawString("Cantidad: " + lblcantC.Text, f, b, 10, 365);
+            g.DrawString("Total: " + lbltotalC.Text, f, b, 10, 380);
+
+            g.DrawString("------------------ CASSETTE D------------------", f, b, 10, 395);
+            g.DrawString("Moneda: MXN", f, b, 10, +410);
+            g.DrawString("ID: " + lblidD.Text, f, b, 10, 425);
+            g.DrawString("Denominación: " + lbldenomD.Text, f, b, 10, 440);
+            g.DrawString("Cantidad: " + lblcantD.Text, f, b, 10, 455);
+            g.DrawString("Total: " + lbltotalD.Text, f, b, 10, 470);
+            g.DrawString("------------------ CASSETTE E------------------", f, b, 10, 485);
+            g.DrawString("Moneda: MXN", f, b, 10, +500);
+            g.DrawString("ID: " + lblidE.Text, f, b, 10, 515);
+            g.DrawString("Denominación: " + lbldenomE.Text, f, b, 10, 530);
+            g.DrawString("Cantidad: " + lblcantE.Text, f, b, 10, 545);
+            g.DrawString("Total: " + lbltotalE.Text, f, b, 10, 560);
+            g.DrawString("------------------ CASSETTE F------------------", f, b, 10, 575);
+            g.DrawString("Moneda: MXN", f, b, 10, +590);
+            g.DrawString("ID: " + lblidF.Text, f, b, 10, 605);
+            g.DrawString("Denominación: " + lbldenomF.Text, f, b, 10, 620);
+            g.DrawString("Cantidad: " + lblcantF.Text, f, b, 10, 635);
+            g.DrawString("Total: " + lbltotalF.Text, f, b, 10, 650);
+            g.DrawString(lblT_Billetes.Text, f, b, 10, 665);
+          //  g.DrawString("", f, b, 10, 890);
+            
+        }
+
+       
+
     }
 }

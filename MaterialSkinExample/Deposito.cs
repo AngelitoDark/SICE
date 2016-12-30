@@ -137,7 +137,7 @@ namespace MaterialSkinExample
         private void button2_Click(object sender, EventArgs e)
         {
             string result = MyMessageBox.ShowBox("Introduce los Billetes ", "Mensaje");
-                       //  string FechaInicio = String.Format(" {0:s}  ", DateTime.Now + DateTime.Now.ToString("%K"));
+           //  string FechaInicio = String.Format(" {0:s}  ", DateTime.Now + DateTime.Now.ToString("%K"));
             DateTime fecha = DateTime.Now;
             CultureInfo ci = CultureInfo.InvariantCulture;
             string hora = String.Format(fecha.ToString("hh:mm:ss.ff", ci));

@@ -78,22 +78,11 @@
             this.btn3 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
-            this.mListView = new iTalk_Listview();
-            this.no_cuenta = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.n_transaccion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Id_Cajero = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MXN20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MXN50 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MXN100 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MXN200 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MXN500 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MXN1000 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.TotalBilletes = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Total = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button4 = new System.Windows.Forms.Button();
             this.txtCuenta = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.button3 = new System.Windows.Forms.Button();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.button31 = new System.Windows.Forms.Button();
             this.GrupoApagar = new System.Windows.Forms.GroupBox();
             this.TecladoAd = new System.Windows.Forms.GroupBox();
             this.btnReiniciar = new System.Windows.Forms.Button();
@@ -114,16 +103,108 @@
             this.txtcontraseñaAd = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.button30 = new System.Windows.Forms.Button();
             this.button29 = new System.Windows.Forms.Button();
+            this.contenidoTCR = new MetroFramework.Controls.MetroTabPage();
+            this.lblLoad = new System.Windows.Forms.Label();
+            this.chcContenido = new MaterialSkin.Controls.MaterialCheckBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Footer = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblCuentaAdmin = new System.Windows.Forms.Label();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.ptr = new System.Windows.Forms.PictureBox();
             this.iTalk_Label2 = new iTalk_Label();
             this.iTalk_HeaderLabel1 = new iTalk_HeaderLabel();
             this.iTalk_Separator3 = new iTalk_Separator();
-            this.button31 = new System.Windows.Forms.Button();
+            this.mListView = new iTalk_Listview();
+            this.no_cuenta = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.n_transaccion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Id_Cajero = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MXN20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MXN50 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MXN100 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MXN200 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MXN500 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MXN1000 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TotalBilletes = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Total = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lblT_Billetes = new iTalk_HeaderLabel();
+            this.lbltotalcontenido = new iTalk_HeaderLabel();
+            this.iTalk_HeaderLabel2 = new iTalk_HeaderLabel();
+            this.iTalk_GroupBox6 = new iTalk_GroupBox();
+            this.lbltotalF = new System.Windows.Forms.Label();
+            this.lblcantF = new System.Windows.Forms.Label();
+            this.lbldenomF = new System.Windows.Forms.Label();
+            this.lblidF = new System.Windows.Forms.Label();
+            this.iTalk_Separator17 = new iTalk_Separator();
+            this.grupoTCR = new iTalk_Separator();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.iTalk_Separator19 = new iTalk_Separator();
+            this.label44 = new System.Windows.Forms.Label();
+            this.iTalk_GroupBox4 = new iTalk_GroupBox();
+            this.lbltotalE = new System.Windows.Forms.Label();
+            this.lblcantE = new System.Windows.Forms.Label();
+            this.lbldenomE = new System.Windows.Forms.Label();
+            this.lblidE = new System.Windows.Forms.Label();
+            this.iTalk_Separator11 = new iTalk_Separator();
+            this.iTalk_Separator12 = new iTalk_Separator();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.iTalk_Separator13 = new iTalk_Separator();
+            this.label28 = new System.Windows.Forms.Label();
+            this.iTalk_GroupBox3 = new iTalk_GroupBox();
+            this.lbltotalC = new System.Windows.Forms.Label();
+            this.lblcantC = new System.Windows.Forms.Label();
+            this.lbldenomC = new System.Windows.Forms.Label();
+            this.lblidC = new System.Windows.Forms.Label();
+            this.iTalk_Separator8 = new iTalk_Separator();
+            this.iTalk_Separator9 = new iTalk_Separator();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.iTalk_Separator10 = new iTalk_Separator();
+            this.label20 = new System.Windows.Forms.Label();
+            this.iTalk_GroupBox5 = new iTalk_GroupBox();
+            this.lbltotalD = new System.Windows.Forms.Label();
+            this.lblcantD = new System.Windows.Forms.Label();
+            this.lbldenomD = new System.Windows.Forms.Label();
+            this.lblidD = new System.Windows.Forms.Label();
+            this.iTalk_Separator14 = new iTalk_Separator();
+            this.iTalk_Separator15 = new iTalk_Separator();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.iTalk_Separator16 = new iTalk_Separator();
+            this.label36 = new System.Windows.Forms.Label();
+            this.iTalk_GroupBox2 = new iTalk_GroupBox();
+            this.lbltotalB = new System.Windows.Forms.Label();
+            this.lblcantB = new System.Windows.Forms.Label();
+            this.lbldenomB = new System.Windows.Forms.Label();
+            this.lblidB = new System.Windows.Forms.Label();
+            this.iTalk_Separator2 = new iTalk_Separator();
+            this.iTalk_Separator4 = new iTalk_Separator();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.iTalk_Separator5 = new iTalk_Separator();
+            this.label12 = new System.Windows.Forms.Label();
+            this.iTalk_GroupBox1 = new iTalk_GroupBox();
+            this.lbltotalA = new System.Windows.Forms.Label();
+            this.lblcantA = new System.Windows.Forms.Label();
+            this.lbldenomA = new System.Windows.Forms.Label();
+            this.lblidA = new System.Windows.Forms.Label();
+            this.iTalk_Separator7 = new iTalk_Separator();
+            this.iTalk_Separator6 = new iTalk_Separator();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.iTalk_Separator1 = new iTalk_Separator();
+            this.label2 = new System.Windows.Forms.Label();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.tclNumeric3.SuspendLayout();
@@ -135,9 +216,18 @@
             this.metroTabPage3.SuspendLayout();
             this.GrupoApagar.SuspendLayout();
             this.TecladoAd.SuspendLayout();
+            this.contenidoTCR.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptr)).BeginInit();
+            this.iTalk_GroupBox6.SuspendLayout();
+            this.iTalk_GroupBox4.SuspendLayout();
+            this.iTalk_GroupBox3.SuspendLayout();
+            this.iTalk_GroupBox5.SuspendLayout();
+            this.iTalk_GroupBox2.SuspendLayout();
+            this.iTalk_GroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroTabControl1
@@ -145,11 +235,12 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage1);
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Controls.Add(this.metroTabPage3);
+            this.metroTabControl1.Controls.Add(this.contenidoTCR);
             this.metroTabControl1.FontSize = MetroFramework.MetroTabControlSize.Tall;
             this.metroTabControl1.Location = new System.Drawing.Point(28, 138);
             this.metroTabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 2;
+            this.metroTabControl1.SelectedIndex = 3;
             this.metroTabControl1.Size = new System.Drawing.Size(974, 604);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.White;
             this.metroTabControl1.TabIndex = 0;
@@ -158,6 +249,7 @@
             this.metroTabControl1.UseCustomForeColor = true;
             this.metroTabControl1.UseSelectable = true;
             this.metroTabControl1.UseStyleColors = true;
+            this.metroTabControl1.SelectedIndexChanged += new System.EventHandler(this.metroTabControl1_SelectedIndexChanged);
             // 
             // metroTabPage1
             // 
@@ -1010,97 +1102,6 @@
             this.btn1.UseVisualStyleBackColor = true;
             this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
-            // mListView
-            // 
-            this.mListView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.no_cuenta,
-            this.n_transaccion,
-            this.Id_Cajero,
-            this.MXN20,
-            this.MXN50,
-            this.MXN100,
-            this.MXN200,
-            this.MXN500,
-            this.MXN1000,
-            this.TotalBilletes,
-            this.Total});
-            this.mListView.GridLines = true;
-            this.mListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.mListView.Location = new System.Drawing.Point(4, 128);
-            this.mListView.Margin = new System.Windows.Forms.Padding(4);
-            this.mListView.Name = "mListView";
-            this.mListView.Size = new System.Drawing.Size(948, 282);
-            this.mListView.TabIndex = 0;
-            this.mListView.UseCompatibleStateImageBehavior = false;
-            this.mListView.View = System.Windows.Forms.View.Details;
-            this.mListView.SelectedIndexChanged += new System.EventHandler(this.mListView_SelectedIndexChanged);
-            // 
-            // no_cuenta
-            // 
-            this.no_cuenta.Text = "No Cuenta";
-            this.no_cuenta.Width = 101;
-            // 
-            // n_transaccion
-            // 
-            this.n_transaccion.Text = "No Transaccion";
-            this.n_transaccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.n_transaccion.Width = 127;
-            // 
-            // Id_Cajero
-            // 
-            this.Id_Cajero.Text = "No Cajero";
-            this.Id_Cajero.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Id_Cajero.Width = 89;
-            // 
-            // MXN20
-            // 
-            this.MXN20.Text = "MXN20";
-            this.MXN20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MXN20.Width = 75;
-            // 
-            // MXN50
-            // 
-            this.MXN50.Text = "MXN50";
-            this.MXN50.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MXN50.Width = 71;
-            // 
-            // MXN100
-            // 
-            this.MXN100.Text = "MXN100";
-            this.MXN100.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MXN100.Width = 72;
-            // 
-            // MXN200
-            // 
-            this.MXN200.Text = "MXN200";
-            this.MXN200.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MXN200.Width = 72;
-            // 
-            // MXN500
-            // 
-            this.MXN500.Text = "MXN500";
-            this.MXN500.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MXN500.Width = 75;
-            // 
-            // MXN1000
-            // 
-            this.MXN1000.Text = "MXN1000";
-            this.MXN1000.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MXN1000.Width = 80;
-            // 
-            // TotalBilletes
-            // 
-            this.TotalBilletes.Text = "Total Billetes";
-            this.TotalBilletes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TotalBilletes.Width = 112;
-            // 
-            // Total
-            // 
-            this.Total.Text = "Total";
-            this.Total.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Total.Width = 65;
-            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -1165,11 +1166,27 @@
             this.metroTabPage3.Name = "metroTabPage3";
             this.metroTabPage3.Size = new System.Drawing.Size(966, 556);
             this.metroTabPage3.TabIndex = 2;
-            this.metroTabPage3.Text = "Herramientas";
+            this.metroTabPage3.Text = "Herramientas /";
             this.metroTabPage3.VerticalScrollbarBarColor = true;
             this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.VerticalScrollbarSize = 1;
             this.metroTabPage3.Click += new System.EventHandler(this.metroTabPage3_Click);
+            // 
+            // button31
+            // 
+            this.button31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button31.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.button31.FlatAppearance.BorderSize = 3;
+            this.button31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button31.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.button31.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button31.Location = new System.Drawing.Point(700, 201);
+            this.button31.Name = "button31";
+            this.button31.Size = new System.Drawing.Size(206, 47);
+            this.button31.TabIndex = 45;
+            this.button31.Text = "Resetear TCR";
+            this.button31.UseVisualStyleBackColor = false;
+            this.button31.Click += new System.EventHandler(this.button31_Click_1);
             // 
             // GrupoApagar
             // 
@@ -1482,7 +1499,7 @@
             this.button30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button30.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.button30.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button30.Location = new System.Drawing.Point(218, 199);
+            this.button30.Location = new System.Drawing.Point(106, 201);
             this.button30.Name = "button30";
             this.button30.Size = new System.Drawing.Size(206, 47);
             this.button30.TabIndex = 35;
@@ -1498,13 +1515,80 @@
             this.button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button29.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.button29.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button29.Location = new System.Drawing.Point(487, 199);
+            this.button29.Location = new System.Drawing.Point(375, 201);
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(206, 47);
             this.button29.TabIndex = 34;
             this.button29.Text = "Reiniciar Equipo";
             this.button29.UseVisualStyleBackColor = false;
             this.button29.Click += new System.EventHandler(this.button29_Click);
+            // 
+            // contenidoTCR
+            // 
+            this.contenidoTCR.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.contenidoTCR.Controls.Add(this.lblLoad);
+            this.contenidoTCR.Controls.Add(this.chcContenido);
+            this.contenidoTCR.Controls.Add(this.groupBox2);
+            this.contenidoTCR.HorizontalScrollbarBarColor = true;
+            this.contenidoTCR.HorizontalScrollbarHighlightOnWheel = false;
+            this.contenidoTCR.HorizontalScrollbarSize = 5;
+            this.contenidoTCR.Location = new System.Drawing.Point(4, 44);
+            this.contenidoTCR.Name = "contenidoTCR";
+            this.contenidoTCR.Size = new System.Drawing.Size(966, 556);
+            this.contenidoTCR.TabIndex = 3;
+            this.contenidoTCR.Text = "Contenido TCR";
+            this.contenidoTCR.VerticalScrollbarBarColor = true;
+            this.contenidoTCR.VerticalScrollbarHighlightOnWheel = false;
+            this.contenidoTCR.VerticalScrollbarSize = 5;
+            this.contenidoTCR.Click += new System.EventHandler(this.contenidoTCR_Click);
+            // 
+            // lblLoad
+            // 
+            this.lblLoad.BackColor = System.Drawing.Color.White;
+            this.lblLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoad.Location = new System.Drawing.Point(93, 17);
+            this.lblLoad.Name = "lblLoad";
+            this.lblLoad.Size = new System.Drawing.Size(64, 29);
+            this.lblLoad.TabIndex = 26;
+            this.lblLoad.Text = "Espere …\r\nObteniendo contenido  TCR \r\n";
+            this.lblLoad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // chcContenido
+            // 
+            this.chcContenido.BackColor = System.Drawing.Color.White;
+            this.chcContenido.Depth = 0;
+            this.chcContenido.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.chcContenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.chcContenido.Location = new System.Drawing.Point(370, 17);
+            this.chcContenido.Margin = new System.Windows.Forms.Padding(0);
+            this.chcContenido.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.chcContenido.MouseState = MaterialSkin.MouseState.HOVER;
+            this.chcContenido.Name = "chcContenido";
+            this.chcContenido.Ripple = true;
+            this.chcContenido.Size = new System.Drawing.Size(199, 30);
+            this.chcContenido.TabIndex = 25;
+            this.chcContenido.Text = "Ver Contenido TCR";
+            this.chcContenido.UseVisualStyleBackColor = false;
+            this.chcContenido.CheckedChanged += new System.EventHandler(this.materialCheckBox1_CheckedChanged);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.lblT_Billetes);
+            this.groupBox2.Controls.Add(this.ptr);
+            this.groupBox2.Controls.Add(this.lbltotalcontenido);
+            this.groupBox2.Controls.Add(this.iTalk_HeaderLabel2);
+            this.groupBox2.Controls.Add(this.iTalk_GroupBox6);
+            this.groupBox2.Controls.Add(this.iTalk_GroupBox4);
+            this.groupBox2.Controls.Add(this.iTalk_GroupBox3);
+            this.groupBox2.Controls.Add(this.iTalk_GroupBox5);
+            this.groupBox2.Controls.Add(this.iTalk_GroupBox2);
+            this.groupBox2.Controls.Add(this.iTalk_GroupBox1);
+            this.groupBox2.Location = new System.Drawing.Point(0, 39);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(956, 448);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
             // 
             // Footer
             // 
@@ -1580,6 +1664,17 @@
             this.lblCuentaAdmin.TabIndex = 52;
             this.lblCuentaAdmin.Text = "1";
             // 
+            // ptr
+            // 
+            this.ptr.Image = ((System.Drawing.Image)(resources.GetObject("ptr.Image")));
+            this.ptr.Location = new System.Drawing.Point(710, 342);
+            this.ptr.Name = "ptr";
+            this.ptr.Size = new System.Drawing.Size(100, 100);
+            this.ptr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptr.TabIndex = 24;
+            this.ptr.TabStop = false;
+            this.ptr.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
             // iTalk_Label2
             // 
             this.iTalk_Label2.AutoSize = true;
@@ -1614,21 +1709,834 @@
             this.iTalk_Separator3.TabIndex = 46;
             this.iTalk_Separator3.Text = "iTalk_Separator3";
             // 
-            // button31
+            // mListView
             // 
-            this.button31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button31.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.button31.FlatAppearance.BorderSize = 3;
-            this.button31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button31.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.button31.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button31.Location = new System.Drawing.Point(387, 379);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(206, 47);
-            this.button31.TabIndex = 45;
-            this.button31.Text = "Resetear TCR";
-            this.button31.UseVisualStyleBackColor = false;
-            this.button31.Click += new System.EventHandler(this.button31_Click_1);
+            this.mListView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.no_cuenta,
+            this.n_transaccion,
+            this.Id_Cajero,
+            this.MXN20,
+            this.MXN50,
+            this.MXN100,
+            this.MXN200,
+            this.MXN500,
+            this.MXN1000,
+            this.TotalBilletes,
+            this.Total});
+            this.mListView.GridLines = true;
+            this.mListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.mListView.Location = new System.Drawing.Point(4, 128);
+            this.mListView.Margin = new System.Windows.Forms.Padding(4);
+            this.mListView.Name = "mListView";
+            this.mListView.Size = new System.Drawing.Size(948, 282);
+            this.mListView.TabIndex = 0;
+            this.mListView.UseCompatibleStateImageBehavior = false;
+            this.mListView.View = System.Windows.Forms.View.Details;
+            this.mListView.SelectedIndexChanged += new System.EventHandler(this.mListView_SelectedIndexChanged);
+            // 
+            // no_cuenta
+            // 
+            this.no_cuenta.Text = "No Cuenta";
+            this.no_cuenta.Width = 101;
+            // 
+            // n_transaccion
+            // 
+            this.n_transaccion.Text = "No Transaccion";
+            this.n_transaccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.n_transaccion.Width = 127;
+            // 
+            // Id_Cajero
+            // 
+            this.Id_Cajero.Text = "No Cajero";
+            this.Id_Cajero.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Id_Cajero.Width = 89;
+            // 
+            // MXN20
+            // 
+            this.MXN20.Text = "MXN20";
+            this.MXN20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.MXN20.Width = 75;
+            // 
+            // MXN50
+            // 
+            this.MXN50.Text = "MXN50";
+            this.MXN50.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.MXN50.Width = 71;
+            // 
+            // MXN100
+            // 
+            this.MXN100.Text = "MXN100";
+            this.MXN100.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.MXN100.Width = 72;
+            // 
+            // MXN200
+            // 
+            this.MXN200.Text = "MXN200";
+            this.MXN200.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.MXN200.Width = 72;
+            // 
+            // MXN500
+            // 
+            this.MXN500.Text = "MXN500";
+            this.MXN500.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.MXN500.Width = 75;
+            // 
+            // MXN1000
+            // 
+            this.MXN1000.Text = "MXN1000";
+            this.MXN1000.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.MXN1000.Width = 80;
+            // 
+            // TotalBilletes
+            // 
+            this.TotalBilletes.Text = "Total Billetes";
+            this.TotalBilletes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TotalBilletes.Width = 112;
+            // 
+            // Total
+            // 
+            this.Total.Text = "Total";
+            this.Total.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Total.Width = 65;
+            // 
+            // lblT_Billetes
+            // 
+            this.lblT_Billetes.AutoSize = true;
+            this.lblT_Billetes.BackColor = System.Drawing.Color.Transparent;
+            this.lblT_Billetes.Font = new System.Drawing.Font("Segoe UI", 20F);
+            this.lblT_Billetes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblT_Billetes.Location = new System.Drawing.Point(124, 363);
+            this.lblT_Billetes.Name = "lblT_Billetes";
+            this.lblT_Billetes.Size = new System.Drawing.Size(226, 37);
+            this.lblT_Billetes.TabIndex = 25;
+            this.lblT_Billetes.Text = "TOTAL BILLETES : ";
+            // 
+            // lbltotalcontenido
+            // 
+            this.lbltotalcontenido.AutoSize = true;
+            this.lbltotalcontenido.BackColor = System.Drawing.Color.Transparent;
+            this.lbltotalcontenido.Font = new System.Drawing.Font("Segoe UI", 20F);
+            this.lbltotalcontenido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lbltotalcontenido.Location = new System.Drawing.Point(424, 363);
+            this.lbltotalcontenido.Name = "lbltotalcontenido";
+            this.lbltotalcontenido.Size = new System.Drawing.Size(145, 37);
+            this.lbltotalcontenido.TabIndex = 23;
+            this.lbltotalcontenido.Text = "TOTAL: $ 0";
+            // 
+            // iTalk_HeaderLabel2
+            // 
+            this.iTalk_HeaderLabel2.AutoSize = true;
+            this.iTalk_HeaderLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_HeaderLabel2.Font = new System.Drawing.Font("Segoe UI", 20F);
+            this.iTalk_HeaderLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.iTalk_HeaderLabel2.Location = new System.Drawing.Point(434, 18);
+            this.iTalk_HeaderLabel2.Name = "iTalk_HeaderLabel2";
+            this.iTalk_HeaderLabel2.Size = new System.Drawing.Size(77, 37);
+            this.iTalk_HeaderLabel2.TabIndex = 22;
+            this.iTalk_HeaderLabel2.Text = "MXN";
+            // 
+            // iTalk_GroupBox6
+            // 
+            this.iTalk_GroupBox6.BackColor = System.Drawing.Color.White;
+            this.iTalk_GroupBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.iTalk_GroupBox6.Controls.Add(this.lbltotalF);
+            this.iTalk_GroupBox6.Controls.Add(this.lblcantF);
+            this.iTalk_GroupBox6.Controls.Add(this.lbldenomF);
+            this.iTalk_GroupBox6.Controls.Add(this.lblidF);
+            this.iTalk_GroupBox6.Controls.Add(this.iTalk_Separator17);
+            this.iTalk_GroupBox6.Controls.Add(this.grupoTCR);
+            this.iTalk_GroupBox6.Controls.Add(this.label41);
+            this.iTalk_GroupBox6.Controls.Add(this.label42);
+            this.iTalk_GroupBox6.Controls.Add(this.label43);
+            this.iTalk_GroupBox6.Controls.Add(this.iTalk_Separator19);
+            this.iTalk_GroupBox6.Controls.Add(this.label44);
+            this.iTalk_GroupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.iTalk_GroupBox6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.iTalk_GroupBox6.Location = new System.Drawing.Point(800, 58);
+            this.iTalk_GroupBox6.MinimumSize = new System.Drawing.Size(136, 50);
+            this.iTalk_GroupBox6.Name = "iTalk_GroupBox6";
+            this.iTalk_GroupBox6.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
+            this.iTalk_GroupBox6.Size = new System.Drawing.Size(150, 271);
+            this.iTalk_GroupBox6.TabIndex = 21;
+            this.iTalk_GroupBox6.Text = "1000";
+            // 
+            // lbltotalF
+            // 
+            this.lbltotalF.AutoSize = true;
+            this.lbltotalF.Location = new System.Drawing.Point(59, 232);
+            this.lbltotalF.Name = "lbltotalF";
+            this.lbltotalF.Size = new System.Drawing.Size(0, 16);
+            this.lbltotalF.TabIndex = 16;
+            // 
+            // lblcantF
+            // 
+            this.lblcantF.AutoSize = true;
+            this.lblcantF.Location = new System.Drawing.Point(70, 168);
+            this.lblcantF.Name = "lblcantF";
+            this.lblcantF.Size = new System.Drawing.Size(0, 16);
+            this.lblcantF.TabIndex = 15;
+            // 
+            // lbldenomF
+            // 
+            this.lbldenomF.AutoSize = true;
+            this.lbldenomF.Location = new System.Drawing.Point(54, 116);
+            this.lbldenomF.Name = "lbldenomF";
+            this.lbldenomF.Size = new System.Drawing.Size(0, 16);
+            this.lbldenomF.TabIndex = 14;
+            // 
+            // lblidF
+            // 
+            this.lblidF.AutoSize = true;
+            this.lblidF.Location = new System.Drawing.Point(56, 59);
+            this.lblidF.Name = "lblidF";
+            this.lblidF.Size = new System.Drawing.Size(0, 16);
+            this.lblidF.TabIndex = 4;
+            // 
+            // iTalk_Separator17
+            // 
+            this.iTalk_Separator17.Location = new System.Drawing.Point(2, 187);
+            this.iTalk_Separator17.Name = "iTalk_Separator17";
+            this.iTalk_Separator17.Size = new System.Drawing.Size(146, 10);
+            this.iTalk_Separator17.TabIndex = 13;
+            this.iTalk_Separator17.Text = "iTalk_Separator17";
+            // 
+            // grupoTCR
+            // 
+            this.grupoTCR.Location = new System.Drawing.Point(2, 133);
+            this.grupoTCR.Name = "grupoTCR";
+            this.grupoTCR.Size = new System.Drawing.Size(146, 10);
+            this.grupoTCR.TabIndex = 12;
+            this.grupoTCR.Text = "iTalk_Separator18";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(56, 200);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(44, 16);
+            this.label41.TabIndex = 11;
+            this.label41.Text = "Total";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(67, 28);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(21, 16);
+            this.label42.TabIndex = 5;
+            this.label42.Text = "Id";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(45, 144);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(74, 16);
+            this.label43.TabIndex = 9;
+            this.label43.Text = "Cantidad ";
+            // 
+            // iTalk_Separator19
+            // 
+            this.iTalk_Separator19.Location = new System.Drawing.Point(2, 78);
+            this.iTalk_Separator19.Name = "iTalk_Separator19";
+            this.iTalk_Separator19.Size = new System.Drawing.Size(146, 10);
+            this.iTalk_Separator19.TabIndex = 4;
+            this.iTalk_Separator19.Text = "iTalk_Separator19";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(27, 88);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(111, 16);
+            this.label44.TabIndex = 7;
+            this.label44.Text = "Denominación ";
+            // 
+            // iTalk_GroupBox4
+            // 
+            this.iTalk_GroupBox4.BackColor = System.Drawing.Color.White;
+            this.iTalk_GroupBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.iTalk_GroupBox4.Controls.Add(this.lbltotalE);
+            this.iTalk_GroupBox4.Controls.Add(this.lblcantE);
+            this.iTalk_GroupBox4.Controls.Add(this.lbldenomE);
+            this.iTalk_GroupBox4.Controls.Add(this.lblidE);
+            this.iTalk_GroupBox4.Controls.Add(this.iTalk_Separator11);
+            this.iTalk_GroupBox4.Controls.Add(this.iTalk_Separator12);
+            this.iTalk_GroupBox4.Controls.Add(this.label25);
+            this.iTalk_GroupBox4.Controls.Add(this.label26);
+            this.iTalk_GroupBox4.Controls.Add(this.label27);
+            this.iTalk_GroupBox4.Controls.Add(this.iTalk_Separator13);
+            this.iTalk_GroupBox4.Controls.Add(this.label28);
+            this.iTalk_GroupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.iTalk_GroupBox4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.iTalk_GroupBox4.Location = new System.Drawing.Point(637, 58);
+            this.iTalk_GroupBox4.MinimumSize = new System.Drawing.Size(136, 50);
+            this.iTalk_GroupBox4.Name = "iTalk_GroupBox4";
+            this.iTalk_GroupBox4.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
+            this.iTalk_GroupBox4.Size = new System.Drawing.Size(150, 271);
+            this.iTalk_GroupBox4.TabIndex = 20;
+            this.iTalk_GroupBox4.Text = "500";
+            // 
+            // lbltotalE
+            // 
+            this.lbltotalE.AutoSize = true;
+            this.lbltotalE.Location = new System.Drawing.Point(59, 232);
+            this.lbltotalE.Name = "lbltotalE";
+            this.lbltotalE.Size = new System.Drawing.Size(0, 16);
+            this.lbltotalE.TabIndex = 16;
+            // 
+            // lblcantE
+            // 
+            this.lblcantE.AutoSize = true;
+            this.lblcantE.Location = new System.Drawing.Point(70, 168);
+            this.lblcantE.Name = "lblcantE";
+            this.lblcantE.Size = new System.Drawing.Size(0, 16);
+            this.lblcantE.TabIndex = 15;
+            // 
+            // lbldenomE
+            // 
+            this.lbldenomE.AutoSize = true;
+            this.lbldenomE.Location = new System.Drawing.Point(54, 116);
+            this.lbldenomE.Name = "lbldenomE";
+            this.lbldenomE.Size = new System.Drawing.Size(0, 16);
+            this.lbldenomE.TabIndex = 14;
+            // 
+            // lblidE
+            // 
+            this.lblidE.AutoSize = true;
+            this.lblidE.Location = new System.Drawing.Point(56, 59);
+            this.lblidE.Name = "lblidE";
+            this.lblidE.Size = new System.Drawing.Size(0, 16);
+            this.lblidE.TabIndex = 4;
+            // 
+            // iTalk_Separator11
+            // 
+            this.iTalk_Separator11.Location = new System.Drawing.Point(2, 187);
+            this.iTalk_Separator11.Name = "iTalk_Separator11";
+            this.iTalk_Separator11.Size = new System.Drawing.Size(146, 10);
+            this.iTalk_Separator11.TabIndex = 13;
+            this.iTalk_Separator11.Text = "iTalk_Separator11";
+            // 
+            // iTalk_Separator12
+            // 
+            this.iTalk_Separator12.Location = new System.Drawing.Point(2, 133);
+            this.iTalk_Separator12.Name = "iTalk_Separator12";
+            this.iTalk_Separator12.Size = new System.Drawing.Size(146, 10);
+            this.iTalk_Separator12.TabIndex = 12;
+            this.iTalk_Separator12.Text = "iTalk_Separator12";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(56, 200);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(44, 16);
+            this.label25.TabIndex = 11;
+            this.label25.Text = "Total";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(67, 28);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(21, 16);
+            this.label26.TabIndex = 5;
+            this.label26.Text = "Id";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(45, 144);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(74, 16);
+            this.label27.TabIndex = 9;
+            this.label27.Text = "Cantidad ";
+            // 
+            // iTalk_Separator13
+            // 
+            this.iTalk_Separator13.Location = new System.Drawing.Point(2, 78);
+            this.iTalk_Separator13.Name = "iTalk_Separator13";
+            this.iTalk_Separator13.Size = new System.Drawing.Size(146, 10);
+            this.iTalk_Separator13.TabIndex = 4;
+            this.iTalk_Separator13.Text = "iTalk_Separator13";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(27, 88);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(111, 16);
+            this.label28.TabIndex = 7;
+            this.label28.Text = "Denominación ";
+            // 
+            // iTalk_GroupBox3
+            // 
+            this.iTalk_GroupBox3.BackColor = System.Drawing.Color.White;
+            this.iTalk_GroupBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.iTalk_GroupBox3.Controls.Add(this.lbltotalC);
+            this.iTalk_GroupBox3.Controls.Add(this.lblcantC);
+            this.iTalk_GroupBox3.Controls.Add(this.lbldenomC);
+            this.iTalk_GroupBox3.Controls.Add(this.lblidC);
+            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Separator8);
+            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Separator9);
+            this.iTalk_GroupBox3.Controls.Add(this.label17);
+            this.iTalk_GroupBox3.Controls.Add(this.label18);
+            this.iTalk_GroupBox3.Controls.Add(this.label19);
+            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Separator10);
+            this.iTalk_GroupBox3.Controls.Add(this.label20);
+            this.iTalk_GroupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.iTalk_GroupBox3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.iTalk_GroupBox3.Location = new System.Drawing.Point(322, 58);
+            this.iTalk_GroupBox3.MinimumSize = new System.Drawing.Size(136, 50);
+            this.iTalk_GroupBox3.Name = "iTalk_GroupBox3";
+            this.iTalk_GroupBox3.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
+            this.iTalk_GroupBox3.Size = new System.Drawing.Size(150, 271);
+            this.iTalk_GroupBox3.TabIndex = 18;
+            this.iTalk_GroupBox3.Text = "100";
+            // 
+            // lbltotalC
+            // 
+            this.lbltotalC.AutoSize = true;
+            this.lbltotalC.Location = new System.Drawing.Point(59, 232);
+            this.lbltotalC.Name = "lbltotalC";
+            this.lbltotalC.Size = new System.Drawing.Size(0, 16);
+            this.lbltotalC.TabIndex = 16;
+            // 
+            // lblcantC
+            // 
+            this.lblcantC.AutoSize = true;
+            this.lblcantC.Location = new System.Drawing.Point(70, 168);
+            this.lblcantC.Name = "lblcantC";
+            this.lblcantC.Size = new System.Drawing.Size(0, 16);
+            this.lblcantC.TabIndex = 15;
+            // 
+            // lbldenomC
+            // 
+            this.lbldenomC.AutoSize = true;
+            this.lbldenomC.Location = new System.Drawing.Point(54, 116);
+            this.lbldenomC.Name = "lbldenomC";
+            this.lbldenomC.Size = new System.Drawing.Size(0, 16);
+            this.lbldenomC.TabIndex = 14;
+            // 
+            // lblidC
+            // 
+            this.lblidC.AutoSize = true;
+            this.lblidC.Location = new System.Drawing.Point(56, 59);
+            this.lblidC.Name = "lblidC";
+            this.lblidC.Size = new System.Drawing.Size(0, 16);
+            this.lblidC.TabIndex = 4;
+            // 
+            // iTalk_Separator8
+            // 
+            this.iTalk_Separator8.Location = new System.Drawing.Point(2, 187);
+            this.iTalk_Separator8.Name = "iTalk_Separator8";
+            this.iTalk_Separator8.Size = new System.Drawing.Size(146, 10);
+            this.iTalk_Separator8.TabIndex = 13;
+            this.iTalk_Separator8.Text = "iTalk_Separator8";
+            // 
+            // iTalk_Separator9
+            // 
+            this.iTalk_Separator9.Location = new System.Drawing.Point(2, 133);
+            this.iTalk_Separator9.Name = "iTalk_Separator9";
+            this.iTalk_Separator9.Size = new System.Drawing.Size(146, 10);
+            this.iTalk_Separator9.TabIndex = 12;
+            this.iTalk_Separator9.Text = "iTalk_Separator9";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(56, 200);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(44, 16);
+            this.label17.TabIndex = 11;
+            this.label17.Text = "Total";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(67, 28);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(21, 16);
+            this.label18.TabIndex = 5;
+            this.label18.Text = "Id";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(45, 144);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(74, 16);
+            this.label19.TabIndex = 9;
+            this.label19.Text = "Cantidad ";
+            // 
+            // iTalk_Separator10
+            // 
+            this.iTalk_Separator10.Location = new System.Drawing.Point(2, 78);
+            this.iTalk_Separator10.Name = "iTalk_Separator10";
+            this.iTalk_Separator10.Size = new System.Drawing.Size(146, 10);
+            this.iTalk_Separator10.TabIndex = 4;
+            this.iTalk_Separator10.Text = "iTalk_Separator10";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(27, 88);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(111, 16);
+            this.label20.TabIndex = 7;
+            this.label20.Text = "Denominación ";
+            // 
+            // iTalk_GroupBox5
+            // 
+            this.iTalk_GroupBox5.BackColor = System.Drawing.Color.White;
+            this.iTalk_GroupBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.iTalk_GroupBox5.Controls.Add(this.lbltotalD);
+            this.iTalk_GroupBox5.Controls.Add(this.lblcantD);
+            this.iTalk_GroupBox5.Controls.Add(this.lbldenomD);
+            this.iTalk_GroupBox5.Controls.Add(this.lblidD);
+            this.iTalk_GroupBox5.Controls.Add(this.iTalk_Separator14);
+            this.iTalk_GroupBox5.Controls.Add(this.iTalk_Separator15);
+            this.iTalk_GroupBox5.Controls.Add(this.label33);
+            this.iTalk_GroupBox5.Controls.Add(this.label34);
+            this.iTalk_GroupBox5.Controls.Add(this.label35);
+            this.iTalk_GroupBox5.Controls.Add(this.iTalk_Separator16);
+            this.iTalk_GroupBox5.Controls.Add(this.label36);
+            this.iTalk_GroupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.iTalk_GroupBox5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.iTalk_GroupBox5.Location = new System.Drawing.Point(478, 58);
+            this.iTalk_GroupBox5.MinimumSize = new System.Drawing.Size(136, 50);
+            this.iTalk_GroupBox5.Name = "iTalk_GroupBox5";
+            this.iTalk_GroupBox5.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
+            this.iTalk_GroupBox5.Size = new System.Drawing.Size(150, 271);
+            this.iTalk_GroupBox5.TabIndex = 19;
+            this.iTalk_GroupBox5.Text = "200";
+            // 
+            // lbltotalD
+            // 
+            this.lbltotalD.AutoSize = true;
+            this.lbltotalD.Location = new System.Drawing.Point(59, 232);
+            this.lbltotalD.Name = "lbltotalD";
+            this.lbltotalD.Size = new System.Drawing.Size(0, 16);
+            this.lbltotalD.TabIndex = 16;
+            // 
+            // lblcantD
+            // 
+            this.lblcantD.AutoSize = true;
+            this.lblcantD.Location = new System.Drawing.Point(70, 168);
+            this.lblcantD.Name = "lblcantD";
+            this.lblcantD.Size = new System.Drawing.Size(0, 16);
+            this.lblcantD.TabIndex = 15;
+            // 
+            // lbldenomD
+            // 
+            this.lbldenomD.AutoSize = true;
+            this.lbldenomD.Location = new System.Drawing.Point(54, 116);
+            this.lbldenomD.Name = "lbldenomD";
+            this.lbldenomD.Size = new System.Drawing.Size(0, 16);
+            this.lbldenomD.TabIndex = 14;
+            // 
+            // lblidD
+            // 
+            this.lblidD.AutoSize = true;
+            this.lblidD.Location = new System.Drawing.Point(56, 59);
+            this.lblidD.Name = "lblidD";
+            this.lblidD.Size = new System.Drawing.Size(0, 16);
+            this.lblidD.TabIndex = 4;
+            // 
+            // iTalk_Separator14
+            // 
+            this.iTalk_Separator14.Location = new System.Drawing.Point(2, 187);
+            this.iTalk_Separator14.Name = "iTalk_Separator14";
+            this.iTalk_Separator14.Size = new System.Drawing.Size(146, 10);
+            this.iTalk_Separator14.TabIndex = 13;
+            this.iTalk_Separator14.Text = "iTalk_Separator14";
+            // 
+            // iTalk_Separator15
+            // 
+            this.iTalk_Separator15.Location = new System.Drawing.Point(2, 133);
+            this.iTalk_Separator15.Name = "iTalk_Separator15";
+            this.iTalk_Separator15.Size = new System.Drawing.Size(146, 10);
+            this.iTalk_Separator15.TabIndex = 12;
+            this.iTalk_Separator15.Text = "iTalk_Separator15";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(56, 200);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(44, 16);
+            this.label33.TabIndex = 11;
+            this.label33.Text = "Total";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(67, 28);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(21, 16);
+            this.label34.TabIndex = 5;
+            this.label34.Text = "Id";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(45, 144);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(74, 16);
+            this.label35.TabIndex = 9;
+            this.label35.Text = "Cantidad ";
+            // 
+            // iTalk_Separator16
+            // 
+            this.iTalk_Separator16.Location = new System.Drawing.Point(2, 78);
+            this.iTalk_Separator16.Name = "iTalk_Separator16";
+            this.iTalk_Separator16.Size = new System.Drawing.Size(146, 10);
+            this.iTalk_Separator16.TabIndex = 4;
+            this.iTalk_Separator16.Text = "iTalk_Separator16";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(27, 88);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(111, 16);
+            this.label36.TabIndex = 7;
+            this.label36.Text = "Denominación ";
+            // 
+            // iTalk_GroupBox2
+            // 
+            this.iTalk_GroupBox2.BackColor = System.Drawing.Color.White;
+            this.iTalk_GroupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.iTalk_GroupBox2.Controls.Add(this.lbltotalB);
+            this.iTalk_GroupBox2.Controls.Add(this.lblcantB);
+            this.iTalk_GroupBox2.Controls.Add(this.lbldenomB);
+            this.iTalk_GroupBox2.Controls.Add(this.lblidB);
+            this.iTalk_GroupBox2.Controls.Add(this.iTalk_Separator2);
+            this.iTalk_GroupBox2.Controls.Add(this.iTalk_Separator4);
+            this.iTalk_GroupBox2.Controls.Add(this.label9);
+            this.iTalk_GroupBox2.Controls.Add(this.label10);
+            this.iTalk_GroupBox2.Controls.Add(this.label11);
+            this.iTalk_GroupBox2.Controls.Add(this.iTalk_Separator5);
+            this.iTalk_GroupBox2.Controls.Add(this.label12);
+            this.iTalk_GroupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.iTalk_GroupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.iTalk_GroupBox2.Location = new System.Drawing.Point(163, 58);
+            this.iTalk_GroupBox2.MinimumSize = new System.Drawing.Size(136, 50);
+            this.iTalk_GroupBox2.Name = "iTalk_GroupBox2";
+            this.iTalk_GroupBox2.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
+            this.iTalk_GroupBox2.Size = new System.Drawing.Size(150, 271);
+            this.iTalk_GroupBox2.TabIndex = 17;
+            this.iTalk_GroupBox2.Text = "50";
+            // 
+            // lbltotalB
+            // 
+            this.lbltotalB.AutoSize = true;
+            this.lbltotalB.Location = new System.Drawing.Point(59, 232);
+            this.lbltotalB.Name = "lbltotalB";
+            this.lbltotalB.Size = new System.Drawing.Size(0, 16);
+            this.lbltotalB.TabIndex = 16;
+            // 
+            // lblcantB
+            // 
+            this.lblcantB.AutoSize = true;
+            this.lblcantB.Location = new System.Drawing.Point(70, 168);
+            this.lblcantB.Name = "lblcantB";
+            this.lblcantB.Size = new System.Drawing.Size(0, 16);
+            this.lblcantB.TabIndex = 15;
+            // 
+            // lbldenomB
+            // 
+            this.lbldenomB.AutoSize = true;
+            this.lbldenomB.Location = new System.Drawing.Point(54, 116);
+            this.lbldenomB.Name = "lbldenomB";
+            this.lbldenomB.Size = new System.Drawing.Size(0, 16);
+            this.lbldenomB.TabIndex = 14;
+            // 
+            // lblidB
+            // 
+            this.lblidB.AutoSize = true;
+            this.lblidB.Location = new System.Drawing.Point(56, 59);
+            this.lblidB.Name = "lblidB";
+            this.lblidB.Size = new System.Drawing.Size(0, 16);
+            this.lblidB.TabIndex = 4;
+            // 
+            // iTalk_Separator2
+            // 
+            this.iTalk_Separator2.Location = new System.Drawing.Point(2, 187);
+            this.iTalk_Separator2.Name = "iTalk_Separator2";
+            this.iTalk_Separator2.Size = new System.Drawing.Size(146, 10);
+            this.iTalk_Separator2.TabIndex = 13;
+            this.iTalk_Separator2.Text = "iTalk_Separator2";
+            // 
+            // iTalk_Separator4
+            // 
+            this.iTalk_Separator4.Location = new System.Drawing.Point(2, 133);
+            this.iTalk_Separator4.Name = "iTalk_Separator4";
+            this.iTalk_Separator4.Size = new System.Drawing.Size(146, 10);
+            this.iTalk_Separator4.TabIndex = 12;
+            this.iTalk_Separator4.Text = "iTalk_Separator4";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(56, 200);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(44, 16);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Total";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(67, 28);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(21, 16);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Id";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(45, 144);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(74, 16);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "Cantidad ";
+            // 
+            // iTalk_Separator5
+            // 
+            this.iTalk_Separator5.Location = new System.Drawing.Point(2, 78);
+            this.iTalk_Separator5.Name = "iTalk_Separator5";
+            this.iTalk_Separator5.Size = new System.Drawing.Size(146, 10);
+            this.iTalk_Separator5.TabIndex = 4;
+            this.iTalk_Separator5.Text = "iTalk_Separator5";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(27, 88);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(111, 16);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Denominación ";
+            // 
+            // iTalk_GroupBox1
+            // 
+            this.iTalk_GroupBox1.BackColor = System.Drawing.Color.White;
+            this.iTalk_GroupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.iTalk_GroupBox1.Controls.Add(this.lbltotalA);
+            this.iTalk_GroupBox1.Controls.Add(this.lblcantA);
+            this.iTalk_GroupBox1.Controls.Add(this.lbldenomA);
+            this.iTalk_GroupBox1.Controls.Add(this.lblidA);
+            this.iTalk_GroupBox1.Controls.Add(this.iTalk_Separator7);
+            this.iTalk_GroupBox1.Controls.Add(this.iTalk_Separator6);
+            this.iTalk_GroupBox1.Controls.Add(this.label4);
+            this.iTalk_GroupBox1.Controls.Add(this.label1);
+            this.iTalk_GroupBox1.Controls.Add(this.label3);
+            this.iTalk_GroupBox1.Controls.Add(this.iTalk_Separator1);
+            this.iTalk_GroupBox1.Controls.Add(this.label2);
+            this.iTalk_GroupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.iTalk_GroupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.iTalk_GroupBox1.Location = new System.Drawing.Point(7, 58);
+            this.iTalk_GroupBox1.MinimumSize = new System.Drawing.Size(136, 50);
+            this.iTalk_GroupBox1.Name = "iTalk_GroupBox1";
+            this.iTalk_GroupBox1.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
+            this.iTalk_GroupBox1.Size = new System.Drawing.Size(150, 271);
+            this.iTalk_GroupBox1.TabIndex = 3;
+            this.iTalk_GroupBox1.Text = " 20";
+            // 
+            // lbltotalA
+            // 
+            this.lbltotalA.AutoSize = true;
+            this.lbltotalA.Location = new System.Drawing.Point(59, 232);
+            this.lbltotalA.Name = "lbltotalA";
+            this.lbltotalA.Size = new System.Drawing.Size(0, 16);
+            this.lbltotalA.TabIndex = 16;
+            // 
+            // lblcantA
+            // 
+            this.lblcantA.AutoSize = true;
+            this.lblcantA.Location = new System.Drawing.Point(70, 168);
+            this.lblcantA.Name = "lblcantA";
+            this.lblcantA.Size = new System.Drawing.Size(0, 16);
+            this.lblcantA.TabIndex = 15;
+            // 
+            // lbldenomA
+            // 
+            this.lbldenomA.AutoSize = true;
+            this.lbldenomA.Location = new System.Drawing.Point(54, 116);
+            this.lbldenomA.Name = "lbldenomA";
+            this.lbldenomA.Size = new System.Drawing.Size(0, 16);
+            this.lbldenomA.TabIndex = 14;
+            // 
+            // lblidA
+            // 
+            this.lblidA.AutoSize = true;
+            this.lblidA.Location = new System.Drawing.Point(56, 59);
+            this.lblidA.Name = "lblidA";
+            this.lblidA.Size = new System.Drawing.Size(0, 16);
+            this.lblidA.TabIndex = 4;
+            // 
+            // iTalk_Separator7
+            // 
+            this.iTalk_Separator7.Location = new System.Drawing.Point(2, 187);
+            this.iTalk_Separator7.Name = "iTalk_Separator7";
+            this.iTalk_Separator7.Size = new System.Drawing.Size(146, 10);
+            this.iTalk_Separator7.TabIndex = 13;
+            this.iTalk_Separator7.Text = "iTalk_Separator7";
+            // 
+            // iTalk_Separator6
+            // 
+            this.iTalk_Separator6.Location = new System.Drawing.Point(2, 133);
+            this.iTalk_Separator6.Name = "iTalk_Separator6";
+            this.iTalk_Separator6.Size = new System.Drawing.Size(146, 10);
+            this.iTalk_Separator6.TabIndex = 12;
+            this.iTalk_Separator6.Text = "iTalk_Separator6";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(56, 200);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 16);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Total";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(67, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 16);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Id";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(45, 144);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 16);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Cantidad ";
+            // 
+            // iTalk_Separator1
+            // 
+            this.iTalk_Separator1.Location = new System.Drawing.Point(2, 78);
+            this.iTalk_Separator1.Name = "iTalk_Separator1";
+            this.iTalk_Separator1.Size = new System.Drawing.Size(146, 10);
+            this.iTalk_Separator1.TabIndex = 4;
+            this.iTalk_Separator1.Text = "iTalk_Separator1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(27, 88);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(111, 16);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Denominación ";
             // 
             // Admin
             // 
@@ -1669,9 +2577,25 @@
             this.GrupoApagar.ResumeLayout(false);
             this.GrupoApagar.PerformLayout();
             this.TecladoAd.ResumeLayout(false);
+            this.contenidoTCR.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptr)).EndInit();
+            this.iTalk_GroupBox6.ResumeLayout(false);
+            this.iTalk_GroupBox6.PerformLayout();
+            this.iTalk_GroupBox4.ResumeLayout(false);
+            this.iTalk_GroupBox4.PerformLayout();
+            this.iTalk_GroupBox3.ResumeLayout(false);
+            this.iTalk_GroupBox3.PerformLayout();
+            this.iTalk_GroupBox5.ResumeLayout(false);
+            this.iTalk_GroupBox5.PerformLayout();
+            this.iTalk_GroupBox2.ResumeLayout(false);
+            this.iTalk_GroupBox2.PerformLayout();
+            this.iTalk_GroupBox1.ResumeLayout(false);
+            this.iTalk_GroupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1774,5 +2698,86 @@
         private System.Windows.Forms.Button btnReiniciar;
         private System.Windows.Forms.CheckBox chkAdmin;
         private System.Windows.Forms.Button button31;
+        private MetroFramework.Controls.MetroTabPage contenidoTCR;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private iTalk_GroupBox iTalk_GroupBox1;
+        private iTalk_Separator iTalk_Separator1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private iTalk_Separator iTalk_Separator7;
+        private iTalk_Separator iTalk_Separator6;
+        private System.Windows.Forms.Label lbltotalA;
+        private System.Windows.Forms.Label lblcantA;
+        private System.Windows.Forms.Label lbldenomA;
+        private System.Windows.Forms.Label lblidA;
+        private iTalk_GroupBox iTalk_GroupBox6;
+        private System.Windows.Forms.Label lbltotalF;
+        private System.Windows.Forms.Label lblcantF;
+        private System.Windows.Forms.Label lbldenomF;
+        private System.Windows.Forms.Label lblidF;
+        private iTalk_Separator iTalk_Separator17;
+        private iTalk_Separator grupoTCR;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private iTalk_Separator iTalk_Separator19;
+        private System.Windows.Forms.Label label44;
+        private iTalk_GroupBox iTalk_GroupBox4;
+        private System.Windows.Forms.Label lbltotalE;
+        private System.Windows.Forms.Label lblcantE;
+        private System.Windows.Forms.Label lbldenomE;
+        private System.Windows.Forms.Label lblidE;
+        private iTalk_Separator iTalk_Separator11;
+        private iTalk_Separator iTalk_Separator12;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private iTalk_Separator iTalk_Separator13;
+        private System.Windows.Forms.Label label28;
+        private iTalk_GroupBox iTalk_GroupBox3;
+        private System.Windows.Forms.Label lbltotalC;
+        private System.Windows.Forms.Label lblcantC;
+        private System.Windows.Forms.Label lbldenomC;
+        private System.Windows.Forms.Label lblidC;
+        private iTalk_Separator iTalk_Separator8;
+        private iTalk_Separator iTalk_Separator9;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private iTalk_Separator iTalk_Separator10;
+        private System.Windows.Forms.Label label20;
+        private iTalk_GroupBox iTalk_GroupBox5;
+        private System.Windows.Forms.Label lbltotalD;
+        private System.Windows.Forms.Label lblcantD;
+        private System.Windows.Forms.Label lbldenomD;
+        private System.Windows.Forms.Label lblidD;
+        private iTalk_Separator iTalk_Separator14;
+        private iTalk_Separator iTalk_Separator15;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private iTalk_Separator iTalk_Separator16;
+        private System.Windows.Forms.Label label36;
+        private iTalk_GroupBox iTalk_GroupBox2;
+        private System.Windows.Forms.Label lbltotalB;
+        private System.Windows.Forms.Label lblcantB;
+        private System.Windows.Forms.Label lbldenomB;
+        private System.Windows.Forms.Label lblidB;
+        private iTalk_Separator iTalk_Separator2;
+        private iTalk_Separator iTalk_Separator4;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private iTalk_Separator iTalk_Separator5;
+        private System.Windows.Forms.Label label12;
+        private iTalk_HeaderLabel iTalk_HeaderLabel2;
+        private iTalk_HeaderLabel lbltotalcontenido;
+        private MaterialSkin.Controls.MaterialCheckBox chcContenido;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Label lblLoad;
+        private System.Windows.Forms.PictureBox ptr;
+        private iTalk_HeaderLabel lblT_Billetes;
     }
 }
