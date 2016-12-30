@@ -554,6 +554,7 @@
             // 
             // pictureBox_loading
             // 
+            this.pictureBox_loading.BackColor = System.Drawing.Color.White;
             this.pictureBox_loading.Location = new System.Drawing.Point(348, 173);
             this.pictureBox_loading.Name = "pictureBox_loading";
             this.pictureBox_loading.Size = new System.Drawing.Size(144, 53);
@@ -575,6 +576,7 @@
             // 
             // lblMensageGuardar
             // 
+            this.lblMensageGuardar.BackColor = System.Drawing.Color.White;
             this.lblMensageGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensageGuardar.ForeColor = System.Drawing.Color.Black;
             this.lblMensageGuardar.Location = new System.Drawing.Point(339, 118);
@@ -607,6 +609,7 @@
             // 
             // lblscroll
             // 
+            this.lblscroll.BackColor = System.Drawing.Color.White;
             this.lblscroll.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblscroll.ForeColor = System.Drawing.Color.Black;
             this.lblscroll.Location = new System.Drawing.Point(62, 246);

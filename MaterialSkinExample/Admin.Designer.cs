@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
-            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.Add = new MetroFramework.Controls.MetroTabPage();
             this.tclNumeric3 = new System.Windows.Forms.GroupBox();
             this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
@@ -63,7 +63,7 @@
             this.txtRepitepass = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtPass = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtUser = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.Consultas = new MetroFramework.Controls.MetroTabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tclNumerico = new System.Windows.Forms.GroupBox();
             this.btnAceptar = new System.Windows.Forms.Button();
@@ -81,7 +81,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.txtCuenta = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.button3 = new System.Windows.Forms.Button();
-            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.Herramientas = new MetroFramework.Controls.MetroTabPage();
             this.button31 = new System.Windows.Forms.Button();
             this.GrupoApagar = new System.Windows.Forms.GroupBox();
             this.TecladoAd = new System.Windows.Forms.GroupBox();
@@ -107,6 +107,7 @@
             this.lblLoad = new System.Windows.Forms.Label();
             this.chcContenido = new MaterialSkin.Controls.MaterialCheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.ptr = new System.Windows.Forms.PictureBox();
             this.Footer = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -114,7 +115,12 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblCuentaAdmin = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.ptr = new System.Windows.Forms.PictureBox();
+            this.materialCheckBox1 = new MaterialSkin.Controls.MaterialCheckBox();
+            this.materialCheckBox2 = new MaterialSkin.Controls.MaterialCheckBox();
+            this.materialCheckBox3 = new MaterialSkin.Controls.MaterialCheckBox();
+            this.materialCheckBox4 = new MaterialSkin.Controls.MaterialCheckBox();
+            this.materialCheckBox5 = new MaterialSkin.Controls.MaterialCheckBox();
+            this.materialCheckBox6 = new MaterialSkin.Controls.MaterialCheckBox();
             this.iTalk_Label2 = new iTalk_Label();
             this.iTalk_HeaderLabel1 = new iTalk_HeaderLabel();
             this.iTalk_Separator3 = new iTalk_Separator();
@@ -206,22 +212,22 @@
             this.iTalk_Separator1 = new iTalk_Separator();
             this.label2 = new System.Windows.Forms.Label();
             this.metroTabControl1.SuspendLayout();
-            this.metroTabPage1.SuspendLayout();
+            this.Add.SuspendLayout();
             this.tclNumeric3.SuspendLayout();
             this.tclNumerico2.SuspendLayout();
             this.metroPanel1.SuspendLayout();
-            this.metroTabPage2.SuspendLayout();
+            this.Consultas.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tclNumerico.SuspendLayout();
-            this.metroTabPage3.SuspendLayout();
+            this.Herramientas.SuspendLayout();
             this.GrupoApagar.SuspendLayout();
             this.TecladoAd.SuspendLayout();
             this.contenidoTCR.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptr)).BeginInit();
             this.iTalk_GroupBox6.SuspendLayout();
             this.iTalk_GroupBox4.SuspendLayout();
             this.iTalk_GroupBox3.SuspendLayout();
@@ -232,9 +238,9 @@
             // 
             // metroTabControl1
             // 
-            this.metroTabControl1.Controls.Add(this.metroTabPage1);
-            this.metroTabControl1.Controls.Add(this.metroTabPage2);
-            this.metroTabControl1.Controls.Add(this.metroTabPage3);
+            this.metroTabControl1.Controls.Add(this.Add);
+            this.metroTabControl1.Controls.Add(this.Consultas);
+            this.metroTabControl1.Controls.Add(this.Herramientas);
             this.metroTabControl1.Controls.Add(this.contenidoTCR);
             this.metroTabControl1.FontSize = MetroFramework.MetroTabControlSize.Tall;
             this.metroTabControl1.Location = new System.Drawing.Point(28, 138);
@@ -251,29 +257,29 @@
             this.metroTabControl1.UseStyleColors = true;
             this.metroTabControl1.SelectedIndexChanged += new System.EventHandler(this.metroTabControl1_SelectedIndexChanged);
             // 
-            // metroTabPage1
+            // Add
             // 
-            this.metroTabPage1.BackColor = System.Drawing.SystemColors.Window;
-            this.metroTabPage1.Controls.Add(this.tclNumeric3);
-            this.metroTabPage1.Controls.Add(this.tclNumerico2);
-            this.metroTabPage1.Controls.Add(this.metroPanel1);
-            this.metroTabPage1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.metroTabPage1.HorizontalScrollbarBarColor = true;
-            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 1;
-            this.metroTabPage1.Location = new System.Drawing.Point(4, 44);
-            this.metroTabPage1.Margin = new System.Windows.Forms.Padding(4);
-            this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(966, 556);
-            this.metroTabPage1.Style = MetroFramework.MetroColorStyle.White;
-            this.metroTabPage1.TabIndex = 0;
-            this.metroTabPage1.Text = "Agregar Usuarios /";
-            this.metroTabPage1.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTabPage1.UseStyleColors = true;
-            this.metroTabPage1.VerticalScrollbarBarColor = true;
-            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.VerticalScrollbarSize = 1;
-            this.metroTabPage1.Click += new System.EventHandler(this.metroTabPage1_Click);
+            this.Add.BackColor = System.Drawing.SystemColors.Window;
+            this.Add.Controls.Add(this.tclNumeric3);
+            this.Add.Controls.Add(this.tclNumerico2);
+            this.Add.Controls.Add(this.metroPanel1);
+            this.Add.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Add.HorizontalScrollbarBarColor = true;
+            this.Add.HorizontalScrollbarHighlightOnWheel = false;
+            this.Add.HorizontalScrollbarSize = 1;
+            this.Add.Location = new System.Drawing.Point(4, 44);
+            this.Add.Margin = new System.Windows.Forms.Padding(4);
+            this.Add.Name = "Add";
+            this.Add.Size = new System.Drawing.Size(966, 556);
+            this.Add.Style = MetroFramework.MetroColorStyle.White;
+            this.Add.TabIndex = 0;
+            this.Add.Text = "Agregar Usuarios /";
+            this.Add.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Add.UseStyleColors = true;
+            this.Add.VerticalScrollbarBarColor = true;
+            this.Add.VerticalScrollbarHighlightOnWheel = false;
+            this.Add.VerticalScrollbarSize = 1;
+            this.Add.Click += new System.EventHandler(this.metroTabPage1_Click);
             // 
             // tclNumeric3
             // 
@@ -841,28 +847,34 @@
             this.txtUser.UseSystemPasswordChar = false;
             this.txtUser.Click += new System.EventHandler(this.txtUser_Click);
             // 
-            // metroTabPage2
+            // Consultas
             // 
-            this.metroTabPage2.Controls.Add(this.groupBox1);
-            this.metroTabPage2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.metroTabPage2.HorizontalScrollbarBarColor = true;
-            this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.HorizontalScrollbarSize = 1;
-            this.metroTabPage2.Location = new System.Drawing.Point(4, 44);
-            this.metroTabPage2.Margin = new System.Windows.Forms.Padding(4);
-            this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(966, 556);
-            this.metroTabPage2.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTabPage2.TabIndex = 1;
-            this.metroTabPage2.Text = "Consultas /";
-            this.metroTabPage2.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTabPage2.VerticalScrollbarBarColor = true;
-            this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.VerticalScrollbarSize = 1;
+            this.Consultas.Controls.Add(this.groupBox1);
+            this.Consultas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Consultas.HorizontalScrollbarBarColor = true;
+            this.Consultas.HorizontalScrollbarHighlightOnWheel = false;
+            this.Consultas.HorizontalScrollbarSize = 1;
+            this.Consultas.Location = new System.Drawing.Point(4, 44);
+            this.Consultas.Margin = new System.Windows.Forms.Padding(4);
+            this.Consultas.Name = "Consultas";
+            this.Consultas.Size = new System.Drawing.Size(966, 556);
+            this.Consultas.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Consultas.TabIndex = 1;
+            this.Consultas.Text = "Consultas /";
+            this.Consultas.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Consultas.VerticalScrollbarBarColor = true;
+            this.Consultas.VerticalScrollbarHighlightOnWheel = false;
+            this.Consultas.VerticalScrollbarSize = 1;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.groupBox1.Controls.Add(this.materialCheckBox4);
+            this.groupBox1.Controls.Add(this.materialCheckBox5);
+            this.groupBox1.Controls.Add(this.materialCheckBox6);
+            this.groupBox1.Controls.Add(this.materialCheckBox3);
+            this.groupBox1.Controls.Add(this.materialCheckBox2);
+            this.groupBox1.Controls.Add(this.materialCheckBox1);
             this.groupBox1.Controls.Add(this.tclNumerico);
             this.groupBox1.Controls.Add(this.mListView);
             this.groupBox1.Controls.Add(this.button4);
@@ -1153,24 +1165,24 @@
             this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // metroTabPage3
+            // Herramientas
             // 
-            this.metroTabPage3.Controls.Add(this.button31);
-            this.metroTabPage3.Controls.Add(this.GrupoApagar);
-            this.metroTabPage3.Controls.Add(this.button30);
-            this.metroTabPage3.Controls.Add(this.button29);
-            this.metroTabPage3.HorizontalScrollbarBarColor = true;
-            this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage3.HorizontalScrollbarSize = 1;
-            this.metroTabPage3.Location = new System.Drawing.Point(4, 44);
-            this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(966, 556);
-            this.metroTabPage3.TabIndex = 2;
-            this.metroTabPage3.Text = "Herramientas /";
-            this.metroTabPage3.VerticalScrollbarBarColor = true;
-            this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage3.VerticalScrollbarSize = 1;
-            this.metroTabPage3.Click += new System.EventHandler(this.metroTabPage3_Click);
+            this.Herramientas.Controls.Add(this.button31);
+            this.Herramientas.Controls.Add(this.GrupoApagar);
+            this.Herramientas.Controls.Add(this.button30);
+            this.Herramientas.Controls.Add(this.button29);
+            this.Herramientas.HorizontalScrollbarBarColor = true;
+            this.Herramientas.HorizontalScrollbarHighlightOnWheel = false;
+            this.Herramientas.HorizontalScrollbarSize = 1;
+            this.Herramientas.Location = new System.Drawing.Point(4, 44);
+            this.Herramientas.Name = "Herramientas";
+            this.Herramientas.Size = new System.Drawing.Size(966, 556);
+            this.Herramientas.TabIndex = 2;
+            this.Herramientas.Text = "Herramientas /";
+            this.Herramientas.VerticalScrollbarBarColor = true;
+            this.Herramientas.VerticalScrollbarHighlightOnWheel = false;
+            this.Herramientas.VerticalScrollbarSize = 1;
+            this.Herramientas.Click += new System.EventHandler(this.metroTabPage3_Click);
             // 
             // button31
             // 
@@ -1531,7 +1543,7 @@
             this.contenidoTCR.Controls.Add(this.groupBox2);
             this.contenidoTCR.HorizontalScrollbarBarColor = true;
             this.contenidoTCR.HorizontalScrollbarHighlightOnWheel = false;
-            this.contenidoTCR.HorizontalScrollbarSize = 5;
+            this.contenidoTCR.HorizontalScrollbarSize = 3;
             this.contenidoTCR.Location = new System.Drawing.Point(4, 44);
             this.contenidoTCR.Name = "contenidoTCR";
             this.contenidoTCR.Size = new System.Drawing.Size(966, 556);
@@ -1539,7 +1551,7 @@
             this.contenidoTCR.Text = "Contenido TCR";
             this.contenidoTCR.VerticalScrollbarBarColor = true;
             this.contenidoTCR.VerticalScrollbarHighlightOnWheel = false;
-            this.contenidoTCR.VerticalScrollbarSize = 5;
+            this.contenidoTCR.VerticalScrollbarSize = 2;
             this.contenidoTCR.Click += new System.EventHandler(this.contenidoTCR_Click);
             // 
             // lblLoad
@@ -1589,6 +1601,17 @@
             this.groupBox2.Size = new System.Drawing.Size(956, 448);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
+            // 
+            // ptr
+            // 
+            this.ptr.Image = ((System.Drawing.Image)(resources.GetObject("ptr.Image")));
+            this.ptr.Location = new System.Drawing.Point(710, 342);
+            this.ptr.Name = "ptr";
+            this.ptr.Size = new System.Drawing.Size(100, 100);
+            this.ptr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptr.TabIndex = 24;
+            this.ptr.TabStop = false;
+            this.ptr.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // Footer
             // 
@@ -1664,16 +1687,101 @@
             this.lblCuentaAdmin.TabIndex = 52;
             this.lblCuentaAdmin.Text = "1";
             // 
-            // ptr
+            // materialCheckBox1
             // 
-            this.ptr.Image = ((System.Drawing.Image)(resources.GetObject("ptr.Image")));
-            this.ptr.Location = new System.Drawing.Point(710, 342);
-            this.ptr.Name = "ptr";
-            this.ptr.Size = new System.Drawing.Size(100, 100);
-            this.ptr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptr.TabIndex = 24;
-            this.ptr.TabStop = false;
-            this.ptr.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.materialCheckBox1.AutoSize = true;
+            this.materialCheckBox1.Depth = 0;
+            this.materialCheckBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.materialCheckBox1.Location = new System.Drawing.Point(56, 20);
+            this.materialCheckBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.materialCheckBox1.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialCheckBox1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCheckBox1.Name = "materialCheckBox1";
+            this.materialCheckBox1.Ripple = true;
+            this.materialCheckBox1.Size = new System.Drawing.Size(150, 30);
+            this.materialCheckBox1.TabIndex = 42;
+            this.materialCheckBox1.Text = "materialCheckBox1";
+            this.materialCheckBox1.UseVisualStyleBackColor = true;
+            // 
+            // materialCheckBox2
+            // 
+            this.materialCheckBox2.AutoSize = true;
+            this.materialCheckBox2.Depth = 0;
+            this.materialCheckBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.materialCheckBox2.Location = new System.Drawing.Point(56, 50);
+            this.materialCheckBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.materialCheckBox2.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialCheckBox2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCheckBox2.Name = "materialCheckBox2";
+            this.materialCheckBox2.Ripple = true;
+            this.materialCheckBox2.Size = new System.Drawing.Size(150, 30);
+            this.materialCheckBox2.TabIndex = 43;
+            this.materialCheckBox2.Text = "materialCheckBox2";
+            this.materialCheckBox2.UseVisualStyleBackColor = true;
+            // 
+            // materialCheckBox3
+            // 
+            this.materialCheckBox3.AutoSize = true;
+            this.materialCheckBox3.Depth = 0;
+            this.materialCheckBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.materialCheckBox3.Location = new System.Drawing.Point(56, 89);
+            this.materialCheckBox3.Margin = new System.Windows.Forms.Padding(0);
+            this.materialCheckBox3.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialCheckBox3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCheckBox3.Name = "materialCheckBox3";
+            this.materialCheckBox3.Ripple = true;
+            this.materialCheckBox3.Size = new System.Drawing.Size(150, 30);
+            this.materialCheckBox3.TabIndex = 44;
+            this.materialCheckBox3.Text = "materialCheckBox3";
+            this.materialCheckBox3.UseVisualStyleBackColor = true;
+            // 
+            // materialCheckBox4
+            // 
+            this.materialCheckBox4.AutoSize = true;
+            this.materialCheckBox4.Depth = 0;
+            this.materialCheckBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.materialCheckBox4.Location = new System.Drawing.Point(698, 89);
+            this.materialCheckBox4.Margin = new System.Windows.Forms.Padding(0);
+            this.materialCheckBox4.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialCheckBox4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCheckBox4.Name = "materialCheckBox4";
+            this.materialCheckBox4.Ripple = true;
+            this.materialCheckBox4.Size = new System.Drawing.Size(150, 30);
+            this.materialCheckBox4.TabIndex = 47;
+            this.materialCheckBox4.Text = "materialCheckBox4";
+            this.materialCheckBox4.UseVisualStyleBackColor = true;
+            // 
+            // materialCheckBox5
+            // 
+            this.materialCheckBox5.AutoSize = true;
+            this.materialCheckBox5.Depth = 0;
+            this.materialCheckBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.materialCheckBox5.Location = new System.Drawing.Point(698, 50);
+            this.materialCheckBox5.Margin = new System.Windows.Forms.Padding(0);
+            this.materialCheckBox5.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialCheckBox5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCheckBox5.Name = "materialCheckBox5";
+            this.materialCheckBox5.Ripple = true;
+            this.materialCheckBox5.Size = new System.Drawing.Size(150, 30);
+            this.materialCheckBox5.TabIndex = 46;
+            this.materialCheckBox5.Text = "materialCheckBox5";
+            this.materialCheckBox5.UseVisualStyleBackColor = true;
+            // 
+            // materialCheckBox6
+            // 
+            this.materialCheckBox6.AutoSize = true;
+            this.materialCheckBox6.Depth = 0;
+            this.materialCheckBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.materialCheckBox6.Location = new System.Drawing.Point(698, 20);
+            this.materialCheckBox6.Margin = new System.Windows.Forms.Padding(0);
+            this.materialCheckBox6.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialCheckBox6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCheckBox6.Name = "materialCheckBox6";
+            this.materialCheckBox6.Ripple = true;
+            this.materialCheckBox6.Size = new System.Drawing.Size(150, 30);
+            this.materialCheckBox6.TabIndex = 45;
+            this.materialCheckBox6.Text = "materialCheckBox6";
+            this.materialCheckBox6.UseVisualStyleBackColor = true;
             // 
             // iTalk_Label2
             // 
@@ -2565,25 +2673,26 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Admin_FormClosed);
             this.Load += new System.EventHandler(this.Admin_Load);
             this.metroTabControl1.ResumeLayout(false);
-            this.metroTabPage1.ResumeLayout(false);
+            this.Add.ResumeLayout(false);
             this.tclNumeric3.ResumeLayout(false);
             this.tclNumerico2.ResumeLayout(false);
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
-            this.metroTabPage2.ResumeLayout(false);
+            this.Consultas.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.tclNumerico.ResumeLayout(false);
-            this.metroTabPage3.ResumeLayout(false);
+            this.Herramientas.ResumeLayout(false);
             this.GrupoApagar.ResumeLayout(false);
             this.GrupoApagar.PerformLayout();
             this.TecladoAd.ResumeLayout(false);
             this.contenidoTCR.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptr)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptr)).EndInit();
             this.iTalk_GroupBox6.ResumeLayout(false);
             this.iTalk_GroupBox6.PerformLayout();
             this.iTalk_GroupBox4.ResumeLayout(false);
@@ -2604,12 +2713,12 @@
         #endregion
 
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
-        private MetroFramework.Controls.MetroTabPage metroTabPage1;
+        private MetroFramework.Controls.MetroTabPage Add;
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtRepitepass;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtPass;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtUser;
-        private MetroFramework.Controls.MetroTabPage metroTabPage2;
+        private MetroFramework.Controls.MetroTabPage Consultas;
         private iTalk_Listview mListView;
         private System.Windows.Forms.ColumnHeader no_cuenta;
         private System.Windows.Forms.ColumnHeader n_transaccion;
@@ -2674,7 +2783,7 @@
         private System.Windows.Forms.Button button27;
         private System.Windows.Forms.Button button28;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private MetroFramework.Controls.MetroTabPage metroTabPage3;
+        private MetroFramework.Controls.MetroTabPage Herramientas;
         private System.Windows.Forms.Button button30;
         private System.Windows.Forms.Button button29;
         private System.Windows.Forms.GroupBox GrupoApagar;
@@ -2779,5 +2888,11 @@
         private System.Windows.Forms.Label lblLoad;
         private System.Windows.Forms.PictureBox ptr;
         private iTalk_HeaderLabel lblT_Billetes;
+        private MaterialSkin.Controls.MaterialCheckBox materialCheckBox4;
+        private MaterialSkin.Controls.MaterialCheckBox materialCheckBox5;
+        private MaterialSkin.Controls.MaterialCheckBox materialCheckBox6;
+        private MaterialSkin.Controls.MaterialCheckBox materialCheckBox3;
+        private MaterialSkin.Controls.MaterialCheckBox materialCheckBox2;
+        private MaterialSkin.Controls.MaterialCheckBox materialCheckBox1;
     }
 }

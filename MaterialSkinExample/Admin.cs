@@ -39,6 +39,9 @@ namespace MaterialSkinExample
         static FullService.ConfiguracaoCassette casett = new FullService.ConfiguracaoCassette();
         static FullService.DadosCassete dados = new FullService.DadosCassete();
         static FullService.ContentClient[] contenido = new FullService.ContentClient[3];
+        public static DateTime fecha = DateTime.Now;
+
+        public static string m_archivo = fecha.Day.ToString() + "-" + fecha.Month.ToString() + "-" + fecha.Year.ToString() + ".journal";
 
 
         public Admin()
@@ -105,7 +108,7 @@ namespace MaterialSkinExample
 
             DateTime fecha = DateTime.Now;
             string m_archivo = fecha.Day.ToString() + "-" + fecha.Month.ToString() + "-" + fecha.Year.ToString() + ".journal";
-            var archivo_Journal = (@"C:\Directorio SICE\" + m_archivo + "");
+            var archivo_Journal = (@"C:\Directorio SICE\Journals\" + m_archivo + "");
 
             using (StreamWriter w = File.AppendText(archivo_Journal))
             {
@@ -311,7 +314,7 @@ namespace MaterialSkinExample
             DateTime fecha = DateTime.Now;
 
             string m_archivo = fecha.Day.ToString() + "-" + fecha.Month.ToString() + "-" + fecha.Year.ToString() + ".journal";
-            var archivo_Journal = (@"C:\Directorio SICE\" + m_archivo + "");
+            var archivo_Journal = (@"C:\Directorio SICE\Journals\" + m_archivo + "");
             using (StreamWriter w = File.AppendText(archivo_Journal))
             {
                 LogConsulta("SICE", w);
@@ -454,7 +457,7 @@ namespace MaterialSkinExample
             DateTime fecha = DateTime.Now;
 
             string m_archivo = fecha.Day.ToString() + "-" + fecha.Month.ToString() + "-" + fecha.Year.ToString() + ".journal";
-            var archivo_Journal = (@"C:\Directorio SICE\" + m_archivo + "");
+            var archivo_Journal = (@"C:\Directorio SICE\Journals\" + m_archivo + "");
             using (StreamWriter w = File.AppendText(archivo_Journal))
             {
                 Logsalir("SICE", w);
@@ -1239,12 +1242,63 @@ namespace MaterialSkinExample
 
         private void metroTabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //    if (metroTabControl1.SelectedTab == metroTabControl1.TabPages["contenidoTCR"])//your specific tabname
-            //    { 
-            //        Thread th = new Thread(new ThreadStart(estadotcr));
-            //        th.Start();
-            //        th.Join();
-            //    }
+
+
+            if (metroTabControl1.SelectedTab == metroTabControl1.TabPages["contenidoTCR"])//Nombre del Tab
+            {
+                var archivo_Journal = (@"C:\Directorio SICE\Journals\" + m_archivo + "");
+
+                using (StreamWriter w = File.AppendText(archivo_Journal))
+                {
+                    w.WriteLine("--------------------------------------Selección barra del contenido Estado TCR ------------------------------------------------");
+                    w.WriteLine("\n");
+                    w.WriteLine("Selección realizada por usuario Administrador: " + lblCuentaAdmin.Text);
+                    w.WriteLine("Hora de selección:   " + fecha);
+                }
+            }
+
+            if (metroTabControl1.SelectedTab == metroTabControl1.TabPages["Herramientas"])//Nombre del Tab
+            {
+                var archivo_Journal = (@"C:\Directorio SICE\Journals\" + m_archivo + "");
+
+                using (StreamWriter w = File.AppendText(archivo_Journal))
+                {
+                    w.WriteLine("--------------------------------------Selección  Herramientas ------------------------------------------------");
+                    w.WriteLine("\n");
+                    w.WriteLine("Selección realizada por usuario Administrador: " + lblCuentaAdmin.Text);
+                    w.WriteLine("Hora de selección:   " + fecha);
+                }// 
+            }
+
+            if (metroTabControl1.SelectedTab == metroTabControl1.TabPages["Consultas"])//Nombre del Tab
+            {
+                var archivo_Journal = (@"C:\Directorio SICE\Journals\" + m_archivo + "");
+
+                using (StreamWriter w = File.AppendText(archivo_Journal))
+                {
+                    w.WriteLine("--------------------------------------Selección Consultas ------------------------------------------------");
+                    w.WriteLine("\n");
+                    w.WriteLine("Selección realizada por usuario Administrador: " + lblCuentaAdmin.Text);
+                    w.WriteLine("Hora de selección:   " + fecha);
+                }
+            }
+
+            if (metroTabControl1.SelectedTab == metroTabControl1.TabPages["Add"])//Nombre del Tab
+            {
+                var archivo_Journal = (@"C:\Directorio SICE\Journals\" + m_archivo + "");
+
+                using (StreamWriter w = File.AppendText(archivo_Journal))
+                {
+                    w.WriteLine("--------------------------------------Selección barra Ahgregar Usuarios ------------------------------------------------");
+                    w.WriteLine("\n");
+                    w.WriteLine("Selección realizada por usuario Administrador: " + lblCuentaAdmin.Text);
+                    w.WriteLine("Hora de selección:   " + fecha);
+                }
+            }
+
+
+
+
         }
 
         private void materialCheckBox1_CheckedChanged(object sender, EventArgs e)
@@ -1252,6 +1306,14 @@ namespace MaterialSkinExample
             if (chcContenido.Checked)
 
             {
+                                var archivo_Journal = (@"C:\Directorio SICE\Journals\" + m_archivo + "");
+                                using (StreamWriter w = File.AppendText(archivo_Journal))
+                {
+                    w.WriteLine("-------------------------------------- CheckBox checked------------------------------------------------");
+                    w.WriteLine("\n");
+                    w.WriteLine("Selección realizada por usuario Administrador: " + lblCuentaAdmin.Text);
+                    w.WriteLine("Hora de selección:   " + fecha);
+                }
                 ptr.Visible = true;
                 lblLoad.Visible = true;
                 chcContenido.Visible = false;
@@ -1273,8 +1335,8 @@ namespace MaterialSkinExample
         {
             if (lblidA.Text == string.Empty)
             {
-                chcContenido.Checked=true;
-              //  MyMessageBox.ShowBox(no_cuenta );
+                chcContenido.Checked = true;
+                //  MyMessageBox.ShowBox(no_cuenta );
             }
             else
             {
@@ -1282,7 +1344,7 @@ namespace MaterialSkinExample
             }
 
 
-           
+
         }
 
         public void btnprintTicket()
@@ -1304,7 +1366,7 @@ namespace MaterialSkinExample
             g.DrawImage(Image.FromFile(logo), 130, -5, 160, 90);
             g.DrawString("Impresión de contenido TCR   ", f, b, 10, 95);
             g.DrawString("Fecha: " + DateTime.Now.ToString(), f, b, 10, 110);
- 
+
             g.DrawString("------------------ CASSETTE A------------------", f, b, 10, 125);
             g.DrawString("Moneda: MXN", f, b, 10, +140);
             g.DrawString("ID: " + lblidA.Text, f, b, 10, 155);
@@ -1345,11 +1407,73 @@ namespace MaterialSkinExample
             g.DrawString("Cantidad: " + lblcantF.Text, f, b, 10, 635);
             g.DrawString("Total: " + lbltotalF.Text, f, b, 10, 650);
             g.DrawString(lblT_Billetes.Text, f, b, 10, 665);
-          //  g.DrawString("", f, b, 10, 890);
-            
+            //  g.DrawString("", f, b, 10, 890);
+
+            var archivo_Journal = (@"C:\Directorio SICE\Journals\" + m_archivo + "");
+
+            using (StreamWriter w = File.AppendText(archivo_Journal))
+            {
+                w.WriteLine("--------------------------------------Impresión de contenido TCR  TICKET ------------------------------------------------");
+                w.WriteLine("\n");
+                w.WriteLine("Selección realizada por usuario Administrador: " + lblCuentaAdmin.Text);
+                w.WriteLine("Hora de selección:   " + fecha);
+
+
+                 w.WriteLine("Fecha: " + DateTime.Now.ToString(), f, b, 10, 110);
+
+                 w.WriteLine("------------------ CASSETTE A------------------", f, b, 10, 125);
+                 w.WriteLine("Moneda: MXN", f, b, 10, +140);
+                 w.WriteLine("ID: " + lblidA.Text, f, b, 10, 155);
+                 w.WriteLine("Denominación: " + lbldenomA.Text, f, b, 10, 170);
+                 w.WriteLine("Cantidad: " + lblcantA.Text, f, b, 10, 185);
+                 w.WriteLine("Total: " + lbltotalA.Text, f, b, 10, 200);
+
+                 w.WriteLine("------------------ CASSETTE B------------------", f, b, 10, 215);
+                 w.WriteLine("Moneda: MXN", f, b, 10, +230);
+                 w.WriteLine("ID: " + lblidB.Text, f, b, 10, 245);
+                 w.WriteLine("Denominación: " + lbldenomB.Text, f, b, 10, 260);
+                 w.WriteLine("Cantidad: " + lblcantB.Text, f, b, 10, 275);
+                 w.WriteLine("Total: " + lbltotalB.Text, f, b, 10, 290);
+                //@"C:\Directorio SICE\journals\"
+                w.WriteLine("------------------ CASSETTE C------------------", f, b, 10, 305);
+                 w.WriteLine("Moneda: MXN", f, b, 10, +320);
+                 w.WriteLine("ID: " + lblidC.Text, f, b, 10, 335);
+                 w.WriteLine("Denominación: " + lbldenomC.Text, f, b, 10, 350);
+                 w.WriteLine("Cantidad: " + lblcantC.Text, f, b, 10, 365);
+                 w.WriteLine("Total: " + lbltotalC.Text, f, b, 10, 380);
+
+                 w.WriteLine("------------------ CASSETTE D------------------", f, b, 10, 395);
+                 w.WriteLine("Moneda: MXN", f, b, 10, +410);
+                 w.WriteLine("ID: " + lblidD.Text, f, b, 10, 425);
+                 w.WriteLine("Denominación: " + lbldenomD.Text, f, b, 10, 440);
+                 w.WriteLine("Cantidad: " + lblcantD.Text, f, b, 10, 455);
+                 w.WriteLine("Total: " + lbltotalD.Text, f, b, 10, 470);
+                 w.WriteLine("------------------ CASSETTE E------------------", f, b, 10, 485);
+                 w.WriteLine("Moneda: MXN", f, b, 10, +500);
+                 w.WriteLine("ID: " + lblidE.Text, f, b, 10, 515);
+                 w.WriteLine("Denominación: " + lbldenomE.Text, f, b, 10, 530);
+                 w.WriteLine("Cantidad: " + lblcantE.Text, f, b, 10, 545);
+                 w.WriteLine("Total: " + lbltotalE.Text, f, b, 10, 560);
+                 w.WriteLine("------------------ CASSETTE F------------------", f, b, 10, 575);
+                 w.WriteLine("Moneda: MXN", f, b, 10, +590);
+                 w.WriteLine("ID: " + lblidF.Text, f, b, 10, 605);
+                 w.WriteLine("Denominación: " + lbldenomF.Text, f, b, 10, 620);
+                 w.WriteLine("Cantidad: " + lblcantF.Text, f, b, 10, 635);
+                RectangleF rectF1 = new RectangleF(30, 10, 100, 122);
+                w.WriteLine("Total: " + lbltotalF.Text, f, b, 10, 650, rectF1);
+                 w.WriteLine(lblT_Billetes.Text, f, b, 10, 665);
+
+               
+              //  e.Graphics.DrawString(text1, font1, Brushes.Blue, rectF1);
+
+
+
+
+            }
+
         }
 
-       
+
 
     }
 }

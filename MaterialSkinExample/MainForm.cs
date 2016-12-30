@@ -32,31 +32,39 @@ namespace MaterialSkinExample
         }
         public void Teller()
         {
-            MaterialSkin.Operaciones.AuthenticationType TCR = new MaterialSkin.Operaciones.AuthenticationType();
-            MaterialSkin.Operaciones.DataResponse TCR1 = new MaterialSkin.Operaciones.DataResponse();
-            MaterialSkin.Operaciones.WebTellerClient TCR2 = new MaterialSkin.Operaciones.WebTellerClient();
-            string user = "TCR";
-            string pass = "12345";
-            string terminal = "1";
-
-
-            TCR.sLogin = user;
-            TCR.sPassword = pass;
-            TCR.sTerminal = terminal;
-
-            string ultimodia = TCR2.TransactionDayCurrent(TCR).RetData;
-            string fecha_actual = DateTime.Now.ToString("dd");
-            int dia_actual = Convert.ToInt32(fecha_actual);
-
-            string msj02 = "02 - Día Inicializado";
-            string msj03 = "03 - Día Activado";//TransactionDayOpen
-
-            if (TCR2.TransactionDayOpen(TCR, dia_actual).Message == msj03)
+            try
             {
-                TCR2.TransactionDayClose(TCR, Convert.ToInt32(ultimodia.Substring(0, 2)));
+                MaterialSkin.Operaciones.AuthenticationType TCR = new MaterialSkin.Operaciones.AuthenticationType();
+                MaterialSkin.Operaciones.DataResponse TCR1 = new MaterialSkin.Operaciones.DataResponse();
+                MaterialSkin.Operaciones.WebTellerClient TCR2 = new MaterialSkin.Operaciones.WebTellerClient();
+                string user = "TCR";
+                string pass = "12345";
+                string terminal = "1";
+
+
+                TCR.sLogin = user;
+                TCR.sPassword = pass;
+                TCR.sTerminal = terminal;
+
+                string ultimodia = TCR2.TransactionDayCurrent(TCR).RetData;
+                string fecha_actual = DateTime.Now.ToString("dd");
+                int dia_actual = Convert.ToInt32(fecha_actual);
+
+                string msj02 = "02 - Día Inicializado";
+                string msj03 = "03 - Día Activado";//TransactionDayOpen
+
+                if (TCR2.TransactionDayOpen(TCR, dia_actual).Message == msj03)
+                {
+                    TCR2.TransactionDayClose(TCR, Convert.ToInt32(ultimodia.Substring(0, 2)));
+                }
+                else
+                { }
             }
-            else
-            { }
+            catch (Exception e)
+            {
+
+                MyMessageBox.ShowBox("Error de Comunicación");
+            }
         }
     
 
@@ -191,7 +199,7 @@ namespace MaterialSkinExample
             DateTime fecha = DateTime.Now;
 
             string m_archivo = fecha.Day.ToString() + "-" + fecha.Month.ToString() + "-" + fecha.Year.ToString() + ".journal";
-            var archivo_Journal = (@"C:\Directorio SICE\" + m_archivo + "");
+            var archivo_Journal = (@"C:\Directorio SICE\Journals\" + m_archivo + "");
             using (StreamWriter w = File.AppendText(archivo_Journal))
             {
                 Log("SICE", w);
@@ -242,10 +250,13 @@ namespace MaterialSkinExample
             string path_N = @"C:\Directorio SICE\JSONS_N";
             string path_R = @"C:\Directorio SICE\JSONS_R";
             string path_file = @"C:\Directorio SICE\Reportes tlock";
+            string path_journal = @"C:\Directorio SICE\Journals";
+
+
             try
             {
                 //Deternimar si el directorio existe 
-                if (Directory.Exists(path) && Directory.Exists(path_D) && Directory.Exists(path_N) && Directory.Exists(path_R) && Directory.Exists(path_file))
+                if (Directory.Exists(path) && Directory.Exists(path_D) && Directory.Exists(path_N) && Directory.Exists(path_R) && Directory.Exists(path_file) && Directory.Exists(path_journal))
                 {
                     //  Console.WriteLine("That path exists already.");
                     return;
@@ -257,6 +268,7 @@ namespace MaterialSkinExample
                 DirectoryInfo di_N = Directory.CreateDirectory(path_N);
                 DirectoryInfo di_r = Directory.CreateDirectory(path_R);
                 DirectoryInfo di_f = Directory.CreateDirectory(path_file);
+                DirectoryInfo di_j = Directory.CreateDirectory(path_journal);
                 //Directorio creado exitosamente
             }
             catch (Exception e)

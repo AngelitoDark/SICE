@@ -22,6 +22,9 @@ namespace MaterialSkinExample
     {
         private readonly MaterialSkinManager materialSkinManager;
 
+        public static DateTime fecha = DateTime.Now;
+        public static string m_archivo = fecha.Day.ToString() + "-" + fecha.Month.ToString() + "-" + fecha.Year.ToString() + ".journal";
+
         public C_Deposito()
         {
 
@@ -109,7 +112,7 @@ namespace MaterialSkinExample
         {
         }
 
-         
+
 
         //Nuevo Ticket
         void pd_PrintPage(object sender, PrintPageEventArgs e)
@@ -201,6 +204,84 @@ namespace MaterialSkinExample
             g.DrawString("Total Depositado: " + "$" + lblT7.Text + "\n", fBody1, sb, 10, ESPACIO + 145 + Mov); Mov = Mov + 20;
             g.DrawString("========================================\n", fBody1, sb, 10, ESPACIO + 145 + Mov); Mov = Mov + 20;
             g.DrawString("Para aclaraciones de los depósitos realizados\nponemos a su disposición nuestras líneas de\natención.\n\nMéxico D.F.:\nMonterrey:\nGuadalajara:\nResto del país:\n", fBody1, sb, 10, ESPACIO + 145 + Mov);
+
+
+            var archivo_Journal = (@"C:\Directorio SICE\Journals\" + m_archivo + "");
+
+            using (StreamWriter w = File.AppendText(archivo_Journal))
+            {
+                w.WriteLine("--------------------------------------Impresión de Deposito Normal TCR  TICKET ------------------------------------------------");
+                w.WriteLine("\n");
+                // w.WriteLine("Selección realizada por usuario Administrador: " + .Text);
+                w.WriteLine("Hora de selección:   " + fecha);
+                w.WriteLine("Depósito de EFECTIVO\n" + "Ubicación: Suc. CEDA\n" + "Id Cajero: 2001\n", fBody1, sb, 10, ESPACIO);
+                w.WriteLine("Transacción: " + numtransaccion, fBody1, sb, 10, ESPACIO + 60);
+                w.WriteLine("No. Cuenta: " + cuenta, fBody1, sb, 10, ESPACIO + 75);
+                w.WriteLine("Fecha: " + DateTime.Now.ToString("dd/MM/yyyy") + "  Hora: " + /*DateTime.Now.ToString("hh:mm:ss")*/ hora1 + "\n", fBody1, sb, 10, ESPACIO + 90);
+                w.WriteLine("========================================\n", fBody1, sb, 10, ESPACIO + 105);
+                w.WriteLine("Cantidad        Denominación          Total\n", fBody1, sb, 10, ESPACIO + 125);
+                if (cant1 >= 1)
+                {
+                    w.WriteLine(lblC1.Text, fBody1, sb, 30, ESPACIO + 145);
+                    w.WriteLine(lblD1.Text, fBody1, sb, 100, ESPACIO + 145);
+                    w.WriteLine(lblT1.Text, fBody1, sb, 180, ESPACIO + 145);
+                    Mov = Mov + 20;
+                }
+                if (cant2 >= 1)
+                {
+                    w.WriteLine(lblC2.Text, fBody1, sb, 30, ESPACIO + 145 + Mov);
+                    w.WriteLine(lblD2.Text, fBody1, sb, 100, ESPACIO + 145 + Mov);
+                    w.WriteLine(lblT2.Text, fBody1, sb, 180, ESPACIO + 145 + Mov);
+                    Mov = Mov + 20;
+                }
+                if (cant3 >= 1)
+                {
+                    w.WriteLine(lblC3.Text, fBody1, sb, 30, ESPACIO + 145 + Mov);
+                    w.WriteLine(lblD3.Text, fBody1, sb, 100, ESPACIO + 145 + Mov);
+                    w.WriteLine(lblT3.Text, fBody1, sb, 180, ESPACIO + 145 + Mov);
+                    Mov = Mov + 20;
+                }
+                if (cant4 >= 1)
+                {
+                    w.WriteLine(lblC4.Text, fBody1, sb, 30, ESPACIO + 145 + Mov);
+                    w.WriteLine(lblD4.Text, fBody1, sb, 100, ESPACIO + 145 + Mov);
+                    w.WriteLine(lblT4.Text, fBody1, sb, 180, ESPACIO + 145 + Mov);
+                    Mov = Mov + 20;
+                }
+                if (cant5 >= 1)
+                {
+                    w.WriteLine(lblC5.Text, fBody1, sb, 30, ESPACIO + 145 + Mov);
+                    w.WriteLine(lblD5.Text, fBody1, sb, 100, ESPACIO + 145 + Mov);
+                    w.WriteLine(lblT5.Text, fBody1, sb, 180, ESPACIO + 145 + Mov);
+                    Mov = Mov + 20;
+                }
+                if (cant6 >= 1)
+                {
+                    w.WriteLine(lblC6.Text, fBody1, sb, 30, ESPACIO + 145 + Mov);
+                    w.WriteLine(lblD6.Text, fBody1, sb, 100, ESPACIO + 145 + Mov);
+                    w.WriteLine(lblT6.Text, fBody1, sb, 180, ESPACIO + 145 + Mov);
+                    Mov = Mov + 20;
+                }
+                w.WriteLine("========================================\n", fBody1, sb, 10, ESPACIO + 145 + Mov); Mov = Mov + 20;
+                w.WriteLine("Billetes Totales:" + Billetes + "\n", fBody1, sb, 10, ESPACIO + 145 + Mov); Mov = Mov + 20;
+                w.WriteLine("Total Depositado: " + "$" + lblT7.Text + "\n", fBody1, sb, 10, ESPACIO + 145 + Mov); Mov = Mov + 20;
+                w.WriteLine("========================================\n", fBody1, sb, 10, ESPACIO + 145 + Mov); Mov = Mov + 20;
+                w.WriteLine("Para aclaraciones de los depósitos realizados\nponemos a su disposición nuestras líneas de\natención.\n\nMéxico D.F.:\nMonterrey:\nGuadalajara:\nResto del país:\n", fBody1, sb, 10, ESPACIO + 145 + Mov);
+
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+
         }
 
 
@@ -258,13 +339,14 @@ namespace MaterialSkinExample
 
         public static string FechaInicio;
         public void json2()
-        {            Deposito deposito = new Deposito();
+        {
+            Deposito deposito = new Deposito();
             int m_IdEstacion = Convert.ToInt32(lblCajero.Text);
             string m_Ubicacion = "CEDA";
             int m_Ciclo = 1;
             int m_Folio = 287;
 
-             DateTime fecha = DateTime.Now;
+            DateTime fecha = DateTime.Now;
             CultureInfo ci = CultureInfo.InvariantCulture;
             string hora = String.Format(fecha.ToString("hh:mm:ss.ff", ci));
             var zona = String.Format(DateTime.Now.ToString("%K"));
@@ -299,19 +381,19 @@ namespace MaterialSkinExample
 
             string MXN20c = lblC1.Text;
             string MXN20d = lblD1.Text;
-                        string MXN50c = lblC2.Text;
+            string MXN50c = lblC2.Text;
             string MXN50d = lblD2.Text;
-                        string MXN100c = lblC3.Text;
+            string MXN100c = lblC3.Text;
             string MXN100d = lblD3.Text;
-                        string MXN200c = lblC4.Text;
+            string MXN200c = lblC4.Text;
             string MXN200d = lblD4.Text;
-                        string MXN500c = lblC5.Text;
+            string MXN500c = lblC5.Text;
             string MXN500d = lblD5.Text;
 
             string MXN1000c = lblC6.Text;
             string MXN1000d = lblD6.Text;
 
-           
+
             try
             {
                 string json = @"{ m_IdEstacion: " + m_IdEstacion + ", m_Ubicacion: '" + m_Ubicacion +
@@ -366,18 +448,15 @@ namespace MaterialSkinExample
             }
             catch (Exception e)
             {
-                MessageBox.Show(e +"Servidor no  disponible  ");
-            } 
+                MessageBox.Show(e + "Servidor no  disponible  ");
+            }
 
         }
         //Journals
 
         public void JournalContinuarDeposito()
         {
-            DateTime fecha = DateTime.Now;
-
-            string m_archivo = fecha.Day.ToString() + "-" + fecha.Month.ToString() + "-" + fecha.Year.ToString() + ".journal";
-            var archivo_Journal = (@"C:\Directorio SICE\" + m_archivo + "");
+            var archivo_Journal = (@"C:\Directorio SICE\Journals\"  + m_archivo + "");
             using (StreamWriter w = File.AppendText(archivo_Journal))
             {
                 LogDeposito("SICE", w);
@@ -405,7 +484,7 @@ namespace MaterialSkinExample
             DateTime fecha = DateTime.Now;
 
             string m_archivo = fecha.Day.ToString() + "-" + fecha.Month.ToString() + "-" + fecha.Year.ToString() + ".journal";
-            var archivo_Journal = (@"C:\Directorio SICE\" + m_archivo + "");
+            var archivo_Journal = (@"C:\Directorio SICE\Journals\"  + m_archivo + "");
             using (StreamWriter w = File.AppendText(archivo_Journal))
             {
                 Logcancelar("SICE", w);
@@ -712,7 +791,7 @@ namespace MaterialSkinExample
         {
             DateTime fecha = DateTime.Now;
             string m_archivo = fecha.Day.ToString() + "-" + fecha.Month.ToString() + "-" + fecha.Year.ToString() + ".journal";
-            var archivo_Journal = (@"C:\Directorio SICE\" + m_archivo + "");
+            var archivo_Journal = (@"C:\Directorio SICE\Journals\"  + m_archivo + "");
             using (StreamWriter w = File.AppendText(archivo_Journal))
             {
                 LogFinalizar("SICE", w);
