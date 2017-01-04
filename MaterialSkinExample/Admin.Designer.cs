@@ -65,7 +65,15 @@
             this.txtUser = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.Consultas = new MetroFramework.Controls.MetroTabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button48 = new System.Windows.Forms.Button();
+            this.button45 = new System.Windows.Forms.Button();
+            this.button47 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dtp2 = new System.Windows.Forms.DateTimePicker();
+            this.dtp1 = new System.Windows.Forms.DateTimePicker();
             this.tclNumerico = new System.Windows.Forms.GroupBox();
+            this.button46 = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnBorrarNum = new System.Windows.Forms.Button();
             this.btn0 = new System.Windows.Forms.Button();
@@ -115,12 +123,11 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblCuentaAdmin = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.materialCheckBox1 = new MaterialSkin.Controls.MaterialCheckBox();
-            this.materialCheckBox2 = new MaterialSkin.Controls.MaterialCheckBox();
-            this.materialCheckBox3 = new MaterialSkin.Controls.MaterialCheckBox();
-            this.materialCheckBox4 = new MaterialSkin.Controls.MaterialCheckBox();
-            this.materialCheckBox5 = new MaterialSkin.Controls.MaterialCheckBox();
-            this.materialCheckBox6 = new MaterialSkin.Controls.MaterialCheckBox();
+            this.lblEstacion = new System.Windows.Forms.Label();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.iTalk_Separator20 = new iTalk_Separator();
+            this.iTalk_Separator18 = new iTalk_Separator();
             this.iTalk_Label2 = new iTalk_Label();
             this.iTalk_HeaderLabel1 = new iTalk_HeaderLabel();
             this.iTalk_Separator3 = new iTalk_Separator();
@@ -136,6 +143,7 @@
             this.MXN1000 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TotalBilletes = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Total = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FECHA_TRANSACCION = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblT_Billetes = new iTalk_HeaderLabel();
             this.lbltotalcontenido = new iTalk_HeaderLabel();
             this.iTalk_HeaderLabel2 = new iTalk_HeaderLabel();
@@ -211,6 +219,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.iTalk_Separator1 = new iTalk_Separator();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.metroTabControl1.SuspendLayout();
             this.Add.SuspendLayout();
             this.tclNumeric3.SuspendLayout();
@@ -234,6 +243,7 @@
             this.iTalk_GroupBox5.SuspendLayout();
             this.iTalk_GroupBox2.SuspendLayout();
             this.iTalk_GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTabControl1
@@ -246,7 +256,7 @@
             this.metroTabControl1.Location = new System.Drawing.Point(28, 138);
             this.metroTabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 3;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(974, 604);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.White;
             this.metroTabControl1.TabIndex = 0;
@@ -869,27 +879,124 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.groupBox1.Controls.Add(this.materialCheckBox4);
-            this.groupBox1.Controls.Add(this.materialCheckBox5);
-            this.groupBox1.Controls.Add(this.materialCheckBox6);
-            this.groupBox1.Controls.Add(this.materialCheckBox3);
-            this.groupBox1.Controls.Add(this.materialCheckBox2);
-            this.groupBox1.Controls.Add(this.materialCheckBox1);
+            this.groupBox1.Controls.Add(this.pictureBox4);
+            this.groupBox1.Controls.Add(this.button48);
+            this.groupBox1.Controls.Add(this.button45);
+            this.groupBox1.Controls.Add(this.button47);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.dtp2);
+            this.groupBox1.Controls.Add(this.dtp1);
             this.groupBox1.Controls.Add(this.tclNumerico);
             this.groupBox1.Controls.Add(this.mListView);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.txtCuenta);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Location = new System.Drawing.Point(-4, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(959, 515);
+            this.groupBox1.Size = new System.Drawing.Size(963, 528);
             this.groupBox1.TabIndex = 37;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // button48
+            // 
+            this.button48.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button48.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.button48.FlatAppearance.BorderSize = 3;
+            this.button48.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button48.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.button48.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button48.Image = ((System.Drawing.Image)(resources.GetObject("button48.Image")));
+            this.button48.Location = new System.Drawing.Point(658, 354);
+            this.button48.Name = "button48";
+            this.button48.Size = new System.Drawing.Size(101, 83);
+            this.button48.TabIndex = 58;
+            this.button48.UseVisualStyleBackColor = false;
+            this.button48.Visible = false;
+            this.button48.Click += new System.EventHandler(this.button48_Click);
+            // 
+            // button45
+            // 
+            this.button45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button45.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.button45.FlatAppearance.BorderSize = 3;
+            this.button45.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button45.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.button45.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button45.Location = new System.Drawing.Point(531, 452);
+            this.button45.Name = "button45";
+            this.button45.Size = new System.Drawing.Size(206, 47);
+            this.button45.TabIndex = 57;
+            this.button45.Text = "CREAR PDF";
+            this.button45.UseVisualStyleBackColor = false;
+            this.button45.Click += new System.EventHandler(this.button45_Click);
+            // 
+            // button47
+            // 
+            this.button47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button47.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.button47.FlatAppearance.BorderSize = 3;
+            this.button47.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button47.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.button47.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button47.Location = new System.Drawing.Point(32, 452);
+            this.button47.Name = "button47";
+            this.button47.Size = new System.Drawing.Size(206, 47);
+            this.button47.TabIndex = 56;
+            this.button47.Text = "CREAR EXCEL";
+            this.button47.UseVisualStyleBackColor = false;
+            this.button47.Click += new System.EventHandler(this.button47_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Location = new System.Drawing.Point(680, 32);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 32);
+            this.label6.TabIndex = 55;
+            this.label6.Text = "Hasta";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(22, 33);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(85, 32);
+            this.label5.TabIndex = 54;
+            this.label5.Text = "Desde";
+            // 
+            // dtp2
+            // 
+            this.dtp2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.dtp2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp2.Location = new System.Drawing.Point(791, 34);
+            this.dtp2.Name = "dtp2";
+            this.dtp2.Size = new System.Drawing.Size(149, 30);
+            this.dtp2.TabIndex = 53;
+            // 
+            // dtp1
+            // 
+            this.dtp1.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
+            this.dtp1.CalendarTitleForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dtp1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp1.Location = new System.Drawing.Point(118, 36);
+            this.dtp1.Name = "dtp1";
+            this.dtp1.Size = new System.Drawing.Size(162, 30);
+            this.dtp1.TabIndex = 52;
+            // 
             // tclNumerico
             // 
+            this.tclNumerico.BackColor = System.Drawing.Color.Silver;
+            this.tclNumerico.Controls.Add(this.button46);
             this.tclNumerico.Controls.Add(this.btnAceptar);
             this.tclNumerico.Controls.Add(this.btnBorrarNum);
             this.tclNumerico.Controls.Add(this.btn0);
@@ -903,215 +1010,245 @@
             this.tclNumerico.Controls.Add(this.btn2);
             this.tclNumerico.Controls.Add(this.btn1);
             this.tclNumerico.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tclNumerico.Location = new System.Drawing.Point(378, 89);
+            this.tclNumerico.Location = new System.Drawing.Point(341, 73);
             this.tclNumerico.Name = "tclNumerico";
-            this.tclNumerico.Size = new System.Drawing.Size(239, 256);
+            this.tclNumerico.Size = new System.Drawing.Size(293, 358);
             this.tclNumerico.TabIndex = 41;
             this.tclNumerico.TabStop = false;
             this.tclNumerico.Visible = false;
             // 
+            // button46
+            // 
+            this.button46.BackColor = System.Drawing.Color.Black;
+            this.button46.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button46.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ControlDark;
+            this.button46.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.button46.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.button46.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button46.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button46.ForeColor = System.Drawing.Color.White;
+            this.button46.Location = new System.Drawing.Point(6, 281);
+            this.button46.Name = "button46";
+            this.button46.Size = new System.Drawing.Size(281, 58);
+            this.button46.TabIndex = 49;
+            this.button46.Text = "Consultar Fechas";
+            this.button46.UseVisualStyleBackColor = false;
+            this.button46.Click += new System.EventHandler(this.button46_Click);
+            // 
             // btnAceptar
             // 
+            this.btnAceptar.BackColor = System.Drawing.Color.Black;
             this.btnAceptar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnAceptar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.btnAceptar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnAceptar.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnAceptar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAceptar.Location = new System.Drawing.Point(50, 210);
+            this.btnAceptar.ForeColor = System.Drawing.Color.White;
+            this.btnAceptar.Location = new System.Drawing.Point(6, 220);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(132, 40);
+            this.btnAceptar.Size = new System.Drawing.Size(82, 58);
             this.btnAceptar.TabIndex = 48;
             this.btnAceptar.Text = "Consultar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnBorrarNum
             // 
+            this.btnBorrarNum.BackColor = System.Drawing.Color.Black;
             this.btnBorrarNum.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnBorrarNum.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.btnBorrarNum.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnBorrarNum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnBorrarNum.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnBorrarNum.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.btnBorrarNum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btnBorrarNum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrarNum.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrarNum.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnBorrarNum.Location = new System.Drawing.Point(96, 167);
+            this.btnBorrarNum.ForeColor = System.Drawing.Color.White;
+            this.btnBorrarNum.Location = new System.Drawing.Point(201, 217);
             this.btnBorrarNum.Name = "btnBorrarNum";
-            this.btnBorrarNum.Size = new System.Drawing.Size(86, 40);
+            this.btnBorrarNum.Size = new System.Drawing.Size(82, 58);
             this.btnBorrarNum.TabIndex = 47;
             this.btnBorrarNum.Text = "Borrar";
-            this.btnBorrarNum.UseVisualStyleBackColor = true;
+            this.btnBorrarNum.UseVisualStyleBackColor = false;
             this.btnBorrarNum.Click += new System.EventHandler(this.btnBorrarNum_Click);
             // 
             // btn0
             // 
+            this.btn0.BackColor = System.Drawing.Color.Black;
             this.btn0.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn0.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.btn0.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn0.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btn0.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ControlDark;
+            this.btn0.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.btn0.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btn0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn0.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn0.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn0.Location = new System.Drawing.Point(50, 167);
+            this.btn0.ForeColor = System.Drawing.Color.White;
+            this.btn0.Location = new System.Drawing.Point(104, 220);
             this.btn0.Name = "btn0";
-            this.btn0.Size = new System.Drawing.Size(40, 40);
+            this.btn0.Size = new System.Drawing.Size(82, 58);
             this.btn0.TabIndex = 46;
             this.btn0.Text = "0";
-            this.btn0.UseVisualStyleBackColor = true;
+            this.btn0.UseVisualStyleBackColor = false;
             this.btn0.Click += new System.EventHandler(this.btn0_Click);
             // 
             // btn9
             // 
+            this.btn9.BackColor = System.Drawing.Color.Black;
             this.btn9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn9.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.btn9.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btn9.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ControlDark;
+            this.btn9.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.btn9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn9.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn9.Location = new System.Drawing.Point(142, 124);
+            this.btn9.ForeColor = System.Drawing.Color.White;
+            this.btn9.Location = new System.Drawing.Point(201, 156);
             this.btn9.Name = "btn9";
-            this.btn9.Size = new System.Drawing.Size(40, 40);
+            this.btn9.Size = new System.Drawing.Size(82, 58);
             this.btn9.TabIndex = 45;
             this.btn9.Text = "9";
-            this.btn9.UseVisualStyleBackColor = true;
+            this.btn9.UseVisualStyleBackColor = false;
             this.btn9.Click += new System.EventHandler(this.btn9_Click);
             // 
             // btn8
             // 
+            this.btn8.BackColor = System.Drawing.Color.Black;
             this.btn8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn8.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.btn8.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btn8.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ControlDark;
+            this.btn8.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.btn8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn8.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn8.Location = new System.Drawing.Point(96, 124);
+            this.btn8.ForeColor = System.Drawing.Color.White;
+            this.btn8.Location = new System.Drawing.Point(104, 156);
             this.btn8.Name = "btn8";
-            this.btn8.Size = new System.Drawing.Size(40, 40);
+            this.btn8.Size = new System.Drawing.Size(82, 58);
             this.btn8.TabIndex = 44;
             this.btn8.Text = "8";
-            this.btn8.UseVisualStyleBackColor = true;
+            this.btn8.UseVisualStyleBackColor = false;
             this.btn8.Click += new System.EventHandler(this.btn8_Click);
             // 
             // btn7
             // 
+            this.btn7.BackColor = System.Drawing.Color.Black;
             this.btn7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn7.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.btn7.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btn7.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ControlDark;
+            this.btn7.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.btn7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn7.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn7.Location = new System.Drawing.Point(50, 124);
+            this.btn7.ForeColor = System.Drawing.Color.White;
+            this.btn7.Location = new System.Drawing.Point(6, 156);
             this.btn7.Name = "btn7";
-            this.btn7.Size = new System.Drawing.Size(40, 40);
+            this.btn7.Size = new System.Drawing.Size(82, 58);
             this.btn7.TabIndex = 43;
             this.btn7.Text = "7";
-            this.btn7.UseVisualStyleBackColor = true;
+            this.btn7.UseVisualStyleBackColor = false;
             this.btn7.Click += new System.EventHandler(this.btn7_Click);
             // 
             // btn6
             // 
+            this.btn6.BackColor = System.Drawing.Color.Black;
             this.btn6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn6.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.btn6.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btn6.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ControlDark;
+            this.btn6.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.btn6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn6.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn6.Location = new System.Drawing.Point(142, 78);
+            this.btn6.ForeColor = System.Drawing.Color.White;
+            this.btn6.Location = new System.Drawing.Point(201, 92);
             this.btn6.Name = "btn6";
-            this.btn6.Size = new System.Drawing.Size(40, 40);
+            this.btn6.Size = new System.Drawing.Size(82, 58);
             this.btn6.TabIndex = 42;
             this.btn6.Text = "6";
-            this.btn6.UseVisualStyleBackColor = true;
+            this.btn6.UseVisualStyleBackColor = false;
             this.btn6.Click += new System.EventHandler(this.btn6_Click);
             // 
             // btn5
             // 
+            this.btn5.BackColor = System.Drawing.Color.Black;
             this.btn5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn5.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.btn5.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btn5.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ControlDark;
+            this.btn5.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.btn5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn5.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn5.Location = new System.Drawing.Point(96, 78);
+            this.btn5.ForeColor = System.Drawing.Color.White;
+            this.btn5.Location = new System.Drawing.Point(104, 92);
             this.btn5.Name = "btn5";
-            this.btn5.Size = new System.Drawing.Size(40, 40);
+            this.btn5.Size = new System.Drawing.Size(82, 58);
             this.btn5.TabIndex = 41;
             this.btn5.Text = "5";
-            this.btn5.UseVisualStyleBackColor = true;
+            this.btn5.UseVisualStyleBackColor = false;
             this.btn5.Click += new System.EventHandler(this.btn5_Click);
             // 
             // btn4
             // 
+            this.btn4.BackColor = System.Drawing.Color.Black;
             this.btn4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn4.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.btn4.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btn4.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ControlDark;
+            this.btn4.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.btn4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn4.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn4.Location = new System.Drawing.Point(50, 78);
+            this.btn4.ForeColor = System.Drawing.Color.White;
+            this.btn4.Location = new System.Drawing.Point(6, 92);
             this.btn4.Name = "btn4";
-            this.btn4.Size = new System.Drawing.Size(40, 40);
+            this.btn4.Size = new System.Drawing.Size(82, 58);
             this.btn4.TabIndex = 40;
             this.btn4.Text = "4";
-            this.btn4.UseVisualStyleBackColor = true;
+            this.btn4.UseVisualStyleBackColor = false;
             this.btn4.Click += new System.EventHandler(this.btn4_Click);
             // 
             // btn3
             // 
+            this.btn3.BackColor = System.Drawing.Color.Black;
             this.btn3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn3.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.btn3.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btn3.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ControlDark;
+            this.btn3.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.btn3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn3.Location = new System.Drawing.Point(142, 32);
+            this.btn3.ForeColor = System.Drawing.Color.White;
+            this.btn3.Location = new System.Drawing.Point(201, 28);
             this.btn3.Name = "btn3";
-            this.btn3.Size = new System.Drawing.Size(40, 40);
+            this.btn3.Size = new System.Drawing.Size(82, 58);
             this.btn3.TabIndex = 39;
             this.btn3.Text = "3";
-            this.btn3.UseVisualStyleBackColor = true;
+            this.btn3.UseVisualStyleBackColor = false;
             this.btn3.Click += new System.EventHandler(this.btn3_Click);
             // 
             // btn2
             // 
+            this.btn2.BackColor = System.Drawing.Color.Black;
             this.btn2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn2.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.btn2.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btn2.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ControlDark;
+            this.btn2.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.btn2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn2.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn2.Location = new System.Drawing.Point(96, 32);
+            this.btn2.ForeColor = System.Drawing.Color.White;
+            this.btn2.Location = new System.Drawing.Point(104, 28);
             this.btn2.Name = "btn2";
-            this.btn2.Size = new System.Drawing.Size(40, 40);
+            this.btn2.Size = new System.Drawing.Size(82, 58);
             this.btn2.TabIndex = 38;
             this.btn2.Text = "2";
-            this.btn2.UseVisualStyleBackColor = true;
+            this.btn2.UseVisualStyleBackColor = false;
             this.btn2.Click += new System.EventHandler(this.btn2_Click);
             // 
             // btn1
             // 
+            this.btn1.BackColor = System.Drawing.Color.Black;
             this.btn1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn1.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.btn1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btn1.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ControlDark;
+            this.btn1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.btn1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn1.Location = new System.Drawing.Point(50, 32);
+            this.btn1.ForeColor = System.Drawing.Color.White;
+            this.btn1.Location = new System.Drawing.Point(6, 28);
             this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(40, 40);
+            this.btn1.Size = new System.Drawing.Size(82, 58);
             this.btn1.TabIndex = 37;
             this.btn1.Text = "1";
-            this.btn1.UseVisualStyleBackColor = true;
+            this.btn1.UseVisualStyleBackColor = false;
             this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
             // button4
@@ -1122,19 +1259,20 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(381, 446);
+            this.button4.Location = new System.Drawing.Point(282, 452);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(206, 47);
             this.button4.TabIndex = 36;
-            this.button4.Text = "Limpiar";
+            this.button4.Text = "LIMPIAR";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // txtCuenta
             // 
             this.txtCuenta.Depth = 0;
+            this.txtCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCuenta.Hint = "Ingresa numero de cuenta";
-            this.txtCuenta.Location = new System.Drawing.Point(396, 57);
+            this.txtCuenta.Location = new System.Drawing.Point(380, 35);
             this.txtCuenta.MaxLength = 32767;
             this.txtCuenta.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtCuenta.Name = "txtCuenta";
@@ -1156,9 +1294,9 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(0, 430);
+            this.button3.Location = new System.Drawing.Point(1, 414);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(206, 47);
+            this.button3.Size = new System.Drawing.Size(25, 47);
             this.button3.TabIndex = 35;
             this.button3.Text = "Consultar";
             this.button3.UseVisualStyleBackColor = false;
@@ -1543,7 +1681,7 @@
             this.contenidoTCR.Controls.Add(this.groupBox2);
             this.contenidoTCR.HorizontalScrollbarBarColor = true;
             this.contenidoTCR.HorizontalScrollbarHighlightOnWheel = false;
-            this.contenidoTCR.HorizontalScrollbarSize = 3;
+            this.contenidoTCR.HorizontalScrollbarSize = 1;
             this.contenidoTCR.Location = new System.Drawing.Point(4, 44);
             this.contenidoTCR.Name = "contenidoTCR";
             this.contenidoTCR.Size = new System.Drawing.Size(966, 556);
@@ -1551,7 +1689,7 @@
             this.contenidoTCR.Text = "Contenido TCR";
             this.contenidoTCR.VerticalScrollbarBarColor = true;
             this.contenidoTCR.VerticalScrollbarHighlightOnWheel = false;
-            this.contenidoTCR.VerticalScrollbarSize = 2;
+            this.contenidoTCR.VerticalScrollbarSize = 1;
             this.contenidoTCR.Click += new System.EventHandler(this.contenidoTCR_Click);
             // 
             // lblLoad
@@ -1681,107 +1819,66 @@
             // lblCuentaAdmin
             // 
             this.lblCuentaAdmin.AutoSize = true;
-            this.lblCuentaAdmin.Location = new System.Drawing.Point(328, 95);
+            this.lblCuentaAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.lblCuentaAdmin.Location = new System.Drawing.Point(449, 97);
             this.lblCuentaAdmin.Name = "lblCuentaAdmin";
-            this.lblCuentaAdmin.Size = new System.Drawing.Size(16, 18);
+            this.lblCuentaAdmin.Size = new System.Drawing.Size(27, 29);
             this.lblCuentaAdmin.TabIndex = 52;
             this.lblCuentaAdmin.Text = "1";
             // 
-            // materialCheckBox1
+            // lblEstacion
             // 
-            this.materialCheckBox1.AutoSize = true;
-            this.materialCheckBox1.Depth = 0;
-            this.materialCheckBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.materialCheckBox1.Location = new System.Drawing.Point(56, 20);
-            this.materialCheckBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckBox1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckBox1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckBox1.Name = "materialCheckBox1";
-            this.materialCheckBox1.Ripple = true;
-            this.materialCheckBox1.Size = new System.Drawing.Size(150, 30);
-            this.materialCheckBox1.TabIndex = 42;
-            this.materialCheckBox1.Text = "materialCheckBox1";
-            this.materialCheckBox1.UseVisualStyleBackColor = true;
+            this.lblEstacion.AutoSize = true;
+            this.lblEstacion.BackColor = System.Drawing.Color.White;
+            this.lblEstacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.lblEstacion.Location = new System.Drawing.Point(860, 98);
+            this.lblEstacion.Name = "lblEstacion";
+            this.lblEstacion.Size = new System.Drawing.Size(111, 29);
+            this.lblEstacion.TabIndex = 54;
+            this.lblEstacion.Text = "estacion";
+            this.lblEstacion.Click += new System.EventHandler(this.lblEstacion_Click);
             // 
-            // materialCheckBox2
+            // materialLabel1
             // 
-            this.materialCheckBox2.AutoSize = true;
-            this.materialCheckBox2.Depth = 0;
-            this.materialCheckBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.materialCheckBox2.Location = new System.Drawing.Point(56, 50);
-            this.materialCheckBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckBox2.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckBox2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckBox2.Name = "materialCheckBox2";
-            this.materialCheckBox2.Ripple = true;
-            this.materialCheckBox2.Size = new System.Drawing.Size(150, 30);
-            this.materialCheckBox2.TabIndex = 43;
-            this.materialCheckBox2.Text = "materialCheckBox2";
-            this.materialCheckBox2.UseVisualStyleBackColor = true;
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.BackColor = System.Drawing.SystemColors.Window;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(731, 97);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(113, 29);
+            this.materialLabel1.TabIndex = 55;
+            this.materialLabel1.Text = "Estacion";
             // 
-            // materialCheckBox3
+            // label7
             // 
-            this.materialCheckBox3.AutoSize = true;
-            this.materialCheckBox3.Depth = 0;
-            this.materialCheckBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.materialCheckBox3.Location = new System.Drawing.Point(56, 89);
-            this.materialCheckBox3.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckBox3.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckBox3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckBox3.Name = "materialCheckBox3";
-            this.materialCheckBox3.Ripple = true;
-            this.materialCheckBox3.Size = new System.Drawing.Size(150, 30);
-            this.materialCheckBox3.TabIndex = 44;
-            this.materialCheckBox3.Text = "materialCheckBox3";
-            this.materialCheckBox3.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(261, 97);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(182, 29);
+            this.label7.TabIndex = 60;
+            this.label7.Text = " Administrador";
             // 
-            // materialCheckBox4
+            // iTalk_Separator20
             // 
-            this.materialCheckBox4.AutoSize = true;
-            this.materialCheckBox4.Depth = 0;
-            this.materialCheckBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.materialCheckBox4.Location = new System.Drawing.Point(698, 89);
-            this.materialCheckBox4.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckBox4.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckBox4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckBox4.Name = "materialCheckBox4";
-            this.materialCheckBox4.Ripple = true;
-            this.materialCheckBox4.Size = new System.Drawing.Size(150, 30);
-            this.materialCheckBox4.TabIndex = 47;
-            this.materialCheckBox4.Text = "materialCheckBox4";
-            this.materialCheckBox4.UseVisualStyleBackColor = true;
+            this.iTalk_Separator20.BackColor = System.Drawing.SystemColors.Window;
+            this.iTalk_Separator20.Location = new System.Drawing.Point(268, 124);
+            this.iTalk_Separator20.Name = "iTalk_Separator20";
+            this.iTalk_Separator20.Size = new System.Drawing.Size(361, 23);
+            this.iTalk_Separator20.TabIndex = 61;
+            this.iTalk_Separator20.Text = "iTalk_Separator20";
             // 
-            // materialCheckBox5
+            // iTalk_Separator18
             // 
-            this.materialCheckBox5.AutoSize = true;
-            this.materialCheckBox5.Depth = 0;
-            this.materialCheckBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.materialCheckBox5.Location = new System.Drawing.Point(698, 50);
-            this.materialCheckBox5.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckBox5.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckBox5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckBox5.Name = "materialCheckBox5";
-            this.materialCheckBox5.Ripple = true;
-            this.materialCheckBox5.Size = new System.Drawing.Size(150, 30);
-            this.materialCheckBox5.TabIndex = 46;
-            this.materialCheckBox5.Text = "materialCheckBox5";
-            this.materialCheckBox5.UseVisualStyleBackColor = true;
-            // 
-            // materialCheckBox6
-            // 
-            this.materialCheckBox6.AutoSize = true;
-            this.materialCheckBox6.Depth = 0;
-            this.materialCheckBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.materialCheckBox6.Location = new System.Drawing.Point(698, 20);
-            this.materialCheckBox6.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckBox6.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckBox6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckBox6.Name = "materialCheckBox6";
-            this.materialCheckBox6.Ripple = true;
-            this.materialCheckBox6.Size = new System.Drawing.Size(150, 30);
-            this.materialCheckBox6.TabIndex = 45;
-            this.materialCheckBox6.Text = "materialCheckBox6";
-            this.materialCheckBox6.UseVisualStyleBackColor = true;
+            this.iTalk_Separator18.BackColor = System.Drawing.SystemColors.Window;
+            this.iTalk_Separator18.Location = new System.Drawing.Point(720, 124);
+            this.iTalk_Separator18.Name = "iTalk_Separator18";
+            this.iTalk_Separator18.Size = new System.Drawing.Size(268, 23);
+            this.iTalk_Separator18.TabIndex = 59;
+            this.iTalk_Separator18.Text = "iTalk_Separator18";
             // 
             // iTalk_Label2
             // 
@@ -1831,13 +1928,15 @@
             this.MXN500,
             this.MXN1000,
             this.TotalBilletes,
-            this.Total});
+            this.Total,
+            this.FECHA_TRANSACCION});
+            this.mListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mListView.GridLines = true;
             this.mListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.mListView.Location = new System.Drawing.Point(4, 128);
+            this.mListView.Location = new System.Drawing.Point(5, 107);
             this.mListView.Margin = new System.Windows.Forms.Padding(4);
             this.mListView.Name = "mListView";
-            this.mListView.Size = new System.Drawing.Size(948, 282);
+            this.mListView.Size = new System.Drawing.Size(958, 282);
             this.mListView.TabIndex = 0;
             this.mListView.UseCompatibleStateImageBehavior = false;
             this.mListView.View = System.Windows.Forms.View.Details;
@@ -1845,68 +1944,74 @@
             // 
             // no_cuenta
             // 
-            this.no_cuenta.Text = "No Cuenta";
-            this.no_cuenta.Width = 101;
+            this.no_cuenta.Text = "No.Cuenta";
+            this.no_cuenta.Width = 90;
             // 
             // n_transaccion
             // 
-            this.n_transaccion.Text = "No Transaccion";
+            this.n_transaccion.Text = "No.Transaccion";
             this.n_transaccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.n_transaccion.Width = 127;
+            this.n_transaccion.Width = 109;
             // 
             // Id_Cajero
             // 
-            this.Id_Cajero.Text = "No Cajero";
+            this.Id_Cajero.Text = "No.Cajero";
             this.Id_Cajero.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Id_Cajero.Width = 89;
+            this.Id_Cajero.Width = 78;
             // 
             // MXN20
             // 
             this.MXN20.Text = "MXN20";
             this.MXN20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MXN20.Width = 75;
+            this.MXN20.Width = 57;
             // 
             // MXN50
             // 
             this.MXN50.Text = "MXN50";
             this.MXN50.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MXN50.Width = 71;
+            this.MXN50.Width = 57;
             // 
             // MXN100
             // 
             this.MXN100.Text = "MXN100";
             this.MXN100.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MXN100.Width = 72;
+            this.MXN100.Width = 63;
             // 
             // MXN200
             // 
             this.MXN200.Text = "MXN200";
             this.MXN200.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MXN200.Width = 72;
+            this.MXN200.Width = 62;
             // 
             // MXN500
             // 
             this.MXN500.Text = "MXN500";
             this.MXN500.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MXN500.Width = 75;
+            this.MXN500.Width = 67;
             // 
             // MXN1000
             // 
             this.MXN1000.Text = "MXN1000";
             this.MXN1000.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MXN1000.Width = 80;
+            this.MXN1000.Width = 69;
             // 
             // TotalBilletes
             // 
-            this.TotalBilletes.Text = "Total Billetes";
+            this.TotalBilletes.Text = "TotalBilletes";
             this.TotalBilletes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TotalBilletes.Width = 112;
+            this.TotalBilletes.Width = 91;
             // 
             // Total
             // 
             this.Total.Text = "Total";
             this.Total.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Total.Width = 65;
+            this.Total.Width = 78;
+            // 
+            // FECHA_TRANSACCION
+            // 
+            this.FECHA_TRANSACCION.Text = "Fecha";
+            this.FECHA_TRANSACCION.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.FECHA_TRANSACCION.Width = 143;
             // 
             // lblT_Billetes
             // 
@@ -1914,7 +2019,7 @@
             this.lblT_Billetes.BackColor = System.Drawing.Color.Transparent;
             this.lblT_Billetes.Font = new System.Drawing.Font("Segoe UI", 20F);
             this.lblT_Billetes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblT_Billetes.Location = new System.Drawing.Point(124, 363);
+            this.lblT_Billetes.Location = new System.Drawing.Point(120, 363);
             this.lblT_Billetes.Name = "lblT_Billetes";
             this.lblT_Billetes.Size = new System.Drawing.Size(226, 37);
             this.lblT_Billetes.TabIndex = 25;
@@ -1967,7 +2072,7 @@
             this.iTalk_GroupBox6.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
             this.iTalk_GroupBox6.Size = new System.Drawing.Size(150, 271);
             this.iTalk_GroupBox6.TabIndex = 21;
-            this.iTalk_GroupBox6.Text = "1000";
+            this.iTalk_GroupBox6.Text = "F";
             // 
             // lbltotalF
             // 
@@ -2084,7 +2189,7 @@
             this.iTalk_GroupBox4.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
             this.iTalk_GroupBox4.Size = new System.Drawing.Size(150, 271);
             this.iTalk_GroupBox4.TabIndex = 20;
-            this.iTalk_GroupBox4.Text = "500";
+            this.iTalk_GroupBox4.Text = "E";
             // 
             // lbltotalE
             // 
@@ -2201,7 +2306,7 @@
             this.iTalk_GroupBox3.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
             this.iTalk_GroupBox3.Size = new System.Drawing.Size(150, 271);
             this.iTalk_GroupBox3.TabIndex = 18;
-            this.iTalk_GroupBox3.Text = "100";
+            this.iTalk_GroupBox3.Text = "C";
             // 
             // lbltotalC
             // 
@@ -2318,7 +2423,7 @@
             this.iTalk_GroupBox5.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
             this.iTalk_GroupBox5.Size = new System.Drawing.Size(150, 271);
             this.iTalk_GroupBox5.TabIndex = 19;
-            this.iTalk_GroupBox5.Text = "200";
+            this.iTalk_GroupBox5.Text = "D";
             // 
             // lbltotalD
             // 
@@ -2435,7 +2540,7 @@
             this.iTalk_GroupBox2.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
             this.iTalk_GroupBox2.Size = new System.Drawing.Size(150, 271);
             this.iTalk_GroupBox2.TabIndex = 17;
-            this.iTalk_GroupBox2.Text = "50";
+            this.iTalk_GroupBox2.Text = "B";
             // 
             // lbltotalB
             // 
@@ -2552,7 +2657,7 @@
             this.iTalk_GroupBox1.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
             this.iTalk_GroupBox1.Size = new System.Drawing.Size(150, 271);
             this.iTalk_GroupBox1.TabIndex = 3;
-            this.iTalk_GroupBox1.Text = " 20";
+            this.iTalk_GroupBox1.Text = "A";
             // 
             // lbltotalA
             // 
@@ -2646,14 +2751,31 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Denominación ";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(815, 396);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 59;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.onclick_Ptr);
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(998, 780);
             this.ControlBox = false;
+            this.Controls.Add(this.iTalk_Separator20);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.iTalk_Separator18);
+            this.Controls.Add(this.materialLabel1);
+            this.Controls.Add(this.lblEstacion);
             this.Controls.Add(this.lblCuentaAdmin);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.iTalk_Label2);
@@ -2705,6 +2827,7 @@
             this.iTalk_GroupBox2.PerformLayout();
             this.iTalk_GroupBox1.ResumeLayout(false);
             this.iTalk_GroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2888,11 +3011,20 @@
         private System.Windows.Forms.Label lblLoad;
         private System.Windows.Forms.PictureBox ptr;
         private iTalk_HeaderLabel lblT_Billetes;
-        private MaterialSkin.Controls.MaterialCheckBox materialCheckBox4;
-        private MaterialSkin.Controls.MaterialCheckBox materialCheckBox5;
-        private MaterialSkin.Controls.MaterialCheckBox materialCheckBox6;
-        private MaterialSkin.Controls.MaterialCheckBox materialCheckBox3;
-        private MaterialSkin.Controls.MaterialCheckBox materialCheckBox2;
-        private MaterialSkin.Controls.MaterialCheckBox materialCheckBox1;
+        private System.Windows.Forms.DateTimePicker dtp2;
+        private System.Windows.Forms.DateTimePicker dtp1;
+        private System.Windows.Forms.Label lblEstacion;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button48;
+        private System.Windows.Forms.Button button45;
+        private System.Windows.Forms.Button button47;
+        private System.Windows.Forms.Button button46;
+        private System.Windows.Forms.ColumnHeader FECHA_TRANSACCION;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private iTalk_Separator iTalk_Separator18;
+        public System.Windows.Forms.Label label7;
+        private iTalk_Separator iTalk_Separator20;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

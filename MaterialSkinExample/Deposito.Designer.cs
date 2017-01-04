@@ -35,26 +35,27 @@
             this.Footer = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.iTalk_Separator1 = new iTalk_Separator();
-            this.iTalk_Separator2 = new iTalk_Separator();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.iTalk_Label1 = new iTalk_Label();
-            this.iTalk_HeaderLabel1 = new iTalk_HeaderLabel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.iTalk_Separator3 = new iTalk_Separator();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.lblEstacionD = new System.Windows.Forms.Label();
+            this.iTalk_Separator3 = new iTalk_Separator();
+            this.iTalk_Label1 = new iTalk_Label();
+            this.iTalk_HeaderLabel1 = new iTalk_HeaderLabel();
+            this.iTalk_Separator2 = new iTalk_Separator();
+            this.iTalk_Separator1 = new iTalk_Separator();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -72,14 +73,14 @@
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.BackColor = System.Drawing.SystemColors.Window;
             this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(759, 94);
+            this.materialLabel1.Location = new System.Drawing.Point(754, 90);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(205, 19);
+            this.materialLabel1.Size = new System.Drawing.Size(113, 29);
             this.materialLabel1.TabIndex = 1;
-            this.materialLabel1.Text = "DENOMINACIONES VALIDAS";
+            this.materialLabel1.Text = "Estacion";
             // 
             // lblDCuenta
             // 
@@ -126,24 +127,6 @@
             this.label1.TabIndex = 36;
             this.label1.Text = "No.Cuenta";
             // 
-            // iTalk_Separator1
-            // 
-            this.iTalk_Separator1.BackColor = System.Drawing.SystemColors.Window;
-            this.iTalk_Separator1.Location = new System.Drawing.Point(-14, 259);
-            this.iTalk_Separator1.Name = "iTalk_Separator1";
-            this.iTalk_Separator1.Size = new System.Drawing.Size(328, 23);
-            this.iTalk_Separator1.TabIndex = 38;
-            this.iTalk_Separator1.Text = "iTalk_Separator1";
-            // 
-            // iTalk_Separator2
-            // 
-            this.iTalk_Separator2.BackColor = System.Drawing.SystemColors.Window;
-            this.iTalk_Separator2.Location = new System.Drawing.Point(719, 116);
-            this.iTalk_Separator2.Name = "iTalk_Separator2";
-            this.iTalk_Separator2.Size = new System.Drawing.Size(268, 23);
-            this.iTalk_Separator2.TabIndex = 39;
-            this.iTalk_Separator2.Text = "iTalk_Separator2";
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -152,7 +135,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(79, 76);
+            this.button2.Location = new System.Drawing.Point(53, 76);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(241, 84);
             this.button2.TabIndex = 41;
@@ -168,7 +151,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(79, 205);
+            this.button1.Location = new System.Drawing.Point(53, 205);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(241, 84);
             this.button1.TabIndex = 42;
@@ -183,11 +166,27 @@
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Location = new System.Drawing.Point(55, 331);
+            this.groupBox1.Location = new System.Drawing.Point(357, 331);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(630, 340);
+            this.groupBox1.Size = new System.Drawing.Size(328, 340);
             this.groupBox1.TabIndex = 43;
             this.groupBox1.TabStop = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.button4.FlatAppearance.BorderSize = 3;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button4.Location = new System.Drawing.Point(364, 205);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(241, 84);
+            this.button4.TabIndex = 44;
+            this.button4.Text = "RETIRO\r\n";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -204,30 +203,6 @@
             this.button3.Text = "  DEPOSITO DIRECTO\r\n";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // iTalk_Label1
-            // 
-            this.iTalk_Label1.AutoSize = true;
-            this.iTalk_Label1.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_Label1.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.iTalk_Label1.ForeColor = System.Drawing.Color.Transparent;
-            this.iTalk_Label1.Location = new System.Drawing.Point(467, 34);
-            this.iTalk_Label1.Name = "iTalk_Label1";
-            this.iTalk_Label1.Size = new System.Drawing.Size(209, 13);
-            this.iTalk_Label1.TabIndex = 46;
-            this.iTalk_Label1.Text = "Sistema Integral de Control de Efectivo ";
-            // 
-            // iTalk_HeaderLabel1
-            // 
-            this.iTalk_HeaderLabel1.AutoSize = true;
-            this.iTalk_HeaderLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_HeaderLabel1.Font = new System.Drawing.Font("Segoe UI", 25F);
-            this.iTalk_HeaderLabel1.ForeColor = System.Drawing.Color.Transparent;
-            this.iTalk_HeaderLabel1.Location = new System.Drawing.Point(376, 9);
-            this.iTalk_HeaderLabel1.Name = "iTalk_HeaderLabel1";
-            this.iTalk_HeaderLabel1.Size = new System.Drawing.Size(85, 46);
-            this.iTalk_HeaderLabel1.TabIndex = 45;
-            this.iTalk_HeaderLabel1.Text = "SICE";
             // 
             // pictureBox3
             // 
@@ -281,7 +256,7 @@
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.BackColor = System.Drawing.Color.White;
             this.pictureBox8.Location = new System.Drawing.Point(793, 601);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(193, 84);
@@ -289,16 +264,6 @@
             this.pictureBox8.TabIndex = 52;
             this.pictureBox8.TabStop = false;
             this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
-            // 
-            // iTalk_Separator3
-            // 
-            this.iTalk_Separator3.BackColor = System.Drawing.SystemColors.Window;
-            this.iTalk_Separator3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.iTalk_Separator3.Location = new System.Drawing.Point(0, 749);
-            this.iTalk_Separator3.Name = "iTalk_Separator3";
-            this.iTalk_Separator3.Size = new System.Drawing.Size(998, 10);
-            this.iTalk_Separator3.TabIndex = 53;
-            this.iTalk_Separator3.Text = "iTalk_Separator3";
             // 
             // pictureBox2
             // 
@@ -339,21 +304,68 @@
             this.label2.Text = "Colocar billetes extendidos y sin grapas ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button4
+            // lblEstacionD
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.button4.FlatAppearance.BorderSize = 3;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(364, 205);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(241, 84);
-            this.button4.TabIndex = 44;
-            this.button4.Text = "RETIRO\r\n";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.lblEstacionD.AutoSize = true;
+            this.lblEstacionD.BackColor = System.Drawing.Color.Transparent;
+            this.lblEstacionD.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstacionD.Location = new System.Drawing.Point(874, 90);
+            this.lblEstacionD.Name = "lblEstacionD";
+            this.lblEstacionD.Size = new System.Drawing.Size(111, 29);
+            this.lblEstacionD.TabIndex = 57;
+            this.lblEstacionD.Text = "estacion";
+            // 
+            // iTalk_Separator3
+            // 
+            this.iTalk_Separator3.BackColor = System.Drawing.SystemColors.Window;
+            this.iTalk_Separator3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.iTalk_Separator3.Location = new System.Drawing.Point(0, 749);
+            this.iTalk_Separator3.Name = "iTalk_Separator3";
+            this.iTalk_Separator3.Size = new System.Drawing.Size(998, 10);
+            this.iTalk_Separator3.TabIndex = 53;
+            this.iTalk_Separator3.Text = "iTalk_Separator3";
+            // 
+            // iTalk_Label1
+            // 
+            this.iTalk_Label1.AutoSize = true;
+            this.iTalk_Label1.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_Label1.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.iTalk_Label1.ForeColor = System.Drawing.Color.Transparent;
+            this.iTalk_Label1.Location = new System.Drawing.Point(467, 34);
+            this.iTalk_Label1.Name = "iTalk_Label1";
+            this.iTalk_Label1.Size = new System.Drawing.Size(209, 13);
+            this.iTalk_Label1.TabIndex = 46;
+            this.iTalk_Label1.Text = "Sistema Integral de Control de Efectivo ";
+            // 
+            // iTalk_HeaderLabel1
+            // 
+            this.iTalk_HeaderLabel1.AutoSize = true;
+            this.iTalk_HeaderLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_HeaderLabel1.Font = new System.Drawing.Font("Segoe UI", 25F);
+            this.iTalk_HeaderLabel1.ForeColor = System.Drawing.Color.Transparent;
+            this.iTalk_HeaderLabel1.Location = new System.Drawing.Point(376, 9);
+            this.iTalk_HeaderLabel1.Name = "iTalk_HeaderLabel1";
+            this.iTalk_HeaderLabel1.Size = new System.Drawing.Size(85, 46);
+            this.iTalk_HeaderLabel1.TabIndex = 45;
+            this.iTalk_HeaderLabel1.Text = "SICE";
+            // 
+            // iTalk_Separator2
+            // 
+            this.iTalk_Separator2.BackColor = System.Drawing.SystemColors.Window;
+            this.iTalk_Separator2.Location = new System.Drawing.Point(719, 116);
+            this.iTalk_Separator2.Name = "iTalk_Separator2";
+            this.iTalk_Separator2.Size = new System.Drawing.Size(268, 23);
+            this.iTalk_Separator2.TabIndex = 39;
+            this.iTalk_Separator2.Text = "iTalk_Separator2";
+            // 
+            // iTalk_Separator1
+            // 
+            this.iTalk_Separator1.BackColor = System.Drawing.SystemColors.Window;
+            this.iTalk_Separator1.Location = new System.Drawing.Point(-14, 259);
+            this.iTalk_Separator1.Name = "iTalk_Separator1";
+            this.iTalk_Separator1.Size = new System.Drawing.Size(328, 23);
+            this.iTalk_Separator1.TabIndex = 38;
+            this.iTalk_Separator1.Text = "iTalk_Separator1";
             // 
             // Deposito
             // 
@@ -361,6 +373,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(998, 780);
+            this.Controls.Add(this.lblEstacionD);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox2);
@@ -427,5 +440,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        public System.Windows.Forms.Label lblEstacionD;
     }
 }

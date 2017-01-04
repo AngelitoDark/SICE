@@ -11,6 +11,7 @@ using MaterialSkin;
 using MaterialSkin.Controls;
 using System.IO;
 using System.Globalization;
+using System.Xml;
 
 namespace MaterialSkinExample
 {
@@ -39,7 +40,31 @@ namespace MaterialSkinExample
             Bitmap myBitmap = new Bitmap(filePath);
             myBitmap.MakeTransparent();
             this.pictureBox1.Image = myBitmap;
-        }
+
+            xml();
+                }
+
+        public void xml()
+        {
+            XmlDocument xDoc = new XmlDocument();
+            xDoc.Load(@"../../Configuration files/config.xml");
+            XmlNodeList tcr = xDoc.GetElementsByTagName("tcr");
+            XmlNodeList lista =
+    ((XmlElement)tcr[0]).GetElementsByTagName("configuracion");
+            foreach (XmlElement nodo in lista)
+
+            {
+                XmlNodeList IdEstacion =
+                   nodo.GetElementsByTagName("IdEstacion");
+                XmlNodeList VersionProtocolo =
+nodo.GetElementsByTagName("VersionProtocolo");
+
+                string estacion = IdEstacion[0].InnerText;
+                string id = VersionProtocolo[0].InnerText;
+                lblEstacionD.Text = estacion;
+            }
+            
+                    }
         public string a, b, c;
 
         
@@ -85,7 +110,7 @@ namespace MaterialSkinExample
             DateTime fecha = DateTime.Now;
 
             string m_archivo = fecha.Day.ToString() + "-" + fecha.Month.ToString() + "-" + fecha.Year.ToString() + ".journal";
-            var archivo_Journal = (@"C:\Directorio SICE\" + m_archivo + "");
+            var archivo_Journal = (@"C:\Directorio SICE\Journals\" + m_archivo + "");
             using (StreamWriter w = File.AppendText(archivo_Journal))
             {
                 Logcancel("SICE", w);
@@ -125,7 +150,7 @@ namespace MaterialSkinExample
             DateTime fecha = DateTime.Now;
 
             string m_archivo = fecha.Day.ToString() + "-" + fecha.Month.ToString() + "-" + fecha.Year.ToString() + ".journal";
-            var archivo_Journal = (@"C:\Directorio SICE\" + m_archivo + "");
+            var archivo_Journal = (@"C:\Directorio SICE\Journals\" + m_archivo + "");
             using (StreamWriter w = File.AppendText(archivo_Journal))
             {
                 Log("SICE", w);
@@ -140,7 +165,7 @@ namespace MaterialSkinExample
            //  string FechaInicio = String.Format(" {0:s}  ", DateTime.Now + DateTime.Now.ToString("%K"));
             DateTime fecha = DateTime.Now;
             CultureInfo ci = CultureInfo.InvariantCulture;
-            string hora = String.Format(fecha.ToString("hh:mm:ss.ff", ci));
+            string hora = String.Format(fecha.ToString("HH:mm:ss.ff", ci));
             var zona = String.Format(DateTime.Now.ToString("%K"));
             string FechaInicio = (fecha.Year + "-" + fecha.Month + "-" + fecha.Day) + ("T" + hora + zona);
 

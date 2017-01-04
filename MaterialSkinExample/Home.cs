@@ -75,7 +75,7 @@ namespace MaterialSkinExample
             DateTime fecha = DateTime.Now;
 
             string m_archivo = fecha.Day.ToString() + "-" + fecha.Month.ToString() + "-" + fecha.Year.ToString() + ".journal";
-            var archivo_Journal = (@"C:\Directorio SICE\" + m_archivo + "");
+            var archivo_Journal = (@"C:\Directorio SICE\Journals\" + m_archivo + "");
             using (StreamWriter w = File.AppendText(archivo_Journal))
             {
                 Log("SICE", w);
@@ -101,7 +101,7 @@ namespace MaterialSkinExample
             DateTime fecha = DateTime.Now;
 
             string m_archivo = fecha.Day.ToString() + "-" + fecha.Month.ToString() + "-" + fecha.Year.ToString() + ".journal";
-            var archivo_Journal = (@"C:\Directorio SICE\" + m_archivo + "");
+            var archivo_Journal = (@"C:\Directorio SICE\Journals\" + m_archivo + "");
             using (StreamWriter w = File.AppendText(archivo_Journal))
             {
                 LogSalir("SICE", w);

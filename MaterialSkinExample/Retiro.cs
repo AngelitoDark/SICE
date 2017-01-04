@@ -17,6 +17,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace MaterialSkinExample
 {
@@ -81,13 +82,29 @@ namespace MaterialSkinExample
             loading.Size = new Size(642, 400);
                                     gruporetiro.Text = lblR_Cuenta.Text;
                         this.ActiveControl = null;
+            xml();
+        }
+        public void xml()
+        {
+            XmlDocument xDoc = new XmlDocument();
+            xDoc.Load(@"../../Configuration files/config.xml");
+            XmlNodeList tcr = xDoc.GetElementsByTagName("tcr");
+            XmlNodeList lista =
+    ((XmlElement)tcr[0]).GetElementsByTagName("configuracion");
+            foreach (XmlElement nodo in lista)
 
-            
+            {
+                XmlNodeList IdEstacion =
+                   nodo.GetElementsByTagName("IdEstacion");
+                XmlNodeList VersionProtocolo =
+nodo.GetElementsByTagName("VersionProtocolo");
 
-
+                string estacion = IdEstacion[0].InnerText;
+                string id = VersionProtocolo[0].InnerText;
+              lblR_Cuenta.Text = estacion;
+            }
 
         }
-
         private void button4_Click(object sender, EventArgs e)
         {
 

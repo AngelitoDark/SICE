@@ -15,6 +15,7 @@ using System.Threading;
 using tlockCajeros;
 using System.Text;
 using System.Globalization;
+using System.Xml;
 
 namespace MaterialSkinExample
 {
@@ -24,6 +25,9 @@ namespace MaterialSkinExample
 
         public static DateTime fecha = DateTime.Now;
         public static string m_archivo = fecha.Day.ToString() + "-" + fecha.Month.ToString() + "-" + fecha.Year.ToString() + ".journal";
+
+
+
 
         public C_Deposito()
         {
@@ -75,7 +79,15 @@ namespace MaterialSkinExample
             lblEspera.Location = new Point(36, 610);
             lblEspera.Size = new Size(970, 73);
 
+            //Cargando XML
+            XmlDocument xDoc = new XmlDocument();
+            xDoc.Load(@"../../Configuration files/config.xml");
+            XmlNodeList tcr = xDoc.GetElementsByTagName("tcr");
+            string IdEstacion = ((XmlElement)tcr[0]).GetElementsByTagName("IdEstacion")[0].InnerText;
+            lblCajero.Text = IdEstacion;
         }
+
+
 
         private void Close_Form(object sender, FormClosedEventArgs e)
         {
@@ -141,6 +153,20 @@ namespace MaterialSkinExample
             con.Close();
             // Fin de Consulta SQL
 
+
+
+            // Configuracion de estacion mediante XML
+
+            XmlDocument xDoc = new XmlDocument();
+
+            xDoc.Load(@"../../Configuration files/config.xml");
+            XmlNodeList tcr = xDoc.GetElementsByTagName("tcr");
+            string IdEstacion = ((XmlElement)tcr[0]).GetElementsByTagName("IdEstacion")[0].InnerText;
+            string VersionProtocolo = ((XmlElement)tcr[0]).GetElementsByTagName("VersionProtocolo")[0].InnerText;
+            string sucursal = ((XmlElement)tcr[0]).GetElementsByTagName("sucursal")[0].InnerText;
+            string version = ((XmlElement)tcr[0]).GetElementsByTagName("version")[0].InnerText;
+
+
             int ESPACIO = 85;  // Interlineado estandar entre texto
             //string logo = Application.StartupPath + "\\logo.png";  //Carga de logotipo
             Graphics g = e.Graphics;  //Uso de graficos para impresión de ticket
@@ -151,7 +177,7 @@ namespace MaterialSkinExample
             SolidBrush sb = new SolidBrush(Color.Black);  //Color de texto
             g.DrawImage(Image.FromFile(logo), 130, -10, 160, 90);
 
-            g.DrawString("Depósito de EFECTIVO\n" + "Ubicación: Suc. CEDA\n" + "Id Cajero: 2001\n", fBody1, sb, 10, ESPACIO);
+            g.DrawString("Depósito de EFECTIVO\n" + "Ubicación: Suc. " + sucursal + "\n" + "Id Cajero: " + IdEstacion + "\n", fBody1, sb, 10, ESPACIO);
             g.DrawString("Transacción: " + numtransaccion, fBody1, sb, 10, ESPACIO + 60);
             g.DrawString("No. Cuenta: " + cuenta, fBody1, sb, 10, ESPACIO + 75);
             g.DrawString("Fecha: " + DateTime.Now.ToString("dd/MM/yyyy") + "  Hora: " + /*DateTime.Now.ToString("hh:mm:ss")*/ hora1 + "\n", fBody1, sb, 10, ESPACIO + 90);
@@ -214,7 +240,7 @@ namespace MaterialSkinExample
                 w.WriteLine("\n");
                 // w.WriteLine("Selección realizada por usuario Administrador: " + .Text);
                 w.WriteLine("Hora de selección:   " + fecha);
-                w.WriteLine("Depósito de EFECTIVO\n" + "Ubicación: Suc. CEDA\n" + "Id Cajero: 2001\n", fBody1, sb, 10, ESPACIO);
+                w.WriteLine("Depósito de EFECTIVO\n" + "Ubicación: Suc."+sucursal+"\n" + "Id Cajero:"+IdEstacion+"\n", fBody1, sb, 10, ESPACIO);
                 w.WriteLine("Transacción: " + numtransaccion, fBody1, sb, 10, ESPACIO + 60);
                 w.WriteLine("No. Cuenta: " + cuenta, fBody1, sb, 10, ESPACIO + 75);
                 w.WriteLine("Fecha: " + DateTime.Now.ToString("dd/MM/yyyy") + "  Hora: " + /*DateTime.Now.ToString("hh:mm:ss")*/ hora1 + "\n", fBody1, sb, 10, ESPACIO + 90);
@@ -296,7 +322,7 @@ namespace MaterialSkinExample
             pd.Print();
         }
         // Variables que guardan informacion 
-        public int save = 100;
+        public int save = 0;
         public int c1 = 0, c2 = 0, c3 = 0, c4 = 0, c5 = 0, c6 = 0;
         //capturar btton
         private void materialFlatButton1_Click_1(object sender, EventArgs e)
@@ -340,22 +366,27 @@ namespace MaterialSkinExample
         public static string FechaInicio;
         public void json2()
         {
+            XmlDocument xDoc = new XmlDocument();
+
+            xDoc.Load(@"../../Configuration files/config.xml");
+            XmlNodeList tcr = xDoc.GetElementsByTagName("tcr");
+             string m_Ubicacion = ((XmlElement)tcr[0]).GetElementsByTagName("sucursal")[0].InnerText;
+
             Deposito deposito = new Deposito();
             int m_IdEstacion = Convert.ToInt32(lblCajero.Text);
-            string m_Ubicacion = "CEDA";
+             
             int m_Ciclo = 1;
-            int m_Folio = 287;
-
             DateTime fecha = DateTime.Now;
             CultureInfo ci = CultureInfo.InvariantCulture;
-            string hora = String.Format(fecha.ToString("hh:mm:ss.ff", ci));
+
+            string hora = String.Format(fecha.ToString("HH:mm:ss.ff", ci));
             var zona = String.Format(DateTime.Now.ToString("%K"));
             string m_FechaHoraFin = (fecha.Year + "-" + fecha.Month + "-" + fecha.Day) + ("T" + hora + zona);
 
             string m_IdMoneda = "MXN";
             string m_IdCliente = "1330";
             string m_Cliente = "N/A";
-            string m_BancoCuenta = "N/A";
+            string m_BancoCuenta = "Banorte";
             string m_Cuenta = lblCuenta.Text;
             string m_Referencia = "";
             string m_ClaveOperadorLocal = "N/A";
@@ -367,11 +398,20 @@ namespace MaterialSkinExample
 
             MySqlConnection con = new MySqlConnection("Server=localhost; User=OKI; Password=OKI2016; database=tlock; port=3306;");
             MySqlCommand cmd = new MySqlCommand();
+            MySqlCommand cmd_id = new MySqlCommand();
+
             con.Open();
             cmd.Connection = con;
+            cmd_id.Connection = con;
             //select IFNULL(sum(total),0)
             cmd.CommandText = ("select IFNULL(sum(total),0) as total from transaccion where no_cuenta = '" + lblCuenta.Text + "'");
+            cmd_id.CommandText = ("select max(id_transaccion)from transaccion");
             string m_SaldoAnterior = cmd.ExecuteScalar().ToString();
+            string IdMensaje = cmd_id.ExecuteScalar().ToString();
+
+            string m_Folio=cmd_id.ExecuteScalar().ToString();
+
+
             con.Close();
             //fin consulta 
 
@@ -405,14 +445,41 @@ namespace MaterialSkinExample
 ",m_MontoProcesado:" + m_MontoProcesado + ",m_MontoDeclarado:" + m_MontoDeclarado +
 ",m_TotalIncidentes:" + m_TotalIncidentes + ",   m_DenominacionContenedor:  {'1':" + "{'1000':" + MXN1000c + ",'500':" + MXN500c +
 ",'200':" + MXN200c + ",'100':" + MXN100c + ",'50':" + MXN50c + ",'20':" + MXN20c + "}" + "},m_Envases:{}}";
+                //////////////////////////
+                /*
+
+                                XmlDocument xDoc = new XmlDocument();
+                                xDoc.Load(@"../../Configuration files/config.xml");
+                                XmlNodeList tcr = xDoc.GetElementsByTagName("tcr");
+                                XmlNodeList lista =
+                        ((XmlElement)tcr[0]).GetElementsByTagName("configuracion");
+                                foreach (XmlElement nodo in lista)
+
+                                {
+                                    XmlNodeList IdEstacion =
+                                       nodo.GetElementsByTagName("IdEstacion");
+                                    XmlNodeList VersionProtocolo =
+                    nodo.GetElementsByTagName("VersionProtocolo");
+
+                                    string estacion = IdEstacion[0].InnerText;
+                                    string id = VersionProtocolo[0].InnerText;
+                                    //   label1.Text = (p + "---" + id);
+                                }
+                                */
 
 
+                string IdEstacion = lblCajero.Text;
+                string IdCategoriaMensaje = "1";
+                string IdTipoMensaje = "1000";
+                string VersionProtocolo = "23";
+                //////////////////////////////////////////
                 JObject jobj = JObject.Parse(json);
                 string cadena = jobj.ToString();
                 var encrypt = tlockCajeros.codificaMensajes.Codificar(cadena);
 
                 //Parametros del POST 
-                string url = "http://187.174.220.229/presol/publico/pd.aspx?IdEstacion=2001&IdCategoriaMensaje=1&IdTipoMensaje=1000&VersionProtocolo=2&c=" + encrypt;
+                //     string url = "http://187.174.220.229/presol/publico/pd.aspx?IdEstacion=2001&IdCategoriaMensaje=1&IdTipoMensaje=1000&VersionProtocolo=2&c=" + encrypt;
+                string url = "http://187.174.220.229/presol/publico/pd.aspx?IdEstacion=" + lblCajero.Text + "&IdMensaje=" + IdMensaje + "&IdCategoriaMensaje=1&IdTipoMensaje=1000&VersionProtocolo=2&c=" + encrypt;
 
                 String paramsPost = encrypt;
 
@@ -456,7 +523,7 @@ namespace MaterialSkinExample
 
         public void JournalContinuarDeposito()
         {
-            var archivo_Journal = (@"C:\Directorio SICE\Journals\"  + m_archivo + "");
+            var archivo_Journal = (@"C:\Directorio SICE\Journals\" + m_archivo + "");
             using (StreamWriter w = File.AppendText(archivo_Journal))
             {
                 LogDeposito("SICE", w);
@@ -484,7 +551,7 @@ namespace MaterialSkinExample
             DateTime fecha = DateTime.Now;
 
             string m_archivo = fecha.Day.ToString() + "-" + fecha.Month.ToString() + "-" + fecha.Year.ToString() + ".journal";
-            var archivo_Journal = (@"C:\Directorio SICE\Journals\"  + m_archivo + "");
+            var archivo_Journal = (@"C:\Directorio SICE\Journals\" + m_archivo + "");
             using (StreamWriter w = File.AppendText(archivo_Journal))
             {
                 Logcancelar("SICE", w);
@@ -791,7 +858,7 @@ namespace MaterialSkinExample
         {
             DateTime fecha = DateTime.Now;
             string m_archivo = fecha.Day.ToString() + "-" + fecha.Month.ToString() + "-" + fecha.Year.ToString() + ".journal";
-            var archivo_Journal = (@"C:\Directorio SICE\Journals\"  + m_archivo + "");
+            var archivo_Journal = (@"C:\Directorio SICE\Journals\" + m_archivo + "");
             using (StreamWriter w = File.AppendText(archivo_Journal))
             {
                 LogFinalizar("SICE", w);
