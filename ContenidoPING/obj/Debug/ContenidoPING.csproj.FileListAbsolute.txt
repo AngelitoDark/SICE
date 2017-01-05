@@ -1,0 +1,8 @@
+P:\P-Luis\2-1-2017\SICE\ContenidoPING\bin\Debug\ContenidoPING.exe.config
+P:\P-Luis\2-1-2017\SICE\ContenidoPING\bin\Debug\ContenidoPING.exe
+P:\P-Luis\2-1-2017\SICE\ContenidoPING\bin\Debug\ContenidoPING.pdb
+P:\P-Luis\2-1-2017\SICE\ContenidoPING\bin\Debug\Newtonsoft.Json.dll
+P:\P-Luis\2-1-2017\SICE\ContenidoPING\bin\Debug\Newtonsoft.Json.xml
+P:\P-Luis\2-1-2017\SICE\ContenidoPING\obj\Debug\ContenidoPING.csprojResolveAssemblyReference.cache
+P:\P-Luis\2-1-2017\SICE\ContenidoPING\obj\Debug\ContenidoPING.exe
+P:\P-Luis\2-1-2017\SICE\ContenidoPING\obj\Debug\ContenidoPING.pdb

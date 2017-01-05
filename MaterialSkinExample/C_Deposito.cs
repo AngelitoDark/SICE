@@ -293,21 +293,9 @@ namespace MaterialSkinExample
                 w.WriteLine("Total Depositado: " + "$" + lblT7.Text + "\n", fBody1, sb, 10, ESPACIO + 145 + Mov); Mov = Mov + 20;
                 w.WriteLine("========================================\n", fBody1, sb, 10, ESPACIO + 145 + Mov); Mov = Mov + 20;
                 w.WriteLine("Para aclaraciones de los depósitos realizados\nponemos a su disposición nuestras líneas de\natención.\n\nMéxico D.F.:\nMonterrey:\nGuadalajara:\nResto del país:\n", fBody1, sb, 10, ESPACIO + 145 + Mov);
-
-
-
-
+ 
             }
-
-
-
-
-
-
-
-
-
-
+             
         }
 
 
@@ -480,7 +468,7 @@ namespace MaterialSkinExample
                 //Parametros del POST 
                 //     string url = "http://187.174.220.229/presol/publico/pd.aspx?IdEstacion=2001&IdCategoriaMensaje=1&IdTipoMensaje=1000&VersionProtocolo=2&c=" + encrypt;
                 string url = "http://187.174.220.229/presol/publico/pd.aspx?IdEstacion=" + lblCajero.Text + "&IdMensaje=" + IdMensaje + "&IdCategoriaMensaje=1&IdTipoMensaje=1000&VersionProtocolo=2&c=" + encrypt;
-
+              
                 String paramsPost = encrypt;
 
                 HttpWebRequest httpRequest = (HttpWebRequest)WebRequest.Create(url);
@@ -498,7 +486,7 @@ namespace MaterialSkinExample
                 var streamReader = new StreamReader(httpResponse.GetResponseStream());
                 String resultHtml = streamReader.ReadToEnd();
 
-                MessageBox.Show(resultHtml);
+            //    MessageBox.Show(resultHtml);//respuesta OK
                 DateTime namefile = DateTime.Now;
                 string m_archivo = namefile.Day.ToString() + "-" + namefile.Month.ToString() + "-" + namefile.Year.ToString() + "h" + namefile.Hour.ToString() + "m" + namefile.Minute.ToString() + "s" + namefile.Second.ToString() + ".json";
                 var texto = jobj;
@@ -786,7 +774,7 @@ namespace MaterialSkinExample
 
             btnDeposito.Visible = false;
             metroButton3.Visible = false;
-            json2();
+           
             salvartabla();
 
             JournalFinalizarDeposito();
@@ -795,6 +783,7 @@ namespace MaterialSkinExample
             string result = MyMessageBox.ShowBox("Transacción Exitosa ... \n No olvide retirar su ticket", "Mensaje");
 
             btnprintTicket();
+            json2();
 
         }
 

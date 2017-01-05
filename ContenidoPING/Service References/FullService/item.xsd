@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://okibrasil.com/wtservice/types" elementFormDefault="qualified" targetNamespace="http://okibrasil.com/wtservice/types" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/wtservice/?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="DadosCadastrarOperacao">
+    <xs:sequence>
+      <xs:element name="Agencia" nillable="true" type="xs:string" />
+      <xs:element name="Assinatura" nillable="true" type="xs:string" />
+      <xs:element name="CodigoOperacao" nillable="true" type="xs:string" />
+      <xs:element name="DataTransacao" nillable="true" type="xs:string" />
+      <xs:element name="HoraTransacao" nillable="true" type="xs:string" />
+      <xs:element name="IdMotivo" nillable="true" type="xs:string" />
+      <xs:element name="LimiteOperacao" type="xs:double" />
+      <xs:element name="MatriculaOperador" nillable="true" type="xs:string" />
+      <xs:element name="NSUModuloFinanceiro" type="xs:int" />
+      <xs:element name="NumeroCofre" nillable="true" type="xs:string" />
+      <xs:element name="NumeroEF" nillable="true" type="xs:string" />
+      <xs:element name="TipoMoeda" type="xs:int" />
+      <xs:element name="Versao" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DadosCadastrarOperacao" nillable="true" type="tns:DadosCadastrarOperacao" />
+  <xs:complexType name="RespostaOperacao">
+    <xs:sequence>
+      <xs:element name="CodigoResposta" nillable="true" type="xs:string" />
+      <xs:element name="Mensagem" nillable="true" type="xs:string" />
+      <xs:element name="NSUCofreReciclador" nillable="true" type="xs:string" />
+      <xs:element name="NSUModuloFinanceiro" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RespostaOperacao" nillable="true" type="tns:RespostaOperacao" />
+  <xs:complexType name="DadosCancelarOperacao">
+    <xs:sequence>
+      <xs:element name="Agencia" nillable="true" type="xs:string" />
+      <xs:element name="Assinatura" nillable="true" type="xs:string" />
+      <xs:element name="CodigoOperacao" nillable="true" type="xs:string" />
+      <xs:element name="DataTransacao" nillable="true" type="xs:string" />
+      <xs:element name="HoraTransacao" nillable="true" type="xs:string" />
+      <xs:element name="MatriculaOperador" nillable="true" type="xs:string" />
+      <xs:element name="NSUCofreReciclador" nillable="true" type="xs:string" />
+      <xs:element name="NSUModuloFinanceiro" type="xs:int" />
+      <xs:element name="NumeroCofre" nillable="true" type="xs:string" />
+      <xs:element name="NumeroEF" nillable="true" type="xs:string" />
+      <xs:element name="Versao" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DadosCancelarOperacao" nillable="true" type="tns:DadosCancelarOperacao" />
+  <xs:complexType name="DadosConsultarStatusOperacao">
+    <xs:sequence>
+      <xs:element name="CodigoOperacao" nillable="true" type="xs:string" />
+      <xs:element name="DataTransacao" nillable="true" type="xs:string" />
+      <xs:element name="HoraTransacao" nillable="true" type="xs:string" />
+      <xs:element name="MatriculaOperador" nillable="true" type="xs:string" />
+      <xs:element name="NSUCofreReciclador" type="xs:int" />
+      <xs:element name="NSUModuloFinanceiro" type="xs:int" />
+      <xs:element name="NumeroCofre" type="xs:int" />
+      <xs:element name="Versao" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DadosConsultarStatusOperacao" nillable="true" type="tns:DadosConsultarStatusOperacao" />
+  <xs:complexType name="RespostaConsultarStatusOperacao">
+    <xs:sequence>
+      <xs:element name="CodigoOperacao" nillable="true" type="xs:string" />
+      <xs:element name="CodigoResposta" type="xs:int" />
+      <xs:element name="DataTransacao" nillable="true" type="xs:string" />
+      <xs:element name="EstadoNsu" nillable="true" type="xs:string" />
+      <xs:element name="HoraTransacao" nillable="true" type="xs:string" />
+      <xs:element name="Mensagem" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MoedaEstrangeira" nillable="true" type="tns:ArrayOfForeignCurrency" />
+      <xs:element name="NSUCofreReciclador" nillable="true" type="xs:string" />
+      <xs:element name="NSUModuloFinanceiro" type="xs:int" />
+      <xs:element name="TipoMoeda" type="xs:int" />
+      <xs:element name="Valor" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RespostaConsultarStatusOperacao" nillable="true" type="tns:RespostaConsultarStatusOperacao" />
+  <xs:complexType name="ArrayOfForeignCurrency">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ForeignCurrency" nillable="true" type="tns:ForeignCurrency" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfForeignCurrency" nillable="true" type="tns:ArrayOfForeignCurrency" />
+  <xs:complexType name="ForeignCurrency">
+    <xs:sequence>
+      <xs:element name="Quantidade" type="xs:int" />
+      <xs:element name="Valor" type="xs:int" />
+      <xs:element name="ValorNota" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ForeignCurrency" nillable="true" type="tns:ForeignCurrency" />
+  <xs:complexType name="Autenticacao">
+    <xs:sequence>
+      <xs:element name="Usuario" nillable="true" type="xs:string" />
+      <xs:element name="Senha" nillable="true" type="xs:string" />
+      <xs:element name="Terminal" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Autenticacao" nillable="true" type="tns:Autenticacao" />
+  <xs:complexType name="ArrayOfDadosFundoDeTroco">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DadosFundoDeTroco" nillable="true" type="tns:DadosFundoDeTroco" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDadosFundoDeTroco" nillable="true" type="tns:ArrayOfDadosFundoDeTroco" />
+  <xs:complexType name="DadosFundoDeTroco">
+    <xs:sequence>
+      <xs:element name="Denominacao" type="xs:int" />
+      <xs:element name="Moeda" type="xs:int" />
+      <xs:element name="Quantidade" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DadosFundoDeTroco" nillable="true" type="tns:DadosFundoDeTroco" />
+  <xs:complexType name="RetornoPadrao">
+    <xs:sequence>
+      <xs:element name="CodigoResposta" nillable="true" type="xs:string" />
+      <xs:element name="Mensagem" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetornoPadrao" nillable="true" type="tns:RetornoPadrao" />
+  <xs:complexType name="RetornoOperacao">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RetornoPadrao">
+        <xs:sequence>
+          <xs:element name="Retorno" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetornoOperacao" nillable="true" type="tns:RetornoOperacao" />
+  <xs:complexType name="ConfiguracaoCassette">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RetornoPadrao">
+        <xs:sequence>
+          <xs:element name="EstadoAtual" nillable="true" type="tns:ArrayOfEstadoCassette" />
+          <xs:element name="EstadoPassado" nillable="true" type="tns:ArrayOfEstadoCassette" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConfiguracaoCassette" nillable="true" type="tns:ConfiguracaoCassette" />
+  <xs:complexType name="ArrayOfEstadoCassette">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EstadoCassette" nillable="true" type="tns:EstadoCassette" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEstadoCassette" nillable="true" type="tns:ArrayOfEstadoCassette" />
+  <xs:complexType name="EstadoCassette">
+    <xs:sequence>
+      <xs:element name="Estado" type="xs:int" />
+      <xs:element name="Lacre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EstadoCassette" nillable="true" type="tns:EstadoCassette" />
+  <xs:complexType name="DadosMotivo">
+    <xs:sequence>
+      <xs:element name="DescricaoMotivo" nillable="true" type="xs:string" />
+      <xs:element name="IdMotivo" nillable="true" type="xs:string" />
+      <xs:element name="TipoMotivo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DadosMotivo" nillable="true" type="tns:DadosMotivo" />
+  <xs:complexType name="DadosConsultaMotivo">
+    <xs:sequence>
+      <xs:element name="CodigoResposta" nillable="true" type="xs:string" />
+      <xs:element name="ListaMotivos" nillable="true" type="tns:ArrayOfDadosMotivo" />
+      <xs:element name="Mensagem" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DadosConsultaMotivo" nillable="true" type="tns:DadosConsultaMotivo" />
+  <xs:complexType name="ArrayOfDadosMotivo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DadosMotivo" nillable="true" type="tns:DadosMotivo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDadosMotivo" nillable="true" type="tns:ArrayOfDadosMotivo" />
+  <xs:complexType name="DadosCadastrarUsuario">
+    <xs:sequence>
+      <xs:element name="Funcional" nillable="true" type="xs:string" />
+      <xs:element name="Nome" nillable="true" type="xs:string" />
+      <xs:element name="Senha" nillable="true" type="xs:string" />
+      <xs:element name="Nivel" type="xs:int" />
+      <xs:element minOccurs="0" name="Oculto" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DadosCadastrarUsuario" nillable="true" type="tns:DadosCadastrarUsuario" />
+  <xs:complexType name="DadosAtualizarUsuario">
+    <xs:sequence>
+      <xs:element name="Funcional" nillable="true" type="xs:string" />
+      <xs:element name="Nome" nillable="true" type="xs:string" />
+      <xs:element name="Nivel" type="xs:int" />
+      <xs:element name="LimiteDiario" type="xs:int" />
+      <xs:element name="LimiteSaque" type="xs:int" />
+      <xs:element minOccurs="0" name="Oculto" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DadosAtualizarUsuario" nillable="true" type="tns:DadosAtualizarUsuario" />
+  <xs:complexType name="DadosExcluirUsuario">
+    <xs:sequence>
+      <xs:element name="Funcional" nillable="true" type="xs:string" />
+      <xs:element name="Nome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DadosExcluirUsuario" nillable="true" type="tns:DadosExcluirUsuario" />
+  <xs:complexType name="AlterarPrivilegios">
+    <xs:sequence>
+      <xs:element name="functional" nillable="true" type="xs:string" />
+      <xs:element name="privileges" nillable="true" type="tns:ArrayOfPrivilege" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AlterarPrivilegios" nillable="true" type="tns:AlterarPrivilegios" />
+  <xs:complexType name="ArrayOfPrivilege">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Privilege" nillable="true" type="tns:Privilege" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPrivilege" nillable="true" type="tns:ArrayOfPrivilege" />
+  <xs:complexType name="Privilege">
+    <xs:sequence>
+      <xs:element name="key" nillable="true" type="xs:string" />
+      <xs:element name="value" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Privilege" nillable="true" type="tns:Privilege" />
+  <xs:complexType name="AlterarLimite">
+    <xs:sequence>
+      <xs:element name="Funcional" nillable="true" type="xs:string" />
+      <xs:element name="Limite" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AlterarLimite" nillable="true" type="tns:AlterarLimite" />
+  <xs:complexType name="ObterPrivilegios">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RetornoPadrao">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="privileges" nillable="true" type="q1:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ObterPrivilegios" nillable="true" type="tns:ObterPrivilegios" />
+  <xs:complexType name="ObterPrivilegiosDeUsuario">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RetornoPadrao">
+        <xs:sequence>
+          <xs:element name="privileges" nillable="true" type="tns:ArrayOfPrivilege" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ObterPrivilegiosDeUsuario" nillable="true" type="tns:ObterPrivilegiosDeUsuario" />
+  <xs:complexType name="ObterUsuarios">
+    <xs:sequence>
+      <xs:element name="usuarios" nillable="true" type="tns:ArrayOfInfoUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ObterUsuarios" nillable="true" type="tns:ObterUsuarios" />
+  <xs:complexType name="ArrayOfInfoUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InfoUsuario" nillable="true" type="tns:InfoUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInfoUsuario" nillable="true" type="tns:ArrayOfInfoUsuario" />
+  <xs:complexType name="InfoUsuario">
+    <xs:sequence>
+      <xs:element name="funcional" nillable="true" type="xs:string" />
+      <xs:element name="nome" nillable="true" type="xs:string" />
+      <xs:element name="nivel" nillable="true" type="xs:string" />
+      <xs:element name="limiteDiario" nillable="true" type="xs:string" />
+      <xs:element name="limiteTransacao" nillable="true" type="xs:string" />
+      <xs:element name="sacado" nillable="true" type="xs:string" />
+      <xs:element name="oculto" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InfoUsuario" nillable="true" type="tns:InfoUsuario" />
+  <xs:complexType name="DadosConteudoTCR">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RetornoPadrao">
+        <xs:sequence>
+          <xs:element name="InformacoesCassetes" nillable="true" type="tns:ArrayOfDadosCassete" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DadosConteudoTCR" nillable="true" type="tns:DadosConteudoTCR" />
+  <xs:complexType name="ArrayOfDadosCassete">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DadosCassete" nillable="true" type="tns:DadosCassete" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDadosCassete" nillable="true" type="tns:ArrayOfDadosCassete" />
+  <xs:complexType name="DadosCassete">
+    <xs:sequence>
+      <xs:element name="Posicao" nillable="true" type="xs:string" />
+      <xs:element name="Tipo" nillable="true" type="xs:string" />
+      <xs:element name="Moeda" nillable="true" type="xs:string" />
+      <xs:element name="Id" nillable="true" type="xs:string" />
+      <xs:element name="NumeroDeSerie" nillable="true" type="xs:string" />
+      <xs:element name="Denominacao" nillable="true" type="xs:string" />
+      <xs:element name="Estado" nillable="true" type="xs:string" />
+      <xs:element name="Contador" nillable="true" type="xs:string" />
+      <xs:element name="Capacidade" nillable="true" type="xs:string" />
+      <xs:element name="ModoDeOperacao" nillable="true" type="xs:string" />
+      <xs:element name="Disponibilidade" nillable="true" type="xs:string" />
+      <xs:element name="ListaDeDenominacoes" nillable="true" type="tns:ArrayOfDadosDenominacao" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DadosCassete" nillable="true" type="tns:DadosCassete" />
+  <xs:complexType name="ArrayOfDadosDenominacao">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DadosDenominacao" nillable="true" type="tns:DadosDenominacao" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDadosDenominacao" nillable="true" type="tns:ArrayOfDadosDenominacao" />
+  <xs:complexType name="DadosDenominacao">
+    <xs:sequence>
+      <xs:element name="Denominacao" nillable="true" type="xs:string" />
+      <xs:element name="Moeda" nillable="true" type="xs:string" />
+      <xs:element name="Titulo" nillable="true" type="xs:string" />
+      <xs:element name="Contador" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DadosDenominacao" nillable="true" type="tns:DadosDenominacao" />
+</xs:schema>

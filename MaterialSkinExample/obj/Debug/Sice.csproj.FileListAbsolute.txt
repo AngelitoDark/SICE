@@ -121,3 +121,6 @@ P:\P-Luis\2-1-2017\SICE\MaterialSkinExample\obj\Debug\SICE.pdb
 P:\P-Luis\2-1-2017\SICE\MaterialSkinExample\bin\Debug\SICE.exe.config
 P:\P-Luis\2-1-2017\SICE\MaterialSkinExample\bin\Debug\SICE.pdb
 P:\P-Luis\2-1-2017\SICE\MaterialSkinExample\obj\Debug\Sice.csprojResolveAssemblyReference.cache
+C:\Users\OKI_2\Desktop\2-1-2017\SICE\MaterialSkinExample\bin\Debug\SICE.exe.config
+C:\Users\OKI_2\Desktop\2-1-2017\SICE\MaterialSkinExample\obj\Debug\SICE.exe
+C:\Users\OKI_2\Desktop\2-1-2017\SICE\MaterialSkinExample\obj\Debug\SICE.pdb

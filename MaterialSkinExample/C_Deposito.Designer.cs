@@ -194,7 +194,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 29);
             this.label3.TabIndex = 49;
-            this.label3.Text = "Estacion ";
+            this.label3.Text = "Estación ";
             this.label3.Click += new System.EventHandler(this.label3_Click_1);
             // 
             // label4

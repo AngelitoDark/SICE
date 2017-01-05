@@ -65,7 +65,7 @@
             this.txtUser = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.Consultas = new MetroFramework.Controls.MetroTabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button48 = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button45 = new System.Windows.Forms.Button();
             this.button47 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -90,7 +90,7 @@
             this.txtCuenta = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.button3 = new System.Windows.Forms.Button();
             this.Herramientas = new MetroFramework.Controls.MetroTabPage();
-            this.button31 = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.GrupoApagar = new System.Windows.Forms.GroupBox();
             this.TecladoAd = new System.Windows.Forms.GroupBox();
             this.btnReiniciar = new System.Windows.Forms.Button();
@@ -124,8 +124,10 @@
             this.lblCuentaAdmin = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.lblEstacion = new System.Windows.Forms.Label();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.label7 = new System.Windows.Forms.Label();
+            this.materialRadioButton1 = new MaterialSkin.Controls.MaterialRadioButton();
+            this.materialRadioButton2 = new MaterialSkin.Controls.MaterialRadioButton();
+            this.label8 = new System.Windows.Forms.Label();
             this.iTalk_Separator20 = new iTalk_Separator();
             this.iTalk_Separator18 = new iTalk_Separator();
             this.iTalk_Label2 = new iTalk_Label();
@@ -219,7 +221,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.iTalk_Separator1 = new iTalk_Separator();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.metroTabControl1.SuspendLayout();
             this.Add.SuspendLayout();
             this.tclNumeric3.SuspendLayout();
@@ -227,6 +228,7 @@
             this.metroPanel1.SuspendLayout();
             this.Consultas.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tclNumerico.SuspendLayout();
             this.Herramientas.SuspendLayout();
             this.GrupoApagar.SuspendLayout();
@@ -243,7 +245,6 @@
             this.iTalk_GroupBox5.SuspendLayout();
             this.iTalk_GroupBox2.SuspendLayout();
             this.iTalk_GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTabControl1
@@ -256,7 +257,7 @@
             this.metroTabControl1.Location = new System.Drawing.Point(28, 138);
             this.metroTabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 2;
             this.metroTabControl1.Size = new System.Drawing.Size(974, 604);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.White;
             this.metroTabControl1.TabIndex = 0;
@@ -879,8 +880,11 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.groupBox1.Controls.Add(this.button46);
+            this.groupBox1.Controls.Add(this.materialRadioButton2);
+            this.groupBox1.Controls.Add(this.btnAceptar);
+            this.groupBox1.Controls.Add(this.materialRadioButton1);
             this.groupBox1.Controls.Add(this.pictureBox4);
-            this.groupBox1.Controls.Add(this.button48);
             this.groupBox1.Controls.Add(this.button45);
             this.groupBox1.Controls.Add(this.button47);
             this.groupBox1.Controls.Add(this.label6);
@@ -900,22 +904,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // button48
+            // pictureBox4
             // 
-            this.button48.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button48.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.button48.FlatAppearance.BorderSize = 3;
-            this.button48.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button48.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.button48.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button48.Image = ((System.Drawing.Image)(resources.GetObject("button48.Image")));
-            this.button48.Location = new System.Drawing.Point(658, 354);
-            this.button48.Name = "button48";
-            this.button48.Size = new System.Drawing.Size(101, 83);
-            this.button48.TabIndex = 58;
-            this.button48.UseVisualStyleBackColor = false;
-            this.button48.Visible = false;
-            this.button48.Click += new System.EventHandler(this.button48_Click);
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(781, 429);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 59;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.onclick_Ptr);
             // 
             // button45
             // 
@@ -955,11 +953,12 @@
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(680, 32);
+            this.label6.Location = new System.Drawing.Point(701, 66);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 32);
             this.label6.TabIndex = 55;
             this.label6.Text = "Hasta";
+            this.label6.Visible = false;
             // 
             // label5
             // 
@@ -967,20 +966,22 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(22, 33);
+            this.label5.Location = new System.Drawing.Point(695, 26);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 32);
             this.label5.TabIndex = 54;
             this.label5.Text = "Desde";
+            this.label5.Visible = false;
             // 
             // dtp2
             // 
             this.dtp2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.dtp2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp2.Location = new System.Drawing.Point(791, 34);
+            this.dtp2.Location = new System.Drawing.Point(781, 68);
             this.dtp2.Name = "dtp2";
-            this.dtp2.Size = new System.Drawing.Size(149, 30);
+            this.dtp2.Size = new System.Drawing.Size(162, 30);
             this.dtp2.TabIndex = 53;
+            this.dtp2.Visible = false;
             // 
             // dtp1
             // 
@@ -988,16 +989,15 @@
             this.dtp1.CalendarTitleForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.dtp1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp1.Location = new System.Drawing.Point(118, 36);
+            this.dtp1.Location = new System.Drawing.Point(781, 28);
             this.dtp1.Name = "dtp1";
             this.dtp1.Size = new System.Drawing.Size(162, 30);
             this.dtp1.TabIndex = 52;
+            this.dtp1.Visible = false;
             // 
             // tclNumerico
             // 
             this.tclNumerico.BackColor = System.Drawing.Color.Silver;
-            this.tclNumerico.Controls.Add(this.button46);
-            this.tclNumerico.Controls.Add(this.btnAceptar);
             this.tclNumerico.Controls.Add(this.btnBorrarNum);
             this.tclNumerico.Controls.Add(this.btn0);
             this.tclNumerico.Controls.Add(this.btn9);
@@ -1012,7 +1012,7 @@
             this.tclNumerico.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tclNumerico.Location = new System.Drawing.Point(341, 73);
             this.tclNumerico.Name = "tclNumerico";
-            this.tclNumerico.Size = new System.Drawing.Size(293, 358);
+            this.tclNumerico.Size = new System.Drawing.Size(293, 283);
             this.tclNumerico.TabIndex = 41;
             this.tclNumerico.TabStop = false;
             this.tclNumerico.Visible = false;
@@ -1027,12 +1027,13 @@
             this.button46.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button46.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button46.ForeColor = System.Drawing.Color.White;
-            this.button46.Location = new System.Drawing.Point(6, 281);
+            this.button46.Location = new System.Drawing.Point(7, 209);
             this.button46.Name = "button46";
-            this.button46.Size = new System.Drawing.Size(281, 58);
+            this.button46.Size = new System.Drawing.Size(195, 58);
             this.button46.TabIndex = 49;
             this.button46.Text = "Consultar Fechas";
             this.button46.UseVisualStyleBackColor = false;
+            this.button46.Visible = false;
             this.button46.Click += new System.EventHandler(this.button46_Click);
             // 
             // btnAceptar
@@ -1045,12 +1046,13 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Location = new System.Drawing.Point(6, 220);
+            this.btnAceptar.Location = new System.Drawing.Point(4, 145);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(82, 58);
+            this.btnAceptar.Size = new System.Drawing.Size(198, 58);
             this.btnAceptar.TabIndex = 48;
             this.btnAceptar.Text = "Consultar";
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Visible = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnBorrarNum
@@ -1063,9 +1065,9 @@
             this.btnBorrarNum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrarNum.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrarNum.ForeColor = System.Drawing.Color.White;
-            this.btnBorrarNum.Location = new System.Drawing.Point(201, 217);
+            this.btnBorrarNum.Location = new System.Drawing.Point(104, 217);
             this.btnBorrarNum.Name = "btnBorrarNum";
-            this.btnBorrarNum.Size = new System.Drawing.Size(82, 58);
+            this.btnBorrarNum.Size = new System.Drawing.Size(179, 58);
             this.btnBorrarNum.TabIndex = 47;
             this.btnBorrarNum.Text = "Borrar";
             this.btnBorrarNum.UseVisualStyleBackColor = false;
@@ -1081,7 +1083,7 @@
             this.btn0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn0.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn0.ForeColor = System.Drawing.Color.White;
-            this.btn0.Location = new System.Drawing.Point(104, 220);
+            this.btn0.Location = new System.Drawing.Point(6, 217);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(82, 58);
             this.btn0.TabIndex = 46;
@@ -1305,7 +1307,7 @@
             // 
             // Herramientas
             // 
-            this.Herramientas.Controls.Add(this.button31);
+            this.Herramientas.Controls.Add(this.btnReset);
             this.Herramientas.Controls.Add(this.GrupoApagar);
             this.Herramientas.Controls.Add(this.button30);
             this.Herramientas.Controls.Add(this.button29);
@@ -1322,21 +1324,21 @@
             this.Herramientas.VerticalScrollbarSize = 1;
             this.Herramientas.Click += new System.EventHandler(this.metroTabPage3_Click);
             // 
-            // button31
+            // btnReset
             // 
-            this.button31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button31.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.button31.FlatAppearance.BorderSize = 3;
-            this.button31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button31.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.button31.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button31.Location = new System.Drawing.Point(700, 201);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(206, 47);
-            this.button31.TabIndex = 45;
-            this.button31.Text = "Resetear TCR";
-            this.button31.UseVisualStyleBackColor = false;
-            this.button31.Click += new System.EventHandler(this.button31_Click_1);
+            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnReset.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.btnReset.FlatAppearance.BorderSize = 3;
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btnReset.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnReset.Location = new System.Drawing.Point(700, 201);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(206, 47);
+            this.btnReset.TabIndex = 45;
+            this.btnReset.Text = "Resetear TCR";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.button31_Click_1);
             // 
             // GrupoApagar
             // 
@@ -1345,9 +1347,9 @@
             this.GrupoApagar.Controls.Add(this.lbl_etiqueta);
             this.GrupoApagar.Controls.Add(this.button32);
             this.GrupoApagar.Controls.Add(this.txtcontraseñaAd);
-            this.GrupoApagar.Location = new System.Drawing.Point(13, 50);
+            this.GrupoApagar.Location = new System.Drawing.Point(336, 24);
             this.GrupoApagar.Name = "GrupoApagar";
-            this.GrupoApagar.Size = new System.Drawing.Size(150, 478);
+            this.GrupoApagar.Size = new System.Drawing.Size(398, 478);
             this.GrupoApagar.TabIndex = 44;
             this.GrupoApagar.TabStop = false;
             this.GrupoApagar.Visible = false;
@@ -1838,20 +1840,6 @@
             this.lblEstacion.Text = "estacion";
             this.lblEstacion.Click += new System.EventHandler(this.lblEstacion_Click);
             // 
-            // materialLabel1
-            // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.BackColor = System.Drawing.SystemColors.Window;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(731, 97);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(113, 29);
-            this.materialLabel1.TabIndex = 55;
-            this.materialLabel1.Text = "Estacion";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -1861,6 +1849,55 @@
             this.label7.Size = new System.Drawing.Size(182, 29);
             this.label7.TabIndex = 60;
             this.label7.Text = " Administrador";
+            // 
+            // materialRadioButton1
+            // 
+            this.materialRadioButton1.AutoSize = true;
+            this.materialRadioButton1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.materialRadioButton1.Depth = 0;
+            this.materialRadioButton1.Font = new System.Drawing.Font("Arial", 10F);
+            this.materialRadioButton1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.materialRadioButton1.Location = new System.Drawing.Point(32, 20);
+            this.materialRadioButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.materialRadioButton1.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialRadioButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRadioButton1.Name = "materialRadioButton1";
+            this.materialRadioButton1.Ripple = true;
+            this.materialRadioButton1.Size = new System.Drawing.Size(134, 30);
+            this.materialRadioButton1.TabIndex = 61;
+            this.materialRadioButton1.TabStop = true;
+            this.materialRadioButton1.Text = "Consulta General";
+            this.materialRadioButton1.UseVisualStyleBackColor = false;
+            this.materialRadioButton1.CheckedChanged += new System.EventHandler(this.materialRadioButton1_CheckedChanged);
+            // 
+            // materialRadioButton2
+            // 
+            this.materialRadioButton2.AutoSize = true;
+            this.materialRadioButton2.Depth = 0;
+            this.materialRadioButton2.Font = new System.Drawing.Font("Arial", 10F);
+            this.materialRadioButton2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.materialRadioButton2.Location = new System.Drawing.Point(32, 50);
+            this.materialRadioButton2.Margin = new System.Windows.Forms.Padding(0);
+            this.materialRadioButton2.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialRadioButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRadioButton2.Name = "materialRadioButton2";
+            this.materialRadioButton2.Ripple = true;
+            this.materialRadioButton2.Size = new System.Drawing.Size(136, 30);
+            this.materialRadioButton2.TabIndex = 62;
+            this.materialRadioButton2.TabStop = true;
+            this.materialRadioButton2.Text = "Consultar Fechas";
+            this.materialRadioButton2.UseVisualStyleBackColor = true;
+            this.materialRadioButton2.CheckedChanged += new System.EventHandler(this.materialRadioButton2_CheckedChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(741, 98);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(113, 29);
+            this.label8.TabIndex = 62;
+            this.label8.Text = "Estación";
             // 
             // iTalk_Separator20
             // 
@@ -1933,7 +1970,7 @@
             this.mListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mListView.GridLines = true;
             this.mListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.mListView.Location = new System.Drawing.Point(5, 107);
+            this.mListView.Location = new System.Drawing.Point(5, 145);
             this.mListView.Margin = new System.Windows.Forms.Padding(4);
             this.mListView.Name = "mListView";
             this.mListView.Size = new System.Drawing.Size(958, 282);
@@ -2751,17 +2788,6 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Denominación ";
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(815, 396);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 59;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.onclick_Ptr);
-            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -2771,10 +2797,10 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(998, 780);
             this.ControlBox = false;
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.iTalk_Separator20);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.iTalk_Separator18);
-            this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.lblEstacion);
             this.Controls.Add(this.lblCuentaAdmin);
             this.Controls.Add(this.pictureBox3);
@@ -2803,6 +2829,7 @@
             this.Consultas.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.tclNumerico.ResumeLayout(false);
             this.Herramientas.ResumeLayout(false);
             this.GrupoApagar.ResumeLayout(false);
@@ -2827,7 +2854,6 @@
             this.iTalk_GroupBox2.PerformLayout();
             this.iTalk_GroupBox1.ResumeLayout(false);
             this.iTalk_GroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2929,7 +2955,7 @@
         private System.Windows.Forms.Button button44;
         private System.Windows.Forms.Button btnReiniciar;
         private System.Windows.Forms.CheckBox chkAdmin;
-        private System.Windows.Forms.Button button31;
+        private System.Windows.Forms.Button btnReset;
         private MetroFramework.Controls.MetroTabPage contenidoTCR;
         private System.Windows.Forms.GroupBox groupBox2;
         private iTalk_GroupBox iTalk_GroupBox1;
@@ -3016,15 +3042,16 @@
         private System.Windows.Forms.Label lblEstacion;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button48;
         private System.Windows.Forms.Button button45;
         private System.Windows.Forms.Button button47;
         private System.Windows.Forms.Button button46;
         private System.Windows.Forms.ColumnHeader FECHA_TRANSACCION;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private iTalk_Separator iTalk_Separator18;
         public System.Windows.Forms.Label label7;
         private iTalk_Separator iTalk_Separator20;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private MaterialSkin.Controls.MaterialRadioButton materialRadioButton2;
+        private MaterialSkin.Controls.MaterialRadioButton materialRadioButton1;
+        public System.Windows.Forms.Label label8;
     }
 }

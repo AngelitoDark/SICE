@@ -391,6 +391,7 @@ nodo.GetElementsByTagName("VersionProtocolo");
                  totalBilletes,
                  total,
                  fecha_transaccion;
+            mListView.Items.Clear();/// limpia antes de la consulta
 
             DataTable dt = Querys.Buscar(txtCuenta.Text);//envio dato a buscar
                                                          //si encuentra el dato guardo los datos en las variables
@@ -644,8 +645,7 @@ nodo.GetElementsByTagName("VersionProtocolo");
                 string result = MyMessageBox.ShowBox("Ingresa numero de Cuenta.", "Mensaje");
             }
             tclNumerico.Visible = false;
-
-
+            
 
 
 
@@ -659,20 +659,21 @@ nodo.GetElementsByTagName("VersionProtocolo");
 
             JournalConsultas();
 
-
            
+
         }
 
         //vista agregar usuarios
 
         public bool T1 = false;
 
-
+        
         private void txtUser_Click(object sender, EventArgs e)
         {
             tclNumerico2.Visible = true;
             T1 = true;
             tclNumeric3.Visible = false;
+            mListView.Items.Clear();
         }
 
         private void button16_Click(object sender, EventArgs e)
@@ -943,6 +944,7 @@ nodo.GetElementsByTagName("VersionProtocolo");
             button33.Visible = true;
             btnReiniciar.Visible = false;
 
+            btnReset.Visible = false;
 
         }
 
@@ -957,6 +959,9 @@ nodo.GetElementsByTagName("VersionProtocolo");
 
             button33.Visible = false;
             btnReiniciar.Visible = true;
+
+            btnReset.Visible = false;
+
 
 
         }
@@ -984,6 +989,8 @@ nodo.GetElementsByTagName("VersionProtocolo");
             button29.Visible = true;
             button30.Visible = true;
             GrupoApagar.Visible = false;
+            btnReset.Visible = true;
+
         }
 
         private void button33_Click(object sender, EventArgs e)
@@ -1144,16 +1151,25 @@ nodo.GetElementsByTagName("VersionProtocolo");
 
         private void button31_Click_1(object sender, EventArgs e)
         {
-            authData.Usuario = user;
-            authData.Terminal = terminal;
-            authData.Senha = Pasword;
-            string mensaje = operaciones.ResetTCR(authData).CodigoResposta;
-            string mensaje1 = operaciones.ResetTCR(authData).Mensagem;
+            try
+            {
+                authData.Usuario = user;
+                authData.Terminal = terminal;
+                authData.Senha = Pasword;
+               // string mensaje = operaciones.ResetTCR(authData).CodigoResposta;
+         operaciones.ResetTCR(authData) ;
 
-            //   richTextBox1.Text = (operaciones.AbastecimentoEncerrar(authData).ExtensionData).ToString();
-            //            lblMensaje.Text = TCR2.ContinueDeposit(TCR).RetData;
-            //  lblMensaje.Text = TCR2.StartDeposit(TCR).Message;
-            MessageBox.Show(mensaje);
+                //   richTextBox1.Text = (operaciones.AbastecimentoEncerrar(authData).ExtensionData).ToString();
+                //            lblMensaje.Text = TCR2.ContinueDeposit(TCR).RetData;
+                //  lblMensaje.Text = TCR2.StartDeposit(TCR).Message;
+          MyMessageBox.ShowBox("Operación ejecutada con éxito");
+            }
+            catch (Exception)
+            {
+
+                MyMessageBox.ShowBox("Intenta de nuevo ");
+            }
+       // }
         }
 
 
@@ -1224,15 +1240,15 @@ nodo.GetElementsByTagName("VersionProtocolo");
                 //caset F
                 lblidF.Text = tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[5].Id;
                 int denomF = Convert.ToInt32(tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[5].Denominacao);
-                lbldenomF.Text = "$ " + denomF.ToString();
+                // lbldenomF.Text = "$ " + denomF.ToString();// original
+                lbldenomF.Text = "$ 0";
                 int contadorF = Convert.ToInt32(tcr2.ConsultarConteudoTCR(authData).InformacoesCassetes[5].Contador);
                 lblcantF.Text = contadorF.ToString();
                 int totalF = denomF * contadorF;
                 lbltotalF.Text = "$ " + totalF;
 
                 lbltotalcontenido.Text = "Contenido: $ " + (totalA + totalB +
-                    totalC + totalD + totalE + totalF +
-                    10000).ToString("#,#", CultureInfo.InvariantCulture);
+                    totalC + totalD + totalE + totalF  ).ToString("#,#", CultureInfo.InvariantCulture);
 
                 lblT_Billetes.Text = "Total de Billetes:  " + (contadorA + contadorB + contadorC + contadorD + contadorE + contadorF);
 
@@ -1275,6 +1291,8 @@ nodo.GetElementsByTagName("VersionProtocolo");
             {
 
                 MyMessageBox.ShowBox("Intenta de nuevo ");
+                lblLoad.Visible = false;
+                chcContenido.Visible = true;
             }
         }
 
@@ -1284,6 +1302,8 @@ nodo.GetElementsByTagName("VersionProtocolo");
 
             if (metroTabControl1.SelectedTab == metroTabControl1.TabPages["contenidoTCR"])//Nombre del Tab
             {
+                mListView.Items.Clear();
+
                 var archivo_Journal = (@"C:\Directorio SICE\Journals\" + m_archivo + "");
 
                 using (StreamWriter w = File.AppendText(archivo_Journal))
@@ -1297,6 +1317,7 @@ nodo.GetElementsByTagName("VersionProtocolo");
 
             if (metroTabControl1.SelectedTab == metroTabControl1.TabPages["Herramientas"])//Nombre del Tab
             {
+                mListView.Items.Clear();
                 var archivo_Journal = (@"C:\Directorio SICE\Journals\" + m_archivo + "");
 
                 using (StreamWriter w = File.AppendText(archivo_Journal))
@@ -1310,6 +1331,7 @@ nodo.GetElementsByTagName("VersionProtocolo");
 
             if (metroTabControl1.SelectedTab == metroTabControl1.TabPages["Consultas"])//Nombre del Tab
             {
+              //  mListView.Items.Clear();
                 var archivo_Journal = (@"C:\Directorio SICE\Journals\" + m_archivo + "");
 
                 using (StreamWriter w = File.AppendText(archivo_Journal))
@@ -1323,6 +1345,7 @@ nodo.GetElementsByTagName("VersionProtocolo");
 
             if (metroTabControl1.SelectedTab == metroTabControl1.TabPages["Add"])//Nombre del Tab
             {
+                mListView.Items.Clear();
                 var archivo_Journal = (@"C:\Directorio SICE\Journals\" + m_archivo + "");
 
                 using (StreamWriter w = File.AppendText(archivo_Journal))
@@ -1405,8 +1428,9 @@ nodo.GetElementsByTagName("VersionProtocolo");
             System.Drawing.Font f = new System.Drawing.Font("Arial Narrow", 10, FontStyle.Regular); //Estilo utilizado en ticket
             SolidBrush b = new SolidBrush(Color.Black);  //Color de texto
             g.DrawImage(System.Drawing.Image.FromFile(logo), 130, -5, 160, 90);
-            g.DrawString("Impresión de contenido TCR   ", f, b, 10, 95);
+            g.DrawString("Impresión de contenido TCR   ", f, b, 10, 80);
             g.DrawString("Administrador: "+lblCuentaAdmin.Text, f, b, 10, 95);
+
             g.DrawString("Fecha: " + DateTime.Now.ToString(), f, b, 10, 110);
 
             g.DrawString("------------------ CASSETTE A------------------", f, b, 10, 125);
@@ -1533,6 +1557,9 @@ nodo.GetElementsByTagName("VersionProtocolo");
                     DateTime fecha = DateTime.Now;
                     string f1 = dtp1.Value.ToString("yyyy-MM-dd");
                     string f2 = dtp2.Value.ToString("yyyy-MM-dd");
+
+                    mListView.Items.Clear();//Limpia antes de la consulta
+
                     cmd.CommandText = (" SELECT * FROM  transaccion WHERE  fecha_Transaccion >= '" + f1 + "%' AND fecha_Transaccion <= '" + f2 + "%' and no_cuenta= '" + txtCuenta.Text + "'");
                     MySqlDataReader dr = cmd.ExecuteReader();
 
@@ -1786,66 +1813,7 @@ nodo.GetElementsByTagName("VersionProtocolo");
             tclNumerico.Visible = false;
         }
 
-        private void button48_Click(object sender, EventArgs e)
-        {
-
-            if (mListView.Items.Count == 0)
-            {
-                MyMessageBox.ShowBox("No hay registros en la tabla");
-            }
-            else
-            {
-                try
-                {
-                    DataTable dtbl = MakeDataTable();
-                    ExportDataTableToPdf(dtbl, @"C:\Directorio SICE\Reportes tlock\temporal.pdf", "CONSULTAS LOCK");
-                    Spire.Pdf.PdfDocument doc = new Spire.Pdf.PdfDocument();
-                    doc.LoadFromFile(@"C:\Directorio SICE\Reportes tlock\temporal.pdf");
-
-                    PrintDialog dialogPrint = new PrintDialog();
-                    dialogPrint.AllowPrintToFile = true;
-                    dialogPrint.AllowSomePages = true;
-                    dialogPrint.PrinterSettings.MinimumPage = 1;
-                    dialogPrint.PrinterSettings.MaximumPage = doc.Pages.Count;
-                    dialogPrint.PrinterSettings.FromPage = 1;
-                    dialogPrint.PrinterSettings.ToPage = doc.Pages.Count;
-
-                    if (dialogPrint.ShowDialog() == DialogResult.OK)
-                    {
-                        //Set the pagenumber which you choose as the start page to print
-                        doc.PrintFromPage = dialogPrint.PrinterSettings.FromPage;
-                        //Set the pagenumber which you choose as the final page to print
-                        doc.PrintToPage = dialogPrint.PrinterSettings.ToPage;
-                        //Set the name of the printer which is to print the PDF
-                        doc.PrinterName = dialogPrint.PrinterSettings.PrinterName;
-
-                        PrintDocument printDoc = doc.PrintDocument;
-                        dialogPrint.Document = printDoc;
-                        printDoc.Print();
-
-                        string result = MyMessageBox.ShowBox("Imprimiendo documento", "Mensaje");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    string result = MyMessageBox.ShowBox(ex.Message + "Error de impresión");
-
-                }
-                if (System.IO.File.Exists(@"C:\Directorio SICE\Reportes tlock\temporal.pdf"))
-                {
-                    try
-                    {
-                        System.IO.File.Delete(@"C:\Directorio SICE\Reportes tlock\temporal.pdf");
-                    }
-                    catch (Exception ex)
-                    {
-
-                        MessageBox.Show("Error de proceso");
-                    }
-                }
-            }//fin else
-            tclNumerico.Visible = false;
-        }
+      
 
         private void lblEstacion_Click(object sender, EventArgs e)
         {
@@ -1912,6 +1880,40 @@ nodo.GetElementsByTagName("VersionProtocolo");
             }//fin else
             tclNumerico.Visible = false;
 
+        }
+
+        private void materialRadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (materialRadioButton1.Checked)
+            {
+
+
+
+                btnAceptar.Visible = true;
+                btnAceptar.Location = new Point(1, 80);
+                button46.Visible = false;
+                tclNumerico.Visible = false;
+                mListView.Items.Clear();
+
+            }
+        }
+
+        private void materialRadioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (materialRadioButton2.Checked)
+            {
+
+                tclNumerico.Visible = false;
+                btnAceptar.Visible = false;
+                button46.Location = new Point(1, 80);
+                button46.Visible = true;
+                label5.Visible = true;
+                label6.Visible = true;
+                dtp1.Visible = true;
+                dtp2.Visible = true;
+                mListView.Items.Clear();
+
+            }
         }
     }
 }

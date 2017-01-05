@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Deposito));
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.lblDCuenta = new System.Windows.Forms.Label();
             this.Footer = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -56,6 +55,7 @@
             this.iTalk_HeaderLabel1 = new iTalk_HeaderLabel();
             this.iTalk_Separator2 = new iTalk_Separator();
             this.iTalk_Separator1 = new iTalk_Separator();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -67,20 +67,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
-            // 
-            // materialLabel1
-            // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.BackColor = System.Drawing.SystemColors.Window;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(754, 90);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(113, 29);
-            this.materialLabel1.TabIndex = 1;
-            this.materialLabel1.Text = "Estacion";
             // 
             // lblDCuenta
             // 
@@ -367,12 +353,24 @@
             this.iTalk_Separator1.TabIndex = 38;
             this.iTalk_Separator1.Text = "iTalk_Separator1";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(736, 90);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(113, 29);
+            this.label3.TabIndex = 58;
+            this.label3.Text = "Estación";
+            // 
             // Deposito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(998, 780);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lblEstacionD);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox9);
@@ -393,7 +391,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Footer);
             this.Controls.Add(this.lblDCuenta);
-            this.Controls.Add(this.materialLabel1);
             this.HelpButton = true;
             this.Name = "Deposito";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -415,7 +412,6 @@
         }
 
         #endregion
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
         public System.Windows.Forms.Label lblDCuenta;
         private System.Windows.Forms.TextBox Footer;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -441,5 +437,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         public System.Windows.Forms.Label lblEstacionD;
+        public System.Windows.Forms.Label label3;
     }
 }
